@@ -1,37 +1,22 @@
-/* Lorenzo Hub - gestore collegamenti v1.1 */
+/* Lorenzo Hub v1.3 — routing */
 (function(){
-  const cfg = () => window.LORENZO_HUB_CONFIG || {apps:{},external:{}};
+  function cfg(){ return window.LORENZO_HUB_CONFIG || {}; }
 
-  function resolveApp(key){
-    const app = cfg().apps?.[key];
-    if(!app) return null;
-    const custom = localStorage.getItem("lorenzoHub.custom."+key);
-    return custom || app.local || null;
-  }
+  window.openFeniceSection = function(section){
+    const s = encodeURIComponent(section || 'home');
+    window.location.href = './fenice-bridge.html?section=' + s;
+  };
 
-  window.openHubApp = function(key){
-    const url = resolveApp(key);
-    if(!url){
-      if(window.hubToast) window.hubToast("Collegamento non configurato");
-      return;
-    }
-    window.location.href = url;
+  window.openFeniceHome = function(){
+    window.location.href = cfg().feniceBase || 'https://lorenzogtp.github.io/fenice-palcoscenico-/';
+  };
+
+  window.openACTVLatest = function(){
+    window.location.href = cfg().actvLatest || 'https://actv-rapido-lorenzo.novecento64.chatgpt.site/';
   };
 
   window.openHubExternal = function(key){
-    const url = cfg().external?.[key];
-    if(!url){
-      if(window.hubToast) window.hubToast("Collegamento non configurato");
-      return;
-    }
-    window.open(url, "_blank", "noopener");
+    const url = cfg().external && cfg().external[key];
+    if(url) window.open(url, '_blank', 'noopener');
   };
-
-  window.saveHubCustomLink = function(key, value){
-    const clean = (value || "").trim();
-    if(clean) localStorage.setItem("lorenzoHub.custom."+key, clean);
-    else localStorage.removeItem("lorenzoHub.custom."+key);
-  };
-
-  window.getHubResolvedLink = resolveApp;
 })();

@@ -8,201 +8,157 @@
 <link rel="apple-touch-icon" href="./icon-192.png">
 <title>Lorenzo Hub</title>
 <style>
-:root{--bg:#0f1720;--card:#182330;--card2:#202d3a;--txt:#f4f6f8;--muted:#aeb9c5;--accent:#d4484f;--ok:#46a36f;--warn:#d59a36;--line:#2d3a47}
+:root{--bg:#0f1720;--card:#182330;--txt:#f4f6f8;--muted:#aeb9c5;--accent:#d4484f;--ok:#46a36f;--line:#2d3a47;--blue:#477fa8}
 *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0d141c,#101923 45%,#0e151d);color:var(--txt);min-height:100vh}
-header{position:sticky;top:0;z-index:10;background:rgba(15,23,32,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 16px 10px}
+header{position:sticky;top:0;z-index:10;background:rgba(15,23,32,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 16px 10px}
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:850;font-size:20px}.date{font-size:13px;color:var(--muted)}
-main{max-width:860px;margin:auto;padding:16px 14px 100px}.hero{background:linear-gradient(135deg,#1c2b39,#223747);border:1px solid #314656;border-radius:20px;padding:18px;margin-bottom:14px}
+main{max-width:900px;margin:auto;padding:16px 14px 100px}.hero{background:linear-gradient(135deg,#1c2b39,#223747);border:1px solid #314656;border-radius:20px;padding:18px;margin-bottom:14px}
 .hero h1{font-size:25px;margin:0 0 6px}.hero p{margin:0;color:var(--muted)}.status{display:inline-flex;margin-top:12px;padding:7px 10px;border-radius:999px;background:#112a20;color:#9de0b8;font-weight:750;font-size:13px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px}.card h3{margin:0 0 10px;font-size:17px}.wide{grid-column:1/-1}
-.bigbtn,.btn{border:0;border-radius:14px;padding:13px 14px;font-weight:800;cursor:pointer}.bigbtn{width:100%;background:#f3f5f7;color:#111;font-size:16px}.btn{background:#263646;color:white}.btn.red{background:var(--accent)}.btn.green{background:var(--ok)}.btn.ghost{background:transparent;border:1px solid #435465;color:#e7edf2}
-.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.task{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}.task:last-child{border-bottom:0}.task input[type=checkbox]{margin-top:3px;transform:scale(1.2)}.task .meta{font-size:12px;color:var(--muted);margin-top:3px}
-.badge{font-size:11px;padding:4px 7px;border-radius:999px;background:#3a2f13;color:#f5cf77}.badge.wait{background:#2e233a;color:#d8b6ff}.badge.ok{background:#163523;color:#9fe6ba}
-input,textarea,select{width:100%;background:#0f1720;border:1px solid #344454;color:#fff;border-radius:12px;padding:11px 12px;font:inherit}textarea{min-height:92px;resize:vertical}
-label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}.sectionTitle{font-size:13px;color:var(--muted);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:18px 2px 8px}
-.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.quick button{background:var(--card);border:1px solid var(--line);color:#fff;border-radius:15px;padding:12px 6px;font-size:12px;min-height:76px}.quick .ico{display:block;font-size:25px;margin-bottom:5px}
-.appcards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.appcard{background:#111b25;border:1px solid #344454;border-radius:16px;padding:14px}.appcard .ico{font-size:28px}.appcard b{display:block;margin:7px 0 3px}.appcard small{display:block;color:var(--muted);min-height:32px}.appcard button{margin-top:10px;width:100%}
+.sectionTitle{font-size:13px;color:var(--muted);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:18px 2px 8px}
+.appcards,.fenicegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.card,.appcard,.fcard{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:14px}.appcard .ico,.fcard .ico{font-size:26px}.appcard b,.fcard b{display:block;margin:6px 0 3px}.appcard small,.fcard small{display:block;color:var(--muted);line-height:1.35}
+.appcard button,.fcard button{width:100%;margin-top:10px}
+.btn{border:0;border-radius:13px;padding:11px 12px;font-weight:800;background:#263646;color:white}.btn.red{background:var(--accent)}.btn.green{background:var(--ok)}.btn.blue{background:var(--blue)}.btn.ghost{background:transparent;border:1px solid #435465}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.quick button{background:var(--card);border:1px solid var(--line);color:#fff;border-radius:15px;padding:12px 6px;font-size:12px;min-height:72px}.quick .ico{display:block;font-size:24px;margin-bottom:4px}
+input,textarea,select{width:100%;background:#0f1720;border:1px solid #344454;color:#fff;border-radius:12px;padding:11px 12px;font:inherit}textarea{min-height:92px}label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.task{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}.task:last-child{border-bottom:0}.meta,.small,.muted{color:var(--muted);font-size:12px}
 nav{position:fixed;left:0;right:0;bottom:0;background:rgba(12,19,27,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:20;padding-bottom:env(safe-area-inset-bottom)}
-nav .inner{width:min(860px,100%);display:grid;grid-template-columns:repeat(5,1fr)}nav button{background:none;border:0;color:#9eabb7;padding:10px 2px 8px;font-size:11px}nav button.active{color:#fff;font-weight:800}nav span{display:block;font-size:20px;margin-bottom:2px}
-.view{display:none}.view.active{display:block}.muted{color:var(--muted)}.small{font-size:12px}.nextbox{border-left:4px solid var(--accent);padding-left:12px}.time{font-size:28px;font-weight:900}.install{display:none;margin-top:10px}.install.show{display:block}
-.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:86px;background:#f5f7f9;color:#111;padding:10px 14px;border-radius:12px;font-weight:700;opacity:0;pointer-events:none;transition:.2s;z-index:50}.toast.show{opacity:1}
-.connected{border-color:#2f7050}.connection-list{display:grid;gap:8px}.connection{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#101923;border:1px solid var(--line);border-radius:12px;padding:10px}.connection .ok{color:#9de0b8;font-weight:800}
-@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}.wide{grid-column:1/-1}.quick{grid-template-columns:repeat(6,1fr)}.appcards{grid-template-columns:repeat(3,1fr)}}
+nav .inner{width:min(900px,100%);display:grid;grid-template-columns:repeat(5,1fr)}nav button{background:none;border:0;color:#9eabb7;padding:10px 2px 8px;font-size:11px}nav button.active{color:#fff;font-weight:800}nav span{display:block;font-size:20px;margin-bottom:2px}
+.view{display:none}.view.active{display:block}.wide{grid-column:1/-1}.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:86px;background:#fff;color:#111;padding:10px 14px;border-radius:12px;font-weight:700;opacity:0;transition:.2s;z-index:50}.toast.show{opacity:1}
+@media(min-width:720px){.appcards{grid-template-columns:repeat(3,1fr)}.fenicegrid{grid-template-columns:repeat(4,1fr)}.quick{grid-template-columns:repeat(6,1fr)}}
 </style>
 <script src="./config.js"></script>
 <script src="./links.js"></script>
 </head>
 <body>
-<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="muted small">v1.2</span></div><div class="date" id="today"></div></div><button class="btn ghost" onclick="exportData()">Backup</button></div></header>
+<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="muted">v1.3</span></div><div id="today" class="date"></div></div><button class="btn ghost" onclick="exportData()">Backup</button></div></header>
 <main>
+
 <section id="oggi" class="view active">
   <div class="hero">
-    <h1 id="greeting">Buon pomeriggio, Lorenzo</h1>
-    <p>Fenice, spostamenti, ODG e attività in un unico cruscotto.</p>
-    <div class="status" id="statusText">● Collegamenti attivi</div>
-    <button id="installBtn" class="bigbtn install">Installa Lorenzo Hub</button>
+    <h1 id="greeting">Lorenzo Hub</h1>
+    <p>Accesso diretto a Fenice Palcoscenico 4.9.3 e ACTV Rapido aggiornato.</p>
+    <div class="status">● Collegamenti completi</div>
   </div>
 
-  <div class="card nextbox">
-    <div class="small muted">COSA DEVO FARE ADESSO?</div>
-    <div class="time" id="clock">--:--</div>
-    <div id="nextAction" style="font-size:18px;font-weight:800;margin:4px 0">Controlli le attività prioritarie.</div>
-    <div class="muted small" id="nextMeta">Le prossime attività vengono ordinate automaticamente.</div>
-  </div>
-
-  <div class="sectionTitle">App collegate</div>
+  <div class="sectionTitle">Le due app principali</div>
   <div class="appcards">
-    <div class="appcard connected"><div class="ico">🎭</div><b>Fenice Palcoscenico 4.9.3</b><small>Collegamento alla Sua versione 4.9.3 pubblicata su GitHub.</small><button class="btn red" onclick="openHubApp('fenice')">Apri Fenice</button></div>
-    <div class="appcard connected"><div class="ico">📋</div><b>Piano Prove</b><small>Piano prove Elisir collegato localmente.</small><button class="btn" onclick="openHubApp('pianoProve')">Apri Piano Prove</button></div>
-    <div class="appcard connected"><div class="ico">🚌</div><b>ACTV Rapido</b><small>ACTV Rapido v20 incluso nel repository.</small><button class="btn green" onclick="openHubApp('actv')">Apri ACTV</button></div>
+    <div class="appcard">
+      <div class="ico">🎭</div><b>Fenice Palcoscenico 4.9.3</b>
+      <small>Produzioni, piano prove, ODG, cast, camerini, calendario e archivio.</small>
+      <button class="btn red" onclick="openFeniceSection('home')">Apri Fenice</button>
+    </div>
+    <div class="appcard">
+      <div class="ico">🚌</div><b>ACTV Rapido · ultimo</b>
+      <small>Apre direttamente la Sua app ACTV Rapido pubblicata e aggiornata.</small>
+      <button class="btn green" onclick="openACTVLatest()">Apri ACTV Rapido</button>
+    </div>
   </div>
 
-  <div class="sectionTitle">Accessi rapidi</div>
+  <div class="sectionTitle">Fenice · accessi immediati</div>
   <div class="quick">
-    <button onclick="openHubApp('fenice')"><span class="ico">🎭</span>Fenice</button>
-    <button onclick="openHubApp('actv')"><span class="ico">🚌</span>ACTV</button>
-    <button onclick="showView('odg')"><span class="ico">📌</span>ODG</button>
-    <button onclick="showView('tasks')"><span class="ico">✅</span>Da fare</button>
-    <button onclick="showView('waiting')"><span class="ico">⏳</span>In attesa</button>
-    <button onclick="startVoice()"><span class="ico">🎙️</span>Detta nota</button>
-  </div>
-
-  <div class="sectionTitle">Priorità</div>
-  <div class="grid">
-    <div class="card"><h3>✅ Da fare</h3><div id="todayTasks"></div></div>
-    <div class="card"><h3>⏳ In attesa</h3><div id="waitingMini"></div></div>
-    <div class="card"><h3>📅 Scadenze</h3><div id="deadlinesMini"></div></div>
+    <button onclick="openFeniceSection('today')"><span class="ico">🎭</span>Oggi</button>
+    <button onclick="openFeniceSection('tomorrow')"><span class="ico">➡️</span>Domani</button>
+    <button onclick="openFeniceSection('smart')"><span class="ico">⚡</span>ODG Smart</button>
+    <button onclick="openFeniceSection('plan')"><span class="ico">🗓️</span>Piano prove</button>
+    <button onclick="openFeniceSection('cast')"><span class="ico">👤</span>Cast</button>
+    <button onclick="openFeniceSection('rooms')"><span class="ico">🚪</span>Camerini</button>
   </div>
 </section>
 
 <section id="tasks" class="view">
-  <div class="sectionTitle">Attività</div>
-  <div class="card wide">
-    <label>Nuova attività</label><input id="taskText" placeholder="Es. Confermare camerino Luongo">
-    <div class="row">
-      <div style="flex:1"><label>Data</label><input id="taskDate" type="date"></div>
-      <div style="flex:1"><label>Priorità</label><select id="taskPriority"><option>Alta</option><option selected>Normale</option><option>Bassa</option></select></div>
-    </div>
+  <div class="sectionTitle">Da fare</div>
+  <div class="card">
+    <label>Nuova attività</label><input id="taskText" placeholder="Es. Confermare camerino">
+    <div class="row"><div style="flex:1"><label>Data</label><input id="taskDate" type="date"></div><div style="flex:1"><label>Priorità</label><select id="taskPriority"><option>Alta</option><option selected>Normale</option><option>Bassa</option></select></div></div>
     <button class="btn red" style="margin-top:10px" onclick="addTask()">Aggiungi</button>
   </div>
-  <div class="card wide" style="margin-top:12px"><div id="taskList"></div></div>
-</section>
-
-<section id="waiting" class="view">
-  <div class="sectionTitle">In attesa</div>
-  <div class="card wide">
-    <input id="waitText" placeholder="Es. Risposta tecnica da...">
-    <label>Da chi / riferimento</label><input id="waitWho" placeholder="Nome o ufficio">
-    <label>Data sollecito</label><input id="waitDate" type="date">
-    <button class="btn" style="margin-top:10px" onclick="addWaiting()">Aggiungi attesa</button>
-  </div>
-  <div class="card wide" style="margin-top:12px"><div id="waitingList"></div></div>
+  <div class="card" style="margin-top:10px"><div id="taskList"></div></div>
 </section>
 
 <section id="odg" class="view">
-  <div class="sectionTitle">ODG Smart</div>
-  <div class="card wide">
-    <label>Data</label><input id="odgDate" type="date">
-    <label>Prova musicale</label><input id="odgMusic" placeholder="11:00–13:00 | Sala Rossi | Tutti">
-    <label>Prova di regia / attività</label><textarea id="odgStage" placeholder="14:30 | Sala prove | Dulcamara – Nemorino&#10;16:00 | Sala prove | + Adina"></textarea>
-    <button class="btn red" onclick="generateODG()">Genera ODG</button>
-    <button class="btn ghost" onclick="copyODG()">Copia per WhatsApp</button>
-    <label>Anteprima</label><textarea id="odgOut" style="min-height:260px"></textarea>
+  <div class="sectionTitle">ODG</div>
+  <div class="appcards">
+    <div class="appcard"><div class="ico">⚡</div><b>ODG Smart Fenice</b><small>Generatore integrato nella 4.9.3.</small><button class="btn red" onclick="openFeniceSection('smart')">Apri ODG Smart</button></div>
+    <div class="appcard"><div class="ico">🗓️</div><b>ODG da Piano prove</b><small>Apre Piano prove e cerca il comando ODG della sezione.</small><button class="btn blue" onclick="openFeniceSection('plan-smart')">Apri</button></div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <label>ODG rapido manuale</label><textarea id="odgOut" placeholder="Può incollare o modificare qui il messaggio WhatsApp."></textarea>
+    <button class="btn" onclick="copyODG()">Copia per WhatsApp</button>
   </div>
 </section>
 
 <section id="fenice" class="view">
-  <div class="sectionTitle">Collegamenti</div>
-  <div class="card wide">
-    <h3>File collegati al repository</h3>
-    <div class="connection-list">
-      <div class="connection"><div>🎭 Fenice Palcoscenico 4.9.3</div><div class="ok">● ATTIVO</div></div>
-      <div class="connection"><div>📋 Piano Prove Elisir</div><div class="ok">● ATTIVO</div></div>
-      <div class="connection"><div>🚌 ACTV Rapido v20</div><div class="ok">● ATTIVO</div></div>
-    </div>
+  <div class="sectionTitle">Fenice Palcoscenico 4.9.3 · tutte le sezioni</div>
+  <div class="fenicegrid">
+    <div class="fcard"><div class="ico">🏠</div><b>Home</b><small>Cruscotto principale.</small><button class="btn" onclick="openFeniceSection('home')">Apri</button></div>
+    <div class="fcard"><div class="ico">🎭</div><b>Oggi</b><small>Piano della produzione attiva.</small><button class="btn" onclick="openFeniceSection('today')">Apri</button></div>
+    <div class="fcard"><div class="ico">➡️</div><b>Domani</b><small>Anticipazione operativa.</small><button class="btn" onclick="openFeniceSection('tomorrow')">Apri</button></div>
+    <div class="fcard"><div class="ico">⚡</div><b>ODG Smart</b><small>WhatsApp automatico.</small><button class="btn red" onclick="openFeniceSection('smart')">Apri</button></div>
+
+    <div class="fcard"><div class="ico">🎬</div><b>Produzioni</b><small>Cambia titolo e archivio produzioni.</small><button class="btn blue" onclick="openFeniceSection('productions')">Apri</button></div>
+    <div class="fcard"><div class="ico">➕</div><b>Nuova produzione</b><small>Crea opera o concerto.</small><button class="btn blue" onclick="openFeniceSection('new-production')">Apri</button></div>
+    <div class="fcard"><div class="ico">🗂️</div><b>Archivio produzioni</b><small>Produzioni salvate.</small><button class="btn" onclick="openFeniceSection('archive')">Apri</button></div>
+    <div class="fcard"><div class="ico">🗓️</div><b>Piano prove</b><small>Date, orari, sedi e convocati.</small><button class="btn" onclick="openFeniceSection('plan')">Apri</button></div>
+
+    <div class="fcard"><div class="ico">⚡</div><b>ODG Piano prove</b><small>Accesso al comando ODG dalla pianificazione.</small><button class="btn red" onclick="openFeniceSection('plan-smart')">Apri</button></div>
+    <div class="fcard"><div class="ico">👤</div><b>Cast / Solisti</b><small>Ruoli e interpreti.</small><button class="btn" onclick="openFeniceSection('cast')">Apri</button></div>
+    <div class="fcard"><div class="ico">🚪</div><b>Camerini</b><small>Assegnazioni per produzione.</small><button class="btn" onclick="openFeniceSection('rooms')">Apri</button></div>
+    <div class="fcard"><div class="ico">📅</div><b>Calendario</b><small>Stagione Fenice.</small><button class="btn" onclick="openFeniceSection('calendar')">Apri</button></div>
+
+    <div class="fcard"><div class="ico">🔎</div><b>Ricerca globale</b><small>Produzioni, prove, cast e camerini.</small><button class="btn" onclick="openFeniceSection('search')">Apri</button></div>
+    <div class="fcard"><div class="ico">🎚️</div><b>Palcoscenico</b><small>Modalità operativa di giornata.</small><button class="btn" onclick="openFeniceSection('stage')">Apri</button></div>
+    <div class="fcard"><div class="ico">💾</div><b>Backup / Import</b><small>Salva e trasferisce dati.</small><button class="btn" onclick="openFeniceSection('backup')">Apri</button></div>
   </div>
-  <div class="appcards" style="margin-top:12px">
-    <div class="appcard"><div class="ico">🎭</div><b>Fenice 4.9.3</b><small>Apri la versione 4.9.3 pubblicata.</small><button class="btn red" onclick="openHubApp('fenice')">Apri</button></div>
-    <div class="appcard"><div class="ico">📋</div><b>Piano Prove</b><small>Apri il piano prove locale.</small><button class="btn" onclick="openHubApp('pianoProve')">Apri</button></div>
-    <div class="appcard"><div class="ico">🚌</div><b>ACTV</b><small>Apri ACTV Rapido locale.</small><button class="btn green" onclick="openHubApp('actv')">Apri</button></div>
-  </div>
-  <div class="card wide" style="margin-top:12px">
-    <h3>Fonti ufficiali ACTV / AVM</h3>
-    <div class="row">
-      <button class="btn" onclick="openHubExternal('actvRealtime')">ACTV Tempo Reale</button>
-      <button class="btn ghost" onclick="openHubExternal('avmOrari')">AVM Orari</button>
-    </div>
+
+  <div class="sectionTitle">ACTV</div>
+  <div class="appcards">
+    <div class="appcard"><div class="ico">🚌</div><b>ACTV Rapido · ultimo</b><small>Versione pubblicata.</small><button class="btn green" onclick="openACTVLatest()">Apri</button></div>
+    <div class="appcard"><div class="ico">🕒</div><b>ACTV Tempo Reale</b><small>Portale ufficiale.</small><button class="btn" onclick="openHubExternal('actvRealtime')">Apri</button></div>
+    <div class="appcard"><div class="ico">📋</div><b>AVM Orari</b><small>Orari e percorsi ufficiali.</small><button class="btn" onclick="openHubExternal('avmOrari')">Apri</button></div>
   </div>
 </section>
 
 <section id="notes" class="view">
-  <div class="sectionTitle">Note di palcoscenico</div>
-  <div class="card wide">
-    <textarea id="noteText" placeholder="Scriva o detti una nota..."></textarea>
-    <div class="row"><button class="btn" onclick="startVoice()">🎙️ Detta</button><button class="btn red" onclick="saveNote()">Salva nota</button></div>
+  <div class="sectionTitle">Note</div>
+  <div class="card">
+    <textarea id="noteText" placeholder="Nota di palcoscenico o promemoria..."></textarea>
+    <div class="row"><button class="btn" onclick="startVoice()">🎙️ Detta</button><button class="btn red" onclick="saveNote()">Salva</button></div>
   </div>
-  <div class="card wide" style="margin-top:12px"><div id="notesList"></div></div>
+  <div class="card" style="margin-top:10px"><div id="notesList"></div></div>
 </section>
 </main>
 
 <nav><div class="inner">
 <button class="active" data-v="oggi" onclick="showView('oggi')"><span>🏠</span>Oggi</button>
 <button data-v="tasks" onclick="showView('tasks')"><span>✅</span>Da fare</button>
-<button data-v="odg" onclick="showView('odg')"><span>📌</span>ODG</button>
-<button data-v="fenice" onclick="showView('fenice')"><span>🔗</span>Collegamenti</button>
+<button data-v="odg" onclick="showView('odg')"><span>⚡</span>ODG</button>
+<button data-v="fenice" onclick="showView('fenice')"><span>🎭</span>Fenice</button>
 <button data-v="notes" onclick="showView('notes')"><span>🎙️</span>Note</button>
 </div></nav>
-<div class="toast" id="toast"></div>
+<div id="toast" class="toast"></div>
 
 <script>
-const KEY='lorenzoHubDataV1';
-const defaultData={tasks:[],waiting:[],notes:[]};
-let data=JSON.parse(localStorage.getItem(KEY)||'null')||defaultData;
-function save(){localStorage.setItem(KEY,JSON.stringify(data));renderAll()}
+const KEY='lorenzoHubDataV1';let data=JSON.parse(localStorage.getItem(KEY)||'null')||{tasks:[],notes:[]};
 function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1800)}
-window.hubToast=toast;
-function showView(v){document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));document.getElementById(v).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.v===v));window.scrollTo({top:0,behavior:'smooth'})}
-function fmtDate(s){if(!s)return'';return new Date(s+'T12:00:00').toLocaleDateString('it-IT',{weekday:'short',day:'2-digit',month:'short'})}
-function todayISO(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')}
-function addTask(){const t=document.getElementById('taskText').value.trim();if(!t)return;data.tasks.unshift({id:Date.now(),text:t,date:document.getElementById('taskDate').value||todayISO(),priority:document.getElementById('taskPriority').value,done:false});document.getElementById('taskText').value='';save();toast('Attività aggiunta')}
-function toggleTask(id){const t=data.tasks.find(x=>x.id===id);if(t)t.done=!t.done;save()}
-function delTask(id){data.tasks=data.tasks.filter(x=>x.id!==id);save()}
-function addWaiting(){const t=document.getElementById('waitText').value.trim();if(!t)return;data.waiting.unshift({id:Date.now(),text:t,who:document.getElementById('waitWho').value.trim(),date:document.getElementById('waitDate').value||todayISO()});document.getElementById('waitText').value='';document.getElementById('waitWho').value='';save();toast('Attesa aggiunta')}
-function delWaiting(id){data.waiting=data.waiting.filter(x=>x.id!==id);save()}
-function saveNote(){const t=document.getElementById('noteText').value.trim();if(!t)return;data.notes.unshift({id:Date.now(),text:t,ts:new Date().toISOString()});document.getElementById('noteText').value='';save();toast('Nota salvata')}
-function delNote(id){data.notes=data.notes.filter(x=>x.id!==id);save()}
-function esc(s){return (s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
-function renderAll(){
- const tasks=[...data.tasks].sort((a,b)=>(a.done-b.done)||a.date.localeCompare(b.date));
- document.getElementById('taskList').innerHTML=tasks.length?tasks.map(t=>`<div class="task"><input type="checkbox" ${t.done?'checked':''} onchange="toggleTask(${t.id})"><div style="flex:1"><div style="${t.done?'text-decoration:line-through;opacity:.6':''}">${esc(t.text)}</div><div class="meta">${fmtDate(t.date)} · ${t.priority}</div></div><button class="btn ghost" onclick="delTask(${t.id})">×</button></div>`).join(''):'<div class="muted">Nessuna attività.</div>';
- const open=tasks.filter(x=>!x.done);
- document.getElementById('todayTasks').innerHTML=open.slice(0,4).map(t=>`<div class="task"><div>•</div><div>${esc(t.text)}<div class="meta">${fmtDate(t.date)}</div></div></div>`).join('')||'<div class="muted small">Nessuna priorità aperta.</div>';
- document.getElementById('waitingList').innerHTML=data.waiting.length?data.waiting.map(w=>`<div class="task"><div style="flex:1"><div><span class="badge wait">ATTESA</span> ${esc(w.text)}</div><div class="meta">${esc(w.who||'')} ${w.date?'· sollecito '+fmtDate(w.date):''}</div></div><button class="btn ghost" onclick="delWaiting(${w.id})">×</button></div>`).join(''):'<div class="muted">Nessuna attesa.</div>';
- document.getElementById('waitingMini').innerHTML=data.waiting.slice(0,3).map(w=>`<div class="task"><div>•</div><div>${esc(w.text)}<div class="meta">${fmtDate(w.date)}</div></div></div>`).join('')||'<div class="muted small">Nessun sollecito.</div>';
- document.getElementById('deadlinesMini').innerHTML=open.filter(x=>x.date).slice(0,3).map(t=>`<div class="task"><div>•</div><div>${esc(t.text)}<div class="meta">${fmtDate(t.date)}</div></div></div>`).join('')||'<div class="muted small">Nessuna scadenza.</div>';
+function save(){localStorage.setItem(KEY,JSON.stringify(data));render()}
+function showView(v){document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));document.getElementById(v).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.v===v));scrollTo(0,0)}
+function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function esc(s){return String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
+function addTask(){const t=document.getElementById('taskText').value.trim();if(!t)return;data.tasks.unshift({id:Date.now(),text:t,date:document.getElementById('taskDate').value||todayISO(),priority:document.getElementById('taskPriority').value,done:false});document.getElementById('taskText').value='';save()}
+function toggleTask(id){const x=data.tasks.find(t=>t.id===id);if(x)x.done=!x.done;save()}
+function delTask(id){data.tasks=data.tasks.filter(t=>t.id!==id);save()}
+function saveNote(){const t=document.getElementById('noteText').value.trim();if(!t)return;data.notes.unshift({id:Date.now(),text:t,ts:new Date().toISOString()});document.getElementById('noteText').value='';save()}
+function delNote(id){data.notes=data.notes.filter(n=>n.id!==id);save()}
+function render(){
+ document.getElementById('taskList').innerHTML=data.tasks.length?data.tasks.map(t=>`<div class="task"><input type="checkbox" ${t.done?'checked':''} onchange="toggleTask(${t.id})"><div style="flex:1"><div style="${t.done?'text-decoration:line-through;opacity:.6':''}">${esc(t.text)}</div><div class="meta">${esc(t.date)} · ${esc(t.priority)}</div></div><button class="btn ghost" onclick="delTask(${t.id})">×</button></div>`).join(''):'<div class="muted">Nessuna attività.</div>';
  document.getElementById('notesList').innerHTML=data.notes.length?data.notes.map(n=>`<div class="task"><div style="flex:1">${esc(n.text)}<div class="meta">${new Date(n.ts).toLocaleString('it-IT')}</div></div><button class="btn ghost" onclick="delNote(${n.id})">×</button></div>`).join(''):'<div class="muted">Nessuna nota.</div>';
- const next=open[0];document.getElementById('nextAction').textContent=next?next.text:'Nessuna attività urgente.';document.getElementById('nextMeta').textContent=next?`${fmtDate(next.date)} · priorità ${next.priority}`:'Può aggiungere una nuova attività.';
- document.getElementById('statusText').textContent=open.some(x=>x.priority==='Alta')?'● Priorità da gestire':'● Collegamenti attivi';
-}
-function generateODG(){
- const d=document.getElementById('odgDate').value||todayISO();
- const dd=new Date(d+'T12:00:00').toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long'});
- const mus=document.getElementById('odgMusic').value.trim(), st=document.getElementById('odgStage').value.trim();
- let out=`📌 *ORDINE DEL GIORNO* 📌\n*${dd.charAt(0).toUpperCase()+dd.slice(1)}*\n\n`;
- if(mus){const p=mus.split('|').map(x=>x.trim());out+=`🎼 *Prova musicale*\n*${p[0]||''}*\n📍 ${p[1]||''}\n${p[2]||''}\n\n----------\n\n`;}
- if(st){out+=`🎭 *Prova di regia*\n\n`;st.split('\n').filter(Boolean).forEach(line=>{const p=line.split('|').map(x=>x.trim());out+=`*${p[0]||''}*\n${p[1]?'📍 '+p[1]+'\n':''}${p[2]||''}\n\n`;});}
- out+=`Grazie e buona serata 🌙`;document.getElementById('odgOut').value=out;
 }
 async function copyODG(){const t=document.getElementById('odgOut').value;if(!t)return;try{await navigator.clipboard.writeText(t);toast('ODG copiato')}catch(e){document.getElementById('odgOut').select();document.execCommand('copy');toast('ODG copiato')}}
-function startVoice(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){toast('Dettatura non supportata da questo browser');return}const r=new SR();r.lang='it-IT';r.interimResults=false;r.maxAlternatives=1;r.onresult=e=>{document.getElementById('noteText').value=e.results[0][0].transcript;showView('notes');toast('Dettatura acquisita')};r.onerror=()=>toast('Non riesco ad accedere al microfono');r.start()}
-function exportData(){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='lorenzo-hub-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
-function updateClock(){const n=new Date();document.getElementById('clock').textContent=n.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});const h=n.getHours();document.getElementById('greeting').textContent=(h<12?'Buongiorno':h<18?'Buon pomeriggio':'Buonasera')+', Lorenzo'}
-const n=new Date();document.getElementById('today').textContent=n.toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-document.getElementById('taskDate').value=todayISO();document.getElementById('waitDate').value=todayISO();document.getElementById('odgDate').value=todayISO();
-updateClock();setInterval(updateClock,30000);renderAll();
-let deferredPrompt=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;document.getElementById('installBtn').classList.add('show')});
-document.getElementById('installBtn').addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;document.getElementById('installBtn').classList.remove('show')});
-if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').then(reg=>reg.update()).catch(()=>{})}
+function startVoice(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){toast('Dettatura non disponibile');return}const r=new SR();r.lang='it-IT';r.onresult=e=>{document.getElementById('noteText').value=e.results[0][0].transcript;showView('notes')};r.start()}
+function exportData(){const b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='lorenzo-hub-backup.json';a.click()}
+const now=new Date();document.getElementById('today').textContent=now.toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long',year:'numeric'});document.getElementById('taskDate').value=todayISO();render();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').then(r=>r.update()).catch(()=>{});
 </script>
 </body>
 </html>

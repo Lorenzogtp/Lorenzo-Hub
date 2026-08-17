@@ -1,28 +1,11 @@
-/* Lorenzo Hub - configurazione collegamenti v1.2
-   Fenice Palcoscenico usa la versione 4.9.3 pubblicata su GitHub Pages.
+/* Lorenzo Hub v1.3 — collegamenti completi
+   Fenice: versione pubblicata 4.9.3
+   ACTV: app ACTV Rapido pubblicata e aggiornata
 */
 window.LORENZO_HUB_CONFIG = {
-  version: "1.2",
-  apps: {
-    fenice: {
-      label: "Fenice Palcoscenico 4.9.3",
-      icon: "🎭",
-      local: "https://lorenzogtp.github.io/fenice-palcoscenico-/",
-      note: "Versione 4.9.3 pubblicata"
-    },
-    pianoProve: {
-      label: "Piano Prove",
-      icon: "📋",
-      local: "./piano-prove-elisir.html",
-      note: "Piano prove collegato"
-    },
-    actv: {
-      label: "ACTV Rapido",
-      icon: "🚌",
-      local: "./actv-rapido.html",
-      note: "Versione v20 collegata"
-    }
-  },
+  version: "1.3",
+  feniceBase: "https://lorenzogtp.github.io/fenice-palcoscenico-/",
+  actvLatest: "https://actv-rapido-lorenzo.novecento64.chatgpt.site/",
   external: {
     actvRealtime: "https://oraritemporeale.actv.it/",
     avmOrari: "https://avm.avmspa.it/it/content/orari-actv",
