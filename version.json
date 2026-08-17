@@ -1,0 +1,16 @@
+{
+  "name": "Lorenzo Hub",
+  "version": "1.2",
+  "date": "2026-08-17",
+  "fenice": {
+    "version": "4.9.3",
+    "url": "https://lorenzogtp.github.io/fenice-palcoscenico-/"
+  },
+  "connections": [
+    "Fenice Palcoscenico 4.9.3 - GitHub Pages",
+    "Piano Prove Elisir - file locale",
+    "ACTV Rapido v20 - file locale",
+    "ACTV Tempo Reale - collegamento esterno",
+    "AVM Orari - collegamento esterno"
+  ]
+}

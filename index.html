@@ -4,44 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#141c26">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
 <title>Lorenzo Hub</title>
 <style>
 :root{--bg:#0f1720;--card:#182330;--card2:#202d3a;--txt:#f4f6f8;--muted:#aeb9c5;--accent:#d4484f;--ok:#46a36f;--warn:#d59a36;--line:#2d3a47}
-*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0d141c,#101923 45%,#0e151d);color:var(--txt);min-height:100vh}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0d141c,#101923 45%,#0e151d);color:var(--txt);min-height:100vh}
 header{position:sticky;top:0;z-index:10;background:rgba(15,23,32,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 16px 10px}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:800;font-size:20px}.date{font-size:13px;color:var(--muted)}
-main{max-width:820px;margin:auto;padding:16px 14px 96px}.hero{background:linear-gradient(135deg,#1c2b39,#223747);border:1px solid #314656;border-radius:20px;padding:18px;margin-bottom:14px}
-.hero h1{font-size:25px;margin:0 0 6px}.hero p{margin:0;color:var(--muted)}.status{display:inline-flex;margin-top:12px;padding:7px 10px;border-radius:999px;background:#112a20;color:#9de0b8;font-weight:700;font-size:13px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:850;font-size:20px}.date{font-size:13px;color:var(--muted)}
+main{max-width:860px;margin:auto;padding:16px 14px 100px}.hero{background:linear-gradient(135deg,#1c2b39,#223747);border:1px solid #314656;border-radius:20px;padding:18px;margin-bottom:14px}
+.hero h1{font-size:25px;margin:0 0 6px}.hero p{margin:0;color:var(--muted)}.status{display:inline-flex;margin-top:12px;padding:7px 10px;border-radius:999px;background:#112a20;color:#9de0b8;font-weight:750;font-size:13px}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px}.card h3{margin:0 0 10px;font-size:17px}.wide{grid-column:1/-1}
 .bigbtn,.btn{border:0;border-radius:14px;padding:13px 14px;font-weight:800;cursor:pointer}.bigbtn{width:100%;background:#f3f5f7;color:#111;font-size:16px}.btn{background:#263646;color:white}.btn.red{background:var(--accent)}.btn.green{background:var(--ok)}.btn.ghost{background:transparent;border:1px solid #435465;color:#e7edf2}
-.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.task{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}.task:last-child{border-bottom:0}.task input{margin-top:3px;transform:scale(1.2)}.task .meta{font-size:12px;color:var(--muted);margin-top:3px}.badge{font-size:11px;padding:4px 7px;border-radius:999px;background:#3a2f13;color:#f5cf77}.badge.wait{background:#2e233a;color:#d8b6ff}.badge.ok{background:#163523;color:#9fe6ba}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.task{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}.task:last-child{border-bottom:0}.task input[type=checkbox]{margin-top:3px;transform:scale(1.2)}.task .meta{font-size:12px;color:var(--muted);margin-top:3px}
+.badge{font-size:11px;padding:4px 7px;border-radius:999px;background:#3a2f13;color:#f5cf77}.badge.wait{background:#2e233a;color:#d8b6ff}.badge.ok{background:#163523;color:#9fe6ba}
 input,textarea,select{width:100%;background:#0f1720;border:1px solid #344454;color:#fff;border-radius:12px;padding:11px 12px;font:inherit}textarea{min-height:92px;resize:vertical}
 label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}.sectionTitle{font-size:13px;color:var(--muted);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:18px 2px 8px}
-.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.quick button{background:var(--card);border:1px solid var(--line);color:#fff;border-radius:15px;padding:12px 6px;font-size:12px;min-height:70px}.quick .ico{display:block;font-size:24px;margin-bottom:5px}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.quick button{background:var(--card);border:1px solid var(--line);color:#fff;border-radius:15px;padding:12px 6px;font-size:12px;min-height:76px}.quick .ico{display:block;font-size:25px;margin-bottom:5px}
+.appcards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.appcard{background:#111b25;border:1px solid #344454;border-radius:16px;padding:14px}.appcard .ico{font-size:28px}.appcard b{display:block;margin:7px 0 3px}.appcard small{display:block;color:var(--muted);min-height:32px}.appcard button{margin-top:10px;width:100%}
 nav{position:fixed;left:0;right:0;bottom:0;background:rgba(12,19,27,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:20;padding-bottom:env(safe-area-inset-bottom)}
-nav .inner{width:min(820px,100%);display:grid;grid-template-columns:repeat(5,1fr)}nav button{background:none;border:0;color:#9eabb7;padding:10px 2px 8px;font-size:11px}nav button.active{color:#fff;font-weight:800}nav span{display:block;font-size:20px;margin-bottom:2px}
-.view{display:none}.view.active{display:block}.muted{color:var(--muted)}.small{font-size:12px}.nextbox{border-left:4px solid var(--accent);padding-left:12px}.time{font-size:28px;font-weight:900}.danger{color:#ff9da2}
-.install{display:none;margin-top:10px}.install.show{display:block}
+nav .inner{width:min(860px,100%);display:grid;grid-template-columns:repeat(5,1fr)}nav button{background:none;border:0;color:#9eabb7;padding:10px 2px 8px;font-size:11px}nav button.active{color:#fff;font-weight:800}nav span{display:block;font-size:20px;margin-bottom:2px}
+.view{display:none}.view.active{display:block}.muted{color:var(--muted)}.small{font-size:12px}.nextbox{border-left:4px solid var(--accent);padding-left:12px}.time{font-size:28px;font-weight:900}.install{display:none;margin-top:10px}.install.show{display:block}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:86px;background:#f5f7f9;color:#111;padding:10px 14px;border-radius:12px;font-weight:700;opacity:0;pointer-events:none;transition:.2s;z-index:50}.toast.show{opacity:1}
-@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}.wide{grid-column:1/-1}.quick{grid-template-columns:repeat(6,1fr)}}
+.connected{border-color:#2f7050}.connection-list{display:grid;gap:8px}.connection{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#101923;border:1px solid var(--line);border-radius:12px;padding:10px}.connection .ok{color:#9de0b8;font-weight:800}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}.wide{grid-column:1/-1}.quick{grid-template-columns:repeat(6,1fr)}.appcards{grid-template-columns:repeat(3,1fr)}}
 </style>
+<script src="./config.js"></script>
+<script src="./links.js"></script>
 </head>
 <body>
-<header>
-  <div class="top">
-    <div><div class="brand">Lorenzo Hub</div><div class="date" id="today"></div></div>
-    <button class="btn ghost" onclick="exportData()">Backup</button>
-  </div>
-</header>
-
+<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="muted small">v1.2</span></div><div class="date" id="today"></div></div><button class="btn ghost" onclick="exportData()">Backup</button></div></header>
 <main>
 <section id="oggi" class="view active">
   <div class="hero">
     <h1 id="greeting">Buon pomeriggio, Lorenzo</h1>
-    <p>Il Suo cruscotto operativo personale.</p>
-    <div class="status" id="statusText">● Tutto sotto controllo</div>
+    <p>Fenice, spostamenti, ODG e attività in un unico cruscotto.</p>
+    <div class="status" id="statusText">● Collegamenti attivi</div>
     <button id="installBtn" class="bigbtn install">Installa Lorenzo Hub</button>
   </div>
 
@@ -52,10 +50,17 @@ nav .inner{width:min(820px,100%);display:grid;grid-template-columns:repeat(5,1fr
     <div class="muted small" id="nextMeta">Le prossime attività vengono ordinate automaticamente.</div>
   </div>
 
+  <div class="sectionTitle">App collegate</div>
+  <div class="appcards">
+    <div class="appcard connected"><div class="ico">🎭</div><b>Fenice Palcoscenico 4.9.3</b><small>Collegamento alla Sua versione 4.9.3 pubblicata su GitHub.</small><button class="btn red" onclick="openHubApp('fenice')">Apri Fenice</button></div>
+    <div class="appcard connected"><div class="ico">📋</div><b>Piano Prove</b><small>Piano prove Elisir collegato localmente.</small><button class="btn" onclick="openHubApp('pianoProve')">Apri Piano Prove</button></div>
+    <div class="appcard connected"><div class="ico">🚌</div><b>ACTV Rapido</b><small>ACTV Rapido v20 incluso nel repository.</small><button class="btn green" onclick="openHubApp('actv')">Apri ACTV</button></div>
+  </div>
+
   <div class="sectionTitle">Accessi rapidi</div>
   <div class="quick">
-    <button onclick="showView('fenice')"><span class="ico">🎭</span>Fenice</button>
-    <button onclick="openACTV()"><span class="ico">🚌</span>ACTV</button>
+    <button onclick="openHubApp('fenice')"><span class="ico">🎭</span>Fenice</button>
+    <button onclick="openHubApp('actv')"><span class="ico">🚌</span>ACTV</button>
     <button onclick="showView('odg')"><span class="ico">📌</span>ODG</button>
     <button onclick="showView('tasks')"><span class="ico">✅</span>Da fare</button>
     <button onclick="showView('waiting')"><span class="ico">⏳</span>In attesa</button>
@@ -107,16 +112,26 @@ nav .inner{width:min(820px,100%);display:grid;grid-template-columns:repeat(5,1fr
 </section>
 
 <section id="fenice" class="view">
-  <div class="sectionTitle">Fenice</div>
-  <div class="grid">
-    <div class="card"><h3>📋 Piano prove</h3><p class="muted small">Collegamento rapido alla Sua app Fenice.</p><button class="btn" onclick="openFenice()">Apri</button></div>
-    <div class="card"><h3>🎭 Produzioni</h3><p class="muted small">Annoti titoli, cast e note operative.</p><button class="btn" onclick="showView('notes')">Note</button></div>
-    <div class="card"><h3>👔 Camerini</h3><p class="muted small">Accesso rapido ai cartelli e alle assegnazioni.</p><button class="btn" onclick="showView('notes')">Apri note</button></div>
+  <div class="sectionTitle">Collegamenti</div>
+  <div class="card wide">
+    <h3>File collegati al repository</h3>
+    <div class="connection-list">
+      <div class="connection"><div>🎭 Fenice Palcoscenico 4.9.3</div><div class="ok">● ATTIVO</div></div>
+      <div class="connection"><div>📋 Piano Prove Elisir</div><div class="ok">● ATTIVO</div></div>
+      <div class="connection"><div>🚌 ACTV Rapido v20</div><div class="ok">● ATTIVO</div></div>
+    </div>
+  </div>
+  <div class="appcards" style="margin-top:12px">
+    <div class="appcard"><div class="ico">🎭</div><b>Fenice 4.9.3</b><small>Apri la versione 4.9.3 pubblicata.</small><button class="btn red" onclick="openHubApp('fenice')">Apri</button></div>
+    <div class="appcard"><div class="ico">📋</div><b>Piano Prove</b><small>Apri il piano prove locale.</small><button class="btn" onclick="openHubApp('pianoProve')">Apri</button></div>
+    <div class="appcard"><div class="ico">🚌</div><b>ACTV</b><small>Apri ACTV Rapido locale.</small><button class="btn green" onclick="openHubApp('actv')">Apri</button></div>
   </div>
   <div class="card wide" style="margin-top:12px">
-    <h3>Impostazioni collegamenti</h3>
-    <label>URL app Fenice</label><input id="feniceUrl" placeholder="Incolli qui il link della Sua app Fenice">
-    <button class="btn green" style="margin-top:10px" onclick="saveLinks()">Salva</button>
+    <h3>Fonti ufficiali ACTV / AVM</h3>
+    <div class="row">
+      <button class="btn" onclick="openHubExternal('actvRealtime')">ACTV Tempo Reale</button>
+      <button class="btn ghost" onclick="openHubExternal('avmOrari')">AVM Orari</button>
+    </div>
   </div>
 </section>
 
@@ -134,97 +149,60 @@ nav .inner{width:min(820px,100%);display:grid;grid-template-columns:repeat(5,1fr
 <button class="active" data-v="oggi" onclick="showView('oggi')"><span>🏠</span>Oggi</button>
 <button data-v="tasks" onclick="showView('tasks')"><span>✅</span>Da fare</button>
 <button data-v="odg" onclick="showView('odg')"><span>📌</span>ODG</button>
-<button data-v="fenice" onclick="showView('fenice')"><span>🎭</span>Fenice</button>
+<button data-v="fenice" onclick="showView('fenice')"><span>🔗</span>Collegamenti</button>
 <button data-v="notes" onclick="showView('notes')"><span>🎙️</span>Note</button>
 </div></nav>
 <div class="toast" id="toast"></div>
 
 <script>
 const KEY='lorenzoHubDataV1';
-const defaultData={tasks:[],waiting:[],notes:[],links:{fenice:'',actv:'https://actv-rapido-lorenzo.novecento64.chatgpt.site/'}};
+const defaultData={tasks:[],waiting:[],notes:[]};
 let data=JSON.parse(localStorage.getItem(KEY)||'null')||defaultData;
 function save(){localStorage.setItem(KEY,JSON.stringify(data));renderAll()}
 function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1800)}
-function showView(v){
- document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));
- document.getElementById(v).classList.add('active');
- document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.v===v));
- window.scrollTo({top:0,behavior:'smooth'});
-}
+window.hubToast=toast;
+function showView(v){document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));document.getElementById(v).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.v===v));window.scrollTo({top:0,behavior:'smooth'})}
 function fmtDate(s){if(!s)return'';return new Date(s+'T12:00:00').toLocaleDateString('it-IT',{weekday:'short',day:'2-digit',month:'short'})}
-function todayISO(){return new Date().toISOString().slice(0,10)}
-function addTask(){
- const t=document.getElementById('taskText').value.trim(); if(!t)return;
- data.tasks.unshift({id:Date.now(),text:t,date:document.getElementById('taskDate').value||todayISO(),priority:document.getElementById('taskPriority').value,done:false});
- document.getElementById('taskText').value=''; save(); toast('Attività aggiunta');
-}
-function toggleTask(id){const t=data.tasks.find(x=>x.id===id); if(t)t.done=!t.done; save()}
+function todayISO(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')}
+function addTask(){const t=document.getElementById('taskText').value.trim();if(!t)return;data.tasks.unshift({id:Date.now(),text:t,date:document.getElementById('taskDate').value||todayISO(),priority:document.getElementById('taskPriority').value,done:false});document.getElementById('taskText').value='';save();toast('Attività aggiunta')}
+function toggleTask(id){const t=data.tasks.find(x=>x.id===id);if(t)t.done=!t.done;save()}
 function delTask(id){data.tasks=data.tasks.filter(x=>x.id!==id);save()}
-function addWaiting(){
- const t=document.getElementById('waitText').value.trim(); if(!t)return;
- data.waiting.unshift({id:Date.now(),text:t,who:document.getElementById('waitWho').value.trim(),date:document.getElementById('waitDate').value||todayISO()});
- ['waitText','waitWho'].forEach(id=>document.getElementById(id).value='');save();toast('Attesa aggiunta');
-}
+function addWaiting(){const t=document.getElementById('waitText').value.trim();if(!t)return;data.waiting.unshift({id:Date.now(),text:t,who:document.getElementById('waitWho').value.trim(),date:document.getElementById('waitDate').value||todayISO()});document.getElementById('waitText').value='';document.getElementById('waitWho').value='';save();toast('Attesa aggiunta')}
 function delWaiting(id){data.waiting=data.waiting.filter(x=>x.id!==id);save()}
-function saveNote(){
- const t=document.getElementById('noteText').value.trim(); if(!t)return;
- data.notes.unshift({id:Date.now(),text:t,ts:new Date().toISOString()}); document.getElementById('noteText').value=''; save();toast('Nota salvata');
-}
+function saveNote(){const t=document.getElementById('noteText').value.trim();if(!t)return;data.notes.unshift({id:Date.now(),text:t,ts:new Date().toISOString()});document.getElementById('noteText').value='';save();toast('Nota salvata')}
 function delNote(id){data.notes=data.notes.filter(x=>x.id!==id);save()}
+function esc(s){return (s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
 function renderAll(){
  const tasks=[...data.tasks].sort((a,b)=>(a.done-b.done)||a.date.localeCompare(b.date));
  document.getElementById('taskList').innerHTML=tasks.length?tasks.map(t=>`<div class="task"><input type="checkbox" ${t.done?'checked':''} onchange="toggleTask(${t.id})"><div style="flex:1"><div style="${t.done?'text-decoration:line-through;opacity:.6':''}">${esc(t.text)}</div><div class="meta">${fmtDate(t.date)} · ${t.priority}</div></div><button class="btn ghost" onclick="delTask(${t.id})">×</button></div>`).join(''):'<div class="muted">Nessuna attività.</div>';
- const td=tasks.filter(x=>!x.done).slice(0,4);
- document.getElementById('todayTasks').innerHTML=td.length?td.map(t=>`<div class="task"><div>•</div><div>${esc(t.text)}<div class="meta">${fmtDate(t.date)}</div></div></div>`).join(''):'<div class="muted small">Nessuna priorità aperta.</div>';
+ const open=tasks.filter(x=>!x.done);
+ document.getElementById('todayTasks').innerHTML=open.slice(0,4).map(t=>`<div class="task"><div>•</div><div>${esc(t.text)}<div class="meta">${fmtDate(t.date)}</div></div></div>`).join('')||'<div class="muted small">Nessuna priorità aperta.</div>';
  document.getElementById('waitingList').innerHTML=data.waiting.length?data.waiting.map(w=>`<div class="task"><div style="flex:1"><div><span class="badge wait">ATTESA</span> ${esc(w.text)}</div><div class="meta">${esc(w.who||'')} ${w.date?'· sollecito '+fmtDate(w.date):''}</div></div><button class="btn ghost" onclick="delWaiting(${w.id})">×</button></div>`).join(''):'<div class="muted">Nessuna attesa.</div>';
  document.getElementById('waitingMini').innerHTML=data.waiting.slice(0,3).map(w=>`<div class="task"><div>•</div><div>${esc(w.text)}<div class="meta">${fmtDate(w.date)}</div></div></div>`).join('')||'<div class="muted small">Nessun sollecito.</div>';
- document.getElementById('deadlinesMini').innerHTML=tasks.filter(x=>!x.done&&x.date).slice(0,3).map(t=>`<div class="task"><div>•</div><div>${esc(t.text)}<div class="meta">${fmtDate(t.date)}</div></div></div>`).join('')||'<div class="muted small">Nessuna scadenza.</div>';
+ document.getElementById('deadlinesMini').innerHTML=open.filter(x=>x.date).slice(0,3).map(t=>`<div class="task"><div>•</div><div>${esc(t.text)}<div class="meta">${fmtDate(t.date)}</div></div></div>`).join('')||'<div class="muted small">Nessuna scadenza.</div>';
  document.getElementById('notesList').innerHTML=data.notes.length?data.notes.map(n=>`<div class="task"><div style="flex:1">${esc(n.text)}<div class="meta">${new Date(n.ts).toLocaleString('it-IT')}</div></div><button class="btn ghost" onclick="delNote(${n.id})">×</button></div>`).join(''):'<div class="muted">Nessuna nota.</div>';
- document.getElementById('feniceUrl').value=data.links.fenice||'';
- const next=tasks.find(x=>!x.done);
- document.getElementById('nextAction').textContent=next?next.text:'Nessuna attività urgente.';
- document.getElementById('nextMeta').textContent=next?`${fmtDate(next.date)} · priorità ${next.priority}`:'Può aggiungere una nuova attività.';
- document.getElementById('statusText').textContent=(tasks.filter(x=>!x.done&&x.priority==='Alta').length>0)?'● Priorità da gestire':'● Tutto sotto controllo';
+ const next=open[0];document.getElementById('nextAction').textContent=next?next.text:'Nessuna attività urgente.';document.getElementById('nextMeta').textContent=next?`${fmtDate(next.date)} · priorità ${next.priority}`:'Può aggiungere una nuova attività.';
+ document.getElementById('statusText').textContent=open.some(x=>x.priority==='Alta')?'● Priorità da gestire':'● Collegamenti attivi';
 }
-function esc(s){return (s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
-function saveLinks(){data.links.fenice=document.getElementById('feniceUrl').value.trim();save();toast('Collegamento salvato')}
-function openFenice(){if(data.links.fenice)window.open(data.links.fenice,'_blank');else{showView('fenice');toast('Inserisca prima il link Fenice')}}
-function openACTV(){window.open(data.links.actv,'_blank')}
 function generateODG(){
  const d=document.getElementById('odgDate').value||todayISO();
  const dd=new Date(d+'T12:00:00').toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long'});
- const mus=document.getElementById('odgMusic').value.trim();
- const st=document.getElementById('odgStage').value.trim();
+ const mus=document.getElementById('odgMusic').value.trim(), st=document.getElementById('odgStage').value.trim();
  let out=`📌 *ORDINE DEL GIORNO* 📌\n*${dd.charAt(0).toUpperCase()+dd.slice(1)}*\n\n`;
  if(mus){const p=mus.split('|').map(x=>x.trim());out+=`🎼 *Prova musicale*\n*${p[0]||''}*\n📍 ${p[1]||''}\n${p[2]||''}\n\n----------\n\n`;}
  if(st){out+=`🎭 *Prova di regia*\n\n`;st.split('\n').filter(Boolean).forEach(line=>{const p=line.split('|').map(x=>x.trim());out+=`*${p[0]||''}*\n${p[1]?'📍 '+p[1]+'\n':''}${p[2]||''}\n\n`;});}
- out+=`Grazie e buona serata 🌙`;
- document.getElementById('odgOut').value=out;
+ out+=`Grazie e buona serata 🌙`;document.getElementById('odgOut').value=out;
 }
 async function copyODG(){const t=document.getElementById('odgOut').value;if(!t)return;try{await navigator.clipboard.writeText(t);toast('ODG copiato')}catch(e){document.getElementById('odgOut').select();document.execCommand('copy');toast('ODG copiato')}}
-function startVoice(){
- const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
- if(!SR){toast('Dettatura non supportata da questo browser');return}
- const r=new SR();r.lang='it-IT';r.interimResults=false;r.maxAlternatives=1;
- r.onresult=e=>{const t=e.results[0][0].transcript;document.getElementById('noteText').value=t;showView('notes');toast('Dettatura acquisita')};
- r.onerror=()=>toast('Non riesco ad accedere al microfono');r.start();
-}
-function exportData(){
- const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
- const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='lorenzo-hub-backup.json';a.click();URL.revokeObjectURL(a.href);
-}
-function updateClock(){
- const n=new Date();document.getElementById('clock').textContent=n.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
- const h=n.getHours();document.getElementById('greeting').textContent=(h<12?'Buongiorno':h<18?'Buon pomeriggio':'Buonasera')+', Lorenzo';
-}
+function startVoice(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){toast('Dettatura non supportata da questo browser');return}const r=new SR();r.lang='it-IT';r.interimResults=false;r.maxAlternatives=1;r.onresult=e=>{document.getElementById('noteText').value=e.results[0][0].transcript;showView('notes');toast('Dettatura acquisita')};r.onerror=()=>toast('Non riesco ad accedere al microfono');r.start()}
+function exportData(){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='lorenzo-hub-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function updateClock(){const n=new Date();document.getElementById('clock').textContent=n.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});const h=n.getHours();document.getElementById('greeting').textContent=(h<12?'Buongiorno':h<18?'Buon pomeriggio':'Buonasera')+', Lorenzo'}
 const n=new Date();document.getElementById('today').textContent=n.toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 document.getElementById('taskDate').value=todayISO();document.getElementById('waitDate').value=todayISO();document.getElementById('odgDate').value=todayISO();
 updateClock();setInterval(updateClock,30000);renderAll();
-
-let deferredPrompt=null;
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;document.getElementById('installBtn').classList.add('show')});
+let deferredPrompt=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;document.getElementById('installBtn').classList.add('show')});
 document.getElementById('installBtn').addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;document.getElementById('installBtn').classList.remove('show')});
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js');
+if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').then(reg=>reg.update()).catch(()=>{})}
 </script>
 </body>
 </html>

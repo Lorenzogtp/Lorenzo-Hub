@@ -1,0 +1,29 @@
+LORENZO HUB v1.2 — FENICE PALCOSCENICO 4.9.3
+
+Questa versione usa Fenice Palcoscenico 4.9.3.
+
+MODIFICA PRINCIPALE
+- Il collegamento Fenice punta alla versione 4.9.3 pubblicata:
+  https://lorenzogtp.github.io/fenice-palcoscenico-/
+- La vecchia copia locale Fenice 4.7.1 è stata rimossa per evitare aperture della versione sbagliata.
+
+FILE DA CARICARE NEL REPOSITORY Lorenzo-Hub
+Caricare TUTTI i file estratti da questo ZIP nella radice del repository.
+Quando GitHub chiede come gestire i file con lo stesso nome, confermare il commit sul branch main.
+
+In particolare vengono aggiornati:
+- index.html
+- config.js
+- sw.js
+- version.json
+
+Restano collegati:
+- Piano Prove Elisir
+- ACTV Rapido v20
+- ACTV Tempo Reale / AVM
+
+Dopo il commit:
+1. Attendere circa 1-3 minuti.
+2. Aprire Lorenzo Hub da GitHub Pages.
+3. Chiudere e riaprire l'app se fosse ancora visibile la versione precedente.
+4. In Collegamenti deve comparire: Fenice Palcoscenico 4.9.3.

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#07383E">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%2296%22%20fill%3D%22%2307383E%22%2F%3E%3Crect%20x%3D%2228%22%20y%3D%2228%22%20width%3D%22456%22%20height%3D%22456%22%20rx%3D%2272%22%20fill%3D%22none%22%20stroke%3D%22%23C9A84D%22%20stroke-width%3D%2212%22%2F%3E%3Cpath%20d%3D%22M110%20185h292M110%20185v170M402%20185v170M130%20188Q256%2095%20382%20188%22%20fill%3D%22none%22%20stroke%3D%22%23C9A84D%22%20stroke-width%3D%2214%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M125%20190h120L170%20350h-45zM387%20190H267l75%20160h45z%22%20fill%3D%22%23fff%22%2F%3E%3Crect%20x%3D%22180%22%20y%3D%22286%22%20width%3D%22152%22%20height%3D%2294%22%20rx%3D%2224%22%20fill%3D%22%230B4A51%22%2F%3E%3Ctext%20x%3D%22256%22%20y%3D%22355%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2286%22%20fill%3D%22%23C9A84D%22%3EPP%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%2296%22%20fill%3D%22%2307383E%22%2F%3E%3Crect%20x%3D%2228%22%20y%3D%2228%22%20width%3D%22456%22%20height%3D%22456%22%20rx%3D%2272%22%20fill%3D%22none%22%20stroke%3D%22%23C9A84D%22%20stroke-width%3D%2212%22%2F%3E%3Cpath%20d%3D%22M110%20185h292M110%20185v170M402%20185v170M130%20188Q256%2095%20382%20188%22%20fill%3D%22none%22%20stroke%3D%22%23C9A84D%22%20stroke-width%3D%2214%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M125%20190h120L170%20350h-45zM387%20190H267l75%20160h45z%22%20fill%3D%22%23fff%22%2F%3E%3Crect%20x%3D%22180%22%20y%3D%22286%22%20width%3D%22152%22%20height%3D%2294%22%20rx%3D%2224%22%20fill%3D%22%230B4A51%22%2F%3E%3Ctext%20x%3D%22256%22%20y%3D%22355%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2286%22%20fill%3D%22%23C9A84D%22%3EPP%3C%2Ftext%3E%3C%2Fsvg%3E">
+<title>Piano prove · Elisir d’amore · 11–26 agosto 2026</title>
+<style>
+:root{
+  color-scheme:light;
+  --notte:#07383E;--notte2:#0B4A51;--laguna:#12606A;--lagunaChiaro:#E5F0EF;
+  --ottone:#C9A84D;--fondo:#F4F5F3;--carta:#fff;--ink:#172321;--muted:#667572;
+  --riga:#DDE5E2;--rigaForte:#C8D4D0;--oggi:#FFF7D9;--festivo:#FFF0EA;
+  --ombra:0 8px 24px rgba(12,46,45,.08);--radius:18px;
+  --regia:#7B4C8E;--musicale:#276B8A;--tecnica:#6C5B34;--luci:#B06B23;--assieme:#3A7D5D;
+  --montaggio:#5D6770;--recita:#962D43;--riposo:#8A6A2F;--orchestra:#2E668B;--incontro:#6C538D;--antepiano:#7A4B5C;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--fondo);max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:var(--fondo);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;line-height:1.48;max-width:100%;overflow-x:hidden}
+button,input{font:inherit}button{cursor:pointer;touch-action:manipulation}.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}[hidden]{display:none!important}
+.appbar{position:sticky;top:0;z-index:80;color:#fff;background:linear-gradient(135deg,var(--notte),var(--notte2));border-bottom:3px solid var(--ottone);box-shadow:0 8px 20px rgba(7,56,62,.18);padding-top:env(safe-area-inset-top)}
+.appbar-inner{max-width:1260px;margin:0 auto;padding:12px 14px 11px}.brand-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:11px;min-width:0}.brand-mark{width:38px;height:38px;flex:0 0 38px;border:1px solid rgba(255,255,255,.24);border-radius:12px;display:grid;place-items:center;color:var(--ottone);font-weight:900;letter-spacing:-.06em;background:rgba(255,255,255,.07)}.brand-title{font-size:17px;line-height:1.1;font-weight:850;letter-spacing:.025em}.brand-subtitle{margin-top:3px;color:#C8DCDA;font-size:12px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.header-actions{display:flex;gap:7px}.icon-button{min-width:42px;height:42px;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:rgba(255,255,255,.08);color:#fff;display:inline-grid;place-items:center;font-weight:800}.icon-button:hover{background:rgba(255,255,255,.15)}
+.search-row{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-top:11px}.search-wrap{position:relative}.search-wrap svg{position:absolute;left:14px;top:50%;width:19px;height:19px;transform:translateY(-50%);stroke:var(--muted);fill:none;stroke-width:2.2;pointer-events:none}.search-wrap input{width:100%;height:48px;border:0;border-radius:14px;background:#fff;color:var(--ink);padding:0 46px 0 43px;font-size:16px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}.clear-search{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:0;border-radius:50%;background:#E9EEEC;color:var(--ink);font-weight:850}
+.quick-row{display:flex;gap:7px;overflow:auto;margin-top:9px;padding-bottom:1px;scrollbar-width:none}.quick-row::-webkit-scrollbar{display:none}.quick{flex:0 0 auto;min-height:36px;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 12px;background:rgba(255,255,255,.08);color:#EAF2F1;font-size:13px;font-weight:750;white-space:nowrap}.quick.active{background:var(--ottone);border-color:var(--ottone);color:var(--notte)}
+.page-shell{max-width:1260px;margin:0 auto;padding:14px 12px 72px}.intro{margin:2px 0 14px;padding:12px 14px;border:1px solid #BCD2CF;border-radius:14px;background:#EDF5F3;color:#244541;font-size:13px}.intro strong{color:var(--notte)}
+.filters{border:1px solid var(--riga);border-radius:20px;background:#fff;box-shadow:0 4px 16px rgba(18,59,57,.06);padding:0 14px 14px;margin-bottom:16px}.filter-head{display:flex;align-items:center;justify-content:space-between;padding:15px 0 11px;border-bottom:1px solid var(--riga)}.filter-head h2{margin:0;font-size:19px}.filter-head small{color:var(--muted);font-weight:700}.filter-group{padding:13px 0;border-bottom:1px solid var(--riga)}.filter-group:last-of-type{border-bottom:0}.filter-label{display:block;margin-bottom:8px;color:var(--muted);font-size:11px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}.chip-scroll{display:flex;gap:8px;overflow:auto;padding:1px 1px 4px;scrollbar-width:none}.chip-scroll::-webkit-scrollbar{display:none}.filter-chip{flex:0 0 auto;min-height:40px;border:1px solid var(--rigaForte);border-radius:999px;background:#fff;color:var(--ink);padding:8px 13px;font-size:13px;font-weight:780;white-space:nowrap}.filter-chip.active{background:var(--notte);border-color:var(--notte);color:#fff}.filter-grid{display:grid;grid-template-columns:1fr;gap:10px}.control{width:100%;height:46px;border:1px solid var(--rigaForte);border-radius:12px;background:#fff;color:var(--ink);padding:0 12px}.reset-button{width:100%;min-height:44px;border:1px solid var(--rigaForte);border-radius:12px;background:#fff;color:var(--ink);font-weight:800}
+.results-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:4px 2px 13px}.results-kicker{color:var(--muted);font-size:11px;font-weight:850;letter-spacing:.13em;text-transform:uppercase}.results-count{margin-top:2px;font-size:22px;font-weight:850;letter-spacing:-.025em}.results-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.small-action{border:1px solid var(--rigaForte);border-radius:11px;background:#fff;color:var(--ink);padding:9px 11px;font-size:13px;font-weight:750}
+.day-card{position:relative;display:grid;grid-template-columns:68px minmax(0,1fr);overflow:hidden;margin-bottom:10px;border:1px solid var(--riga);border-radius:var(--radius);background:var(--carta);box-shadow:0 2px 8px rgba(15,54,52,.045)}.day-card.today{border:2px solid var(--ottone);box-shadow:0 8px 24px rgba(133,106,32,.14)}.day-card.holiday .day-rail{background:var(--festivo)}.day-card.today .day-rail{background:var(--oggi)}.day-rail{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:100%;padding:13px 4px;background:var(--lagunaChiaro);border-right:1px solid #D2E2DF}.day-number{font-size:27px;line-height:1;font-weight:900;color:var(--laguna);letter-spacing:-.04em}.day-card.holiday .day-number{color:var(--recita)}.day-week{margin-top:5px;color:var(--muted);font-size:10px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}.day-month{margin-top:2px;color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase}.day-body{min-width:0;padding:11px 13px 12px}.day-meta{display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap}.badge{display:inline-flex;align-items:center;border-radius:999px;padding:3px 8px;font-size:10px;font-weight:850;letter-spacing:.04em;text-transform:uppercase}.today-badge{background:var(--ottone);color:var(--notte)}.multi-badge{background:#E7EFEF;color:#28514D}.holiday-badge{background:#F9DED2;color:#8E3C2B}.odg-link{margin-left:auto;border:1px solid #BCD2CF;background:#EDF5F3;color:#0B4A51;text-decoration:none;font-size:11.5px;font-weight:800;padding:5px 10px;border-radius:999px;white-space:nowrap}.share-day{border:1px solid var(--riga);background:#fff;color:var(--muted);font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:999px}
+.event-row{position:relative;padding:9px 0 9px 15px;border-top:1px dashed var(--riga);overflow-wrap:anywhere}.event-row:first-of-type{border-top:0}.event-row::before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;background:var(--event-color,var(--laguna))}.event-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px}.event-time{font-variant-numeric:tabular-nums;font-weight:900;color:var(--notte);font-size:14px}.venue-name{color:var(--muted);font-size:11px;font-weight:850;letter-spacing:.05em;text-transform:uppercase}.type-badge{border-radius:999px;padding:2px 7px;color:#fff;background:var(--event-color,var(--laguna));font-size:9.5px;font-weight:900;letter-spacing:.05em;text-transform:uppercase}.event-text{font-size:15px;line-height:1.46}.event-note{margin-top:3px;color:#5F6D69;font-size:13px}.no-results{text-align:center;padding:50px 20px;color:var(--muted)}.back-top{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:70;width:48px;height:48px;border:0;border-radius:50%;background:var(--ottone);color:var(--notte);font-size:21px;font-weight:900;box-shadow:0 8px 22px rgba(0,0,0,.24)}
+.type-regia{--event-color:var(--regia)}.type-musicale{--event-color:var(--musicale)}.type-tecnica{--event-color:var(--tecnica)}.type-luci{--event-color:var(--luci)}.type-assieme{--event-color:var(--assieme)}.type-montaggio{--event-color:var(--montaggio)}.type-recita{--event-color:var(--recita)}.type-riposo,.type-festivo{--event-color:var(--riposo)}.type-orchestra{--event-color:var(--orchestra)}.type-incontro{--event-color:var(--incontro)}.type-antepiano{--event-color:var(--antepiano)}
+mark{background:#FFE27A;color:inherit;border-radius:3px;padding:0 1px}
+@media(min-width:700px){.filter-grid{grid-template-columns:1fr 1fr}.day-card{grid-template-columns:82px minmax(0,1fr)}.day-body{padding:12px 17px 14px}.event-row{padding-left:17px}.brand-title{font-size:18px}}
+@media(min-width:1000px){.appbar-inner{display:grid;grid-template-columns:330px minmax(0,1fr) auto;align-items:center;gap:18px;padding-top:14px;padding-bottom:13px}.brand-row{grid-column:1}.search-row{grid-column:2;margin:0}.quick-row{grid-column:3;margin:0;overflow:visible}.page-shell{padding-top:22px}.filters{display:grid;grid-template-columns:1.15fr 1fr 1fr;column-gap:18px;padding-bottom:6px}.filter-head{grid-column:1/-1}.filter-group{border-bottom:0}.filter-group.date-group{grid-column:1/-1;padding-top:0}.filter-group.reset-group{display:flex;align-items:end}.reset-button{max-width:220px}}
+@media(max-width:639px){body{font-size:17px;line-height:1.52}.appbar-inner{padding:10px}.brand-mark{width:34px;height:34px;flex-basis:34px;border-radius:10px;font-size:13px}.brand-title{font-size:16px}.brand-subtitle{font-size:11px}.search-wrap input{height:50px;font-size:17px}.quick{min-height:40px}.page-shell{padding:10px 8px 76px}.filters{border-radius:15px;padding:0 10px 10px}.filter-head{padding:13px 0 9px}.filter-chip{min-height:44px;font-size:14px}.control{height:50px;font-size:16px}.day-card{grid-template-columns:62px minmax(0,1fr);border-radius:14px;margin-bottom:9px}.day-rail{padding:12px 3px}.day-number{font-size:27px}.day-body{padding:10px}.event-text{font-size:15.5px}.odg-link{margin-left:0}}
+@media print{@page{size:A4;margin:12mm}.appbar{position:static;background:#fff;color:#000;border-bottom:2px solid #000;box-shadow:none}.brand-title,.brand-subtitle{color:#000}.brand-mark{color:#000;border-color:#aaa;background:#fff}.search-row,.quick-row,.filters,.results-actions,.share-day,.odg-link,.back-top,.intro{display:none!important}.page-shell{max-width:none;padding:8px 0}.day-card{box-shadow:none;break-inside:avoid;border-radius:8px;margin-bottom:5px;grid-template-columns:55px 1fr}.day-number{font-size:19pt}.day-body{padding:7px 10px}.event-text{font-size:9pt}}
+</style>
+</head>
+<body>
+<header class="appbar">
+  <div class="appbar-inner">
+    <div class="brand-row">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">LF</div>
+        <div style="min-width:0"><div class="brand-title">PIANO PROVE · ELISIR D’AMORE</div><div class="brand-subtitle">11–26 AGOSTO 2026</div></div>
+      </div>
+      <div class="header-actions"><button class="icon-button" id="printBtn" type="button" aria-label="Stampa" title="Stampa">⎙</button></div>
+    </div>
+    <div class="search-row">
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.8-3.8"></path></svg>
+        <label class="visually-hidden" for="q">Cerca nel piano prove</label>
+        <input id="q" type="search" placeholder="Cerca: regia, coro, luci, Ciampa, costume…" enterkeyhint="search" autocomplete="off" spellcheck="false">
+        <button class="clear-search" id="clearSearch" type="button" aria-label="Cancella ricerca" hidden>✕</button>
+      </div>
+    </div>
+    <nav class="quick-row" aria-label="Filtri rapidi">
+      <button class="quick" type="button" data-quick="next">Prossimo impegno</button>
+      <button class="quick" type="button" data-quick="11-16">11–16 ago</button>
+      <button class="quick" type="button" data-quick="17-23">17–23 ago</button>
+      <button class="quick" type="button" data-quick="24-26">24–26 ago</button>
+      <button class="quick" type="button" data-quick="all">Tutto</button>
+    </nav>
+  </div>
+</header>
+
+<div class="page-shell">
+  <div class="intro"><strong>Piano prove interattivo:</strong> ricerca libera e filtri per tipologia, sede, presenza di Coro/Orchestra/Compagnia e data. Ogni giornata mantiene il collegamento diretto <strong>Apri ODG</strong>. Il file resta consultabile offline; per aprire l’ODG è necessaria la connessione.</div>
+
+  <section class="filters" aria-label="Ricerca e filtri">
+    <div class="filter-head"><h2>Ricerca completa</h2><small id="filterStatus">nessun filtro</small></div>
+
+    <div class="filter-group">
+      <span class="filter-label">Tipologia di prova / attività</span>
+      <div class="chip-scroll" id="typeChoices"></div>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Sede</span>
+      <div class="chip-scroll" id="venueChoices"></div>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Persone / reparti citati</span>
+      <div class="chip-scroll" id="groupChoices"></div>
+    </div>
+
+    <div class="filter-group date-group">
+      <span class="filter-label">Giorno specifico</span>
+      <div class="filter-grid">
+        <input class="control" type="date" id="daySelect" min="2026-08-11" max="2026-08-26">
+        <label style="display:flex;align-items:center;gap:9px;padding:0 4px;color:var(--ink);font-size:14px;font-weight:700"><input type="checkbox" id="multiOnly" style="width:20px;height:20px"> Solo giornate con più attività</label>
+      </div>
+    </div>
+
+    <div class="filter-group reset-group"><button class="reset-button" id="resetFilters" type="button">Togli tutti i filtri</button></div>
+  </section>
+
+  <div class="results-head">
+    <div><div class="results-kicker">Pianificazione settimanale</div><div class="results-count" id="resultsCount" aria-live="polite"></div></div>
+    <div class="results-actions"><button class="small-action" id="goNext" type="button">Vai al prossimo</button><button class="small-action" id="showAll" type="button">Mostra tutto</button></div>
+  </div>
+
+  <main id="results"></main>
+  <div class="no-results" id="noResults" hidden><div style="font-size:34px;margin-bottom:8px">⌕</div><strong>Nessun risultato</strong><br>Modifichi la ricerca oppure azzeri i filtri.</div>
+</div>
+<button class="back-top" id="backTop" type="button" aria-label="Torna all'inizio" hidden>↑</button>
+
+<script>
+const DAYS=[
+ {date:'2026-08-11',events:[
+  {time:'08:00–14:00',ranges:[['08:00','14:00']],venue:'Malibran',types:['montaggio'],title:'Elisir – MONTAGGIO'},
+  {time:'10:30–14:00',ranges:[['10:30','14:00']],venue:'Fenice · loggione',types:['incontro','musicale'],groups:['Compagnia/Maestri'],title:'Elisir – INCONTRO COMPAGNIA / PROVA MUSICALE'},
+  {time:'15:30–19:30',ranges:[['15:30','19:30']],venue:'Fenice · loggione',types:['regia'],groups:['Compagnia/Maestri'],title:'Elisir – PROVA DI REGIA',note:'Compagnia / Maestri'}
+ ]},
+ {date:'2026-08-12',events:[
+  {time:'08:00–14:00',ranges:[['08:00','14:00']],venue:'Malibran',types:['montaggio'],title:'Elisir – MONTAGGIO'},
+  {time:'10:00–13:00',ranges:[['10:00','13:00']],venue:'Fenice · loggione',types:['musicale'],groups:['Compagnia/Maestri'],title:'Elisir – PROVA MUSICALE',note:'Compagnia / Maestri'},
+  {time:'14:30–19:30',ranges:[['14:30','19:30']],venue:'Fenice · loggione',types:['regia'],groups:['Compagnia/Maestri'],title:'Elisir – PROVA DI REGIA',note:'Compagnia / Maestri'}
+ ]},
+ {date:'2026-08-13',events:[
+  {time:'09:00–13:30',ranges:[['09:00','13:30']],venue:'Malibran',types:['tecnica'],title:'Elisir – PROVA TECNICA'},
+  {time:'15:00–19:30',ranges:[['15:00','19:30']],venue:'Malibran',types:['luci'],title:'Elisir – PRESET LUCI'},
+  {time:'15:00–19:30',ranges:[['15:00','19:30']],venue:'Fenice · loggione',types:['regia'],groups:['Compagnia/Maestri'],title:'Elisir – PROVA DI REGIA',note:'Compagnia / Maestri'}
+ ]},
+ {date:'2026-08-14',events:[
+  {time:'10:00–13:30',ranges:[['10:00','13:30']],venue:'Malibran',types:['regia'],groups:['Compagnia/Maestri'],title:'Elisir – PROVA DI REGIA',note:'Compagnia / Maestri'}
+ ]},
+ {date:'2026-08-15',holiday:true,events:[
+  {time:'—',ranges:[],venue:'',types:['festivo'],title:'Elisir – GIORNATA FESTIVA',note:'Ferragosto'}
+ ]},
+ {date:'2026-08-16',events:[
+  {time:'10:00–13:30',ranges:[['10:00','13:30']],venue:'Malibran',types:['regia'],groups:['Compagnia/Maestri'],title:'Elisir – PROVA DI REGIA',note:'Compagnia / Maestri'}
+ ]},
+ {date:'2026-08-17',events:[
+  {time:'—',ranges:[],venue:'Malibran',types:['riposo'],title:'Elisir – RIPOSO'}
+ ]},
+ {date:'2026-08-18',events:[
+  {time:'10:00–13:30 · 15:00–18:30',ranges:[['10:00','13:30'],['15:00','18:30']],venue:'Malibran',types:['regia'],groups:['Compagnia/Maestri','Coro'],title:'Elisir – PROVE DI REGIA',note:'Compagnia / Maestri · CORO 15:00–16:45'}
+ ]},
+ {date:'2026-08-19',events:[
+  {time:'10:00–13:00 · 15:00–18:00',ranges:[['10:00','13:00'],['15:00','18:00']],venue:'Malibran',types:['regia'],groups:['Compagnia/Maestri','Coro'],title:'Elisir – REGIE',note:'Compagnia / Maestri · CORO 11:15–13:00 + 15:00–16:45'},
+  {time:'18:15–22:15',ranges:[['18:15','22:15']],venue:'Malibran',types:['luci'],title:'Elisir – PROVE LUCI'}
+ ]},
+ {date:'2026-08-20',events:[
+  {time:'10:00–13:00 · 15:00–18:00',ranges:[['10:00','13:00'],['15:00','18:00']],venue:'Malibran',types:['regia'],groups:['Compagnia/Maestri','Coro'],title:'Elisir – PROVE DI REGIA',note:'Compagnia / Maestri · CORO 15:00–18:00'},
+  {time:'18:15–22:15',ranges:[['18:15','22:15']],venue:'Malibran',types:['luci'],title:'Elisir – PROVE LUCI'}
+ ]},
+ {date:'2026-08-21',events:[
+  {time:'09:00–13:30',ranges:[['09:00','13:30']],venue:'Malibran',types:['luci'],title:'Elisir – PROVE LUCI'},
+  {time:'16:00–20:00',ranges:[['16:00','20:00']],venue:'Malibran',types:['antepiano'],groups:['Costume/Trucco/Parrucca'],title:'Elisir – ANTEPIANO',note:'in COSTUME / TRUCCO / PARRUCCA'},
+  {time:'15:00–19:00',ranges:[['15:00','19:00']],venue:'Fenice · sala esposizioni',types:['orchestra'],groups:['Orchestra'],title:'Elisir – LETTURA ORCHESTRA',note:'Orchestra · Fenice sala esposizioni · h 15:00–19:00'}
+ ]},
+ {date:'2026-08-22',events:[
+  {time:'10:30–13:30 · 15:00–18:00',ranges:[['10:30','13:30'],['15:00','18:00']],venue:'Malibran',types:['assieme'],title:'Elisir – PROVE IN ASSIEME',note:'M° Ciampa'}
+ ]},
+ {date:'2026-08-23',events:[
+  {time:'10:00–13:00',ranges:[['10:00','13:00']],venue:'Malibran',types:['assieme'],title:'Elisir – PROVA IN ASSIEME',note:'M° Ciampa'}
+ ]},
+ {date:'2026-08-24',events:[
+  {time:'—',ranges:[],venue:'Malibran',types:['riposo'],title:'Elisir – RIPOSO'}
+ ]},
+ {date:'2026-08-25',events:[
+  {time:'09:00–13:30',ranges:[['09:00','13:30']],venue:'Malibran',types:['luci'],title:'Elisir – PROVE LUCI'},
+  {time:'18:00–22:00',ranges:[['18:00','22:00']],venue:'Malibran',types:['assieme'],groups:['Costume'],title:'Elisir – PROVA IN ASSIEME',note:'M° Ciampa · in costume'}
+ ]},
+ {date:'2026-08-26',events:[
+  {time:'09:00–13:30',ranges:[['09:00','13:30']],venue:'Malibran',types:['luci'],title:'Elisir – PROVE LUCI'},
+  {time:'19:00',ranges:[['19:00','23:59']],venue:'Malibran',types:['recita'],title:'Elisir – 1ª RECITA',note:'M° Ciampa · Diretta Rai Radio 3 · altre recite indicate nel piano: 28 e 30/08, 1/09'}
+ ]}
+];
+
+const TYPE_LABELS={montaggio:'Montaggio',incontro:'Incontro',musicale:'Musicale',regia:'Regia',tecnica:'Tecnica',luci:'Luci',antepiano:'Antepiano',assieme:'Assieme',orchestra:'Lettura orchestra',recita:'Recita',riposo:'Riposo',festivo:'Festivo'};
+const TYPE_ORDER=['regia','musicale','luci','assieme','tecnica','montaggio','incontro','antepiano','orchestra','recita','riposo','festivo'];
+const VENUES=['Malibran','Fenice · loggione','Fenice · sala esposizioni'];
+const GROUPS=['Compagnia/Maestri','Coro','Orchestra','Costume/Trucco/Parrucca'];
+const MONTHS=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+const WEEKDAYS=['dom','lun','mar','mer','gio','ven','sab'];
+const WEEKDAYS_FULL=['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'];
+
+const state={q:'',types:new Set(),venues:new Set(),groups:new Set(),day:'',multiOnly:false,range:null};
+const el={q:document.getElementById('q'),clear:document.getElementById('clearSearch'),types:document.getElementById('typeChoices'),venues:document.getElementById('venueChoices'),groups:document.getElementById('groupChoices'),day:document.getElementById('daySelect'),multi:document.getElementById('multiOnly'),reset:document.getElementById('resetFilters'),results:document.getElementById('results'),count:document.getElementById('resultsCount'),none:document.getElementById('noResults'),status:document.getElementById('filterStatus'),back:document.getElementById('backTop')};
+
+function norm(s){return (s||'').toString().normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').trim()}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+function dateObj(iso){const [y,m,d]=iso.split('-').map(Number);return new Date(y,m-1,d,12,0,0)}
+function odgURL(iso){return `https://webapp.teatrolafenice.it/odg-giorno?date=${iso.replaceAll('-','')}&key=all`}
+function eventText(e){return [e.time,e.venue,e.title,e.note,(e.types||[]).map(t=>TYPE_LABELS[t]).join(' '),(e.groups||[]).join(' ')].filter(Boolean).join(' ')}
+function dayText(d){return [d.date,...d.events.map(eventText)].join(' ')}
+function dayInRange(iso){
+  if(!state.range) return true;
+  if(state.range==='11-16') return iso>='2026-08-11'&&iso<='2026-08-16';
+  if(state.range==='17-23') return iso>='2026-08-17'&&iso<='2026-08-23';
+  if(state.range==='24-26') return iso>='2026-08-24'&&iso<='2026-08-26';
+  if(state.range==='next') return iso===nextDateISO();
+  return true;
+}
+function nextDateISO(){
+  const today=new Date(); today.setHours(0,0,0,0);
+  const candidate=DAYS.find(d=>dateObj(d.date)>=today);
+  return candidate?candidate.date:DAYS[DAYS.length-1].date;
+}
+function eventMatches(e){
+  if(state.types.size && ![...state.types].some(t=>(e.types||[]).includes(t))) return false;
+  if(state.venues.size && !state.venues.has(e.venue)) return false;
+  if(state.groups.size && ![...state.groups].some(g=>(e.groups||[]).includes(g))) return false;
+  const words=norm(state.q).split(' ').filter(Boolean);
+  if(words.length){const hay=norm(eventText(e));if(!words.every(w=>hay.includes(w))) return false;}
+  return true;
+}
+function filteredDays(){
+  return DAYS.map(d=>{
+    if(state.day && d.date!==state.day) return null;
+    if(!dayInRange(d.date)) return null;
+    if(state.multiOnly && d.events.length<2) return null;
+    let events=d.events.filter(eventMatches);
+    if(state.q && !events.length && norm(dayText(d)).includes(norm(state.q))) events=d.events;
+    if(!events.length) return null;
+    return {...d,events};
+  }).filter(Boolean);
+}
+function chip(label,key,kind){return `<button class="filter-chip" type="button" data-${kind}="${esc(key)}">${esc(label)}</button>`}
+function initFilters(){
+  el.types.innerHTML=TYPE_ORDER.map(t=>chip(TYPE_LABELS[t],t,'type')).join('');
+  el.venues.innerHTML=VENUES.map(v=>chip(v,v,'venue')).join('');
+  el.groups.innerHTML=GROUPS.map(g=>chip(g,g,'group')).join('');
+}
+function eventClass(e){return `type-${e.types[0]||'regia'}`}
+function highlight(text){
+  const q=state.q.trim(); if(!q)return esc(text);
+  const words=norm(q).split(' ').filter(Boolean); if(!words.length)return esc(text);
+  let out=esc(text);
+  words.forEach(w=>{if(w.length<2)return;const re=new RegExp(`(${w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,'ig');out=out.replace(re,'<mark>$1</mark>')});
+  return out;
+}
+function render(){
+  const days=filteredDays();
+  const totalEvents=days.reduce((n,d)=>n+d.events.length,0);
+  el.count.textContent=`${days.length} giornat${days.length===1?'a':'e'} · ${totalEvents} attivit${totalEvents===1?'à':'à'}`;
+  el.none.hidden=days.length>0; el.results.hidden=days.length===0;
+  const todayISO=new Date().toLocaleDateString('sv-SE');
+  el.results.innerHTML=days.map(d=>{
+    const dt=dateObj(d.date), isToday=d.date===todayISO;
+    const badges=[isToday?'<span class="badge today-badge">Oggi</span>':'',d.holiday?'<span class="badge holiday-badge">Festivo</span>':'',d.events.length>1?`<span class="badge multi-badge">${d.events.length} attività</span>`:''].join('');
+    const events=d.events.map(e=>`<div class="event-row ${eventClass(e)}"><div class="event-top"><span class="event-time">${esc(e.time)}</span>${e.venue?`<span class="venue-name">${esc(e.venue)}</span>`:''}<span class="type-badge">${esc(TYPE_LABELS[e.types[0]]||e.types[0])}</span></div><div class="event-text">${highlight(e.title)}</div>${e.note?`<div class="event-note">${highlight(e.note)}</div>`:''}</div>`).join('');
+    const shareText=`${WEEKDAYS_FULL[dt.getDay()]} ${dt.getDate()} ${MONTHS[dt.getMonth()]} ${dt.getFullYear()}\n`+d.events.map(e=>`${e.time} ${e.venue?e.venue+' · ':''}${e.title}${e.note?' · '+e.note:''}`).join('\n')+`\nODG: ${odgURL(d.date)}`;
+    return `<article class="day-card${isToday?' today':''}${d.holiday?' holiday':''}" id="d-${d.date}" data-date="${d.date}"><div class="day-rail"><div class="day-number">${dt.getDate()}</div><div class="day-week">${WEEKDAYS[dt.getDay()]}</div><div class="day-month">ago</div></div><div class="day-body"><div class="day-meta">${badges}<a class="odg-link" href="${odgURL(d.date)}" target="_blank" rel="noopener">↗ Apri ODG</a><button class="share-day" type="button" data-share="${d.date}" data-sharetext="${esc(shareText)}">📤 Condividi</button></div>${events}</div></article>`;
+  }).join('');
+  updateStatus(); syncActive();
+}
+function updateStatus(){
+  let n=(state.q?1:0)+state.types.size+state.venues.size+state.groups.size+(state.day?1:0)+(state.multiOnly?1:0)+(state.range?1:0);
+  el.status.textContent=n?`${n} filtro${n===1?'':'i'} attivo${n===1?'':'i'}`:'nessun filtro';
+}
+function syncActive(){
+  document.querySelectorAll('[data-type]').forEach(b=>b.classList.toggle('active',state.types.has(b.dataset.type)));
+  document.querySelectorAll('[data-venue]').forEach(b=>b.classList.toggle('active',state.venues.has(b.dataset.venue)));
+  document.querySelectorAll('[data-group]').forEach(b=>b.classList.toggle('active',state.groups.has(b.dataset.group)));
+  document.querySelectorAll('[data-quick]').forEach(b=>b.classList.toggle('active',state.range===b.dataset.quick || (b.dataset.quick==='all'&&!state.range)));
+  el.clear.hidden=!state.q;
+}
+function resetAll(){state.q='';state.types.clear();state.venues.clear();state.groups.clear();state.day='';state.multiOnly=false;state.range=null;el.q.value='';el.day.value='';el.multi.checked=false;render()}
+function toggleSet(set,val){set.has(val)?set.delete(val):set.add(val);render()}
+
+document.addEventListener('click',async ev=>{
+  const t=ev.target.closest('[data-type]');if(t){toggleSet(state.types,t.dataset.type);return}
+  const v=ev.target.closest('[data-venue]');if(v){toggleSet(state.venues,v.dataset.venue);return}
+  const g=ev.target.closest('[data-group]');if(g){toggleSet(state.groups,g.dataset.group);return}
+  const q=ev.target.closest('[data-quick]');if(q){state.range=q.dataset.quick==='all'?null:q.dataset.quick;state.day='';el.day.value='';render();if(q.dataset.quick==='next')scrollToNext();return}
+  const s=ev.target.closest('[data-share]');if(s){const text=s.dataset.sharetext;try{if(navigator.share)await navigator.share({title:'Piano prove Elisir',text});else{await navigator.clipboard.writeText(text);s.textContent='✓ Copiato';setTimeout(()=>s.textContent='📤 Condividi',1200)}}catch(_){}}
+});
+el.q.addEventListener('input',()=>{state.q=el.q.value;render()});
+el.clear.addEventListener('click',()=>{state.q='';el.q.value='';render();el.q.focus()});
+el.day.addEventListener('change',()=>{state.day=el.day.value;state.range=null;render();if(state.day)setTimeout(()=>document.getElementById(`d-${state.day}`)?.scrollIntoView({behavior:'smooth',block:'start'}),20)});
+el.multi.addEventListener('change',()=>{state.multiOnly=el.multi.checked;render()});
+el.reset.addEventListener('click',resetAll);
+document.getElementById('showAll').addEventListener('click',resetAll);
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+document.getElementById('goNext').addEventListener('click',()=>{state.range='next';state.day='';el.day.value='';render();scrollToNext()});
+function scrollToNext(){setTimeout(()=>document.getElementById(`d-${nextDateISO()}`)?.scrollIntoView({behavior:'smooth',block:'start'}),30)}
+window.addEventListener('scroll',()=>{el.back.hidden=window.scrollY<500},{passive:true});el.back.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+initFilters();render();
+</script>
+</body>
+</html>
