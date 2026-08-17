@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "1.5",
+  "version": "1.6",
   "date": "2026-08-17",
   "fenice": {
     "version": "4.9.3",
@@ -32,5 +32,6 @@
     "package": "com.samsung.android.calendar",
     "launch": "Android VIEW intent to current time",
     "fallback": "https://play.google.com/store/apps/details?id=com.samsung.android.calendar"
-  }
+  },
+  "icon": "LH MAX"
 }

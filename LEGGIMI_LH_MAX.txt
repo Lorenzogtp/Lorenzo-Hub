@@ -1,0 +1,14 @@
+LORENZO HUB v1.6 — LH MAX
+
+Aggiornamento:
+- nuova icona LH MAX applicata all'app;
+- logo LH molto più grande e leggibile;
+- icone 192 e 512 per PWA/Android;
+- Apple Touch Icon;
+- favicon;
+- cache Service Worker aggiornata per forzare il refresh.
+
+Per GitHub Pages:
+sostituire i file del repository con quelli presenti in questo pacchetto.
+Se Android mostra ancora la vecchia icona, disinstallare il collegamento/app dalla Home
+e reinstallarlo dopo che GitHub Pages ha completato il deploy.
