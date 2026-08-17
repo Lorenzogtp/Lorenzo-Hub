@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "1.3",
+  "version": "1.5",
   "date": "2026-08-17",
   "fenice": {
     "version": "4.9.3",
@@ -26,5 +26,11 @@
   "actv": {
     "mode": "latest-published",
     "url": "https://actv-rapido-lorenzo.novecento64.chatgpt.site/"
+  },
+  "calendar": {
+    "type": "Samsung Calendar",
+    "package": "com.samsung.android.calendar",
+    "launch": "Android VIEW intent to current time",
+    "fallback": "https://play.google.com/store/apps/details?id=com.samsung.android.calendar"
   }
 }

@@ -31,13 +31,13 @@ nav .inner{width:min(900px,100%);display:grid;grid-template-columns:repeat(5,1fr
 <script src="./links.js"></script>
 </head>
 <body>
-<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="muted">v1.3</span></div><div id="today" class="date"></div></div><button class="btn ghost" onclick="exportData()">Backup</button></div></header>
+<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="muted">v1.5</span></div><div id="today" class="date"></div></div><button class="btn ghost" onclick="exportData()">Backup</button></div></header>
 <main>
 
 <section id="oggi" class="view active">
   <div class="hero">
     <h1 id="greeting">Lorenzo Hub</h1>
-    <p>Accesso diretto a Fenice Palcoscenico 4.9.3 e ACTV Rapido aggiornato.</p>
+    <p>Fenice Palcoscenico 4.9.3, ACTV Rapido e Calendario Samsung in un unico punto.</p>
     <div class="status">● Collegamenti completi</div>
   </div>
 
@@ -52,6 +52,11 @@ nav .inner{width:min(900px,100%);display:grid;grid-template-columns:repeat(5,1fr
       <div class="ico">🚌</div><b>ACTV Rapido · ultimo</b>
       <small>Apre direttamente la Sua app ACTV Rapido pubblicata e aggiornata.</small>
       <button class="btn green" onclick="openACTVLatest()">Apri ACTV Rapido</button>
+    </div>
+    <div class="appcard">
+      <div class="ico">📅</div><b>Calendario Samsung</b>
+      <small>Apre direttamente l’app Calendario Samsung sul Suo Galaxy.</small>
+      <button class="btn blue" onclick="openSamsungCalendar()">Apri Calendario Samsung</button>
     </div>
   </div>
 
@@ -109,6 +114,12 @@ nav .inner{width:min(900px,100%);display:grid;grid-template-columns:repeat(5,1fr
     <div class="fcard"><div class="ico">🔎</div><b>Ricerca globale</b><small>Produzioni, prove, cast e camerini.</small><button class="btn" onclick="openFeniceSection('search')">Apri</button></div>
     <div class="fcard"><div class="ico">🎚️</div><b>Palcoscenico</b><small>Modalità operativa di giornata.</small><button class="btn" onclick="openFeniceSection('stage')">Apri</button></div>
     <div class="fcard"><div class="ico">💾</div><b>Backup / Import</b><small>Salva e trasferisce dati.</small><button class="btn" onclick="openFeniceSection('backup')">Apri</button></div>
+  </div>
+
+
+  <div class="sectionTitle">Calendario Samsung</div>
+  <div class="appcards">
+    <div class="appcard"><div class="ico">📅</div><b>Calendario Samsung</b><small>App Calendario Samsung del dispositivo.</small><button class="btn blue" onclick="openSamsungCalendar()">Apri Calendario Samsung</button></div>
   </div>
 
   <div class="sectionTitle">ACTV</div>

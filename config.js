@@ -3,7 +3,9 @@
    ACTV: app ACTV Rapido pubblicata e aggiornata
 */
 window.LORENZO_HUB_CONFIG = {
-  version: "1.3",
+  samsungCalendarPackage: "com.samsung.android.calendar",
+  samsungCalendarFallback: "https://play.google.com/store/apps/details?id=com.samsung.android.calendar",
+  version: "1.5",
   feniceBase: "https://lorenzogtp.github.io/fenice-palcoscenico-/",
   actvLatest: "https://actv-rapido-lorenzo.novecento64.chatgpt.site/",
   external: {

@@ -1,4 +1,4 @@
-const CACHE='lorenzo-hub-v1.3-20260817';
+const CACHE='lorenzo-hub-v1.5-20260817';
 const CORE=[
  './','./index.html','./manifest.webmanifest','./config.js','./links.js',
  './fenice-bridge.html','./404.html','./version.json','./icon-192.png','./icon-512.png'

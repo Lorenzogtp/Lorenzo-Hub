@@ -1,4 +1,4 @@
-LORENZO HUB v1.3 — COLLEGAMENTI COMPLETI
+LORENZO HUB v1.5 — COLLEGAMENTI COMPLETI
 
 CORREZIONI
 1. Fenice Palcoscenico 4.9.3:
@@ -39,3 +39,27 @@ Se GitHub/Chrome conserva una vecchia cache, chiudere completamente l'app e riap
 
 I vecchi file actv-rapido.html e piano-prove-elisir.html presenti nel repository possono restare:
 la v1.3 non li usa più.
+
+
+NUOVO COLLEGAMENTO CALENDARIO
+- Pulsante: Il mio Calendario
+- Destinazione: Google Calendar
+- URL: https://calendar.google.com/calendar/u/0/r
+- Su Android/Chrome utilizza l'account Google già attivo sul dispositivo.
+
+Per aggiornare GitHub:
+estrarre questo ZIP, caricare tutti i file nel repository Lorenzo-Hub e fare Commit changes su main.
+
+
+CORREZIONE CALENDARIO
+- Il precedente collegamento Google Calendar è stato sostituito.
+- Il pulsante ora apre l'app CALENDARIO SAMSUNG.
+- Pacchetto Android: com.samsung.android.calendar
+- Il collegamento usa un Android Intent VIEW al momento corrente.
+- Se l'intent non viene gestito, Chrome usa come fallback la pagina ufficiale dell'app.
+
+NOTA:
+Una PWA pubblicata su GitHub Pages può avviare Calendario Samsung, ma non può leggere
+direttamente il database locale degli appuntamenti del telefono senza i permessi di
+un'app Android nativa. Per questo questa versione implementa il collegamento diretto
+all'app Samsung.
