@@ -1,0 +1,21 @@
+LORENZO HUB – PWA
+
+File principali:
+- index.html
+- manifest.webmanifest
+- sw.js
+- icon-192.png
+- icon-512.png
+
+Pubblicazione rapida su GitHub Pages:
+1. Creare un nuovo repository.
+2. Caricare tutti i file nella radice del repository.
+3. Settings > Pages > Deploy from a branch.
+4. Selezionare main / root.
+5. Aprire il link GitHub Pages da Chrome.
+6. Menu ⋮ > Aggiungi a schermata Home / Installa app.
+
+Nota:
+La prima volta, dentro Fenice > Impostazioni collegamenti, incollare l'URL della Sua app Fenice.
+Il collegamento ACTV Rapido è già configurato.
+I dati personali dell'app vengono salvati localmente nel browser del dispositivo.
