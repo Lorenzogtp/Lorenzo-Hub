@@ -9,7 +9,7 @@
 <link rel="icon" href="./favicon.png">
 <title>Lorenzo Hub</title>
 <style>
-:root{--bg:#0f1720;--card:#182330;--txt:#f4f6f8;--muted:#aeb9c5;--accent:#d4484f;--ok:#46a36f;--line:#2d3a47;--blue:#477fa8}
+:root{--bg:#0f1720;--card:#182330;--txt:#f4f6f8;--muted:#aeb9c5;--accent:#d4484f;--ok:#46a36f;--line:#2d3a47;--blue:#477fa8;--violet:#6d4ec7}
 *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0d141c,#101923 45%,#0e151d);color:var(--txt);min-height:100vh}
 header{position:sticky;top:0;z-index:10;background:rgba(15,23,32,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 16px 10px}
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:850;font-size:20px}.date{font-size:13px;color:var(--muted)}
@@ -19,31 +19,31 @@ main{max-width:900px;margin:auto;padding:16px 14px 100px}.hero{background:linear
 .appcards,.fenicegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .card,.appcard,.fcard{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:14px}.appcard .ico,.fcard .ico{font-size:26px}.appcard b,.fcard b{display:block;margin:6px 0 3px}.appcard small,.fcard small{display:block;color:var(--muted);line-height:1.35}
 .appcard button,.fcard button{width:100%;margin-top:10px}
-.btn{border:0;border-radius:13px;padding:11px 12px;font-weight:800;background:#263646;color:white}.btn.red{background:var(--accent)}.btn.green{background:var(--ok)}.btn.blue{background:var(--blue)}.btn.ghost{background:transparent;border:1px solid #435465}
+.btn{border:0;border-radius:13px;padding:11px 12px;font-weight:800;background:#263646;color:white}.btn.red{background:var(--accent)}.btn.green{background:var(--ok)}.btn.blue{background:var(--blue)}.btn.pension{background:linear-gradient(135deg,var(--violet),#316aa7)}.btn.ghost{background:transparent;border:1px solid #435465}
 .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.quick button{background:var(--card);border:1px solid var(--line);color:#fff;border-radius:15px;padding:12px 6px;font-size:12px;min-height:72px}.quick .ico{display:block;font-size:24px;margin-bottom:4px}
 input,textarea,select{width:100%;background:#0f1720;border:1px solid #344454;color:#fff;border-radius:12px;padding:11px 12px;font:inherit}textarea{min-height:92px}label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}
 .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.task{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}.task:last-child{border-bottom:0}.meta,.small,.muted{color:var(--muted);font-size:12px}
 nav{position:fixed;left:0;right:0;bottom:0;background:rgba(12,19,27,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:20;padding-bottom:env(safe-area-inset-bottom)}
 nav .inner{width:min(900px,100%);display:grid;grid-template-columns:repeat(5,1fr)}nav button{background:none;border:0;color:#9eabb7;padding:10px 2px 8px;font-size:11px}nav button.active{color:#fff;font-weight:800}nav span{display:block;font-size:20px;margin-bottom:2px}
 .view{display:none}.view.active{display:block}.wide{grid-column:1/-1}.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:86px;background:#fff;color:#111;padding:10px 14px;border-radius:12px;font-weight:700;opacity:0;transition:.2s;z-index:50}.toast.show{opacity:1}
-@media(min-width:720px){.appcards{grid-template-columns:repeat(3,1fr)}.fenicegrid{grid-template-columns:repeat(4,1fr)}.quick{grid-template-columns:repeat(6,1fr)}}
+@media(min-width:720px){.appcards{grid-template-columns:repeat(3,1fr)}.primary-appcards{grid-template-columns:repeat(2,1fr)}.fenicegrid{grid-template-columns:repeat(4,1fr)}.quick{grid-template-columns:repeat(6,1fr)}}
 </style>
 <script src="./config.js"></script>
 <script src="./links.js"></script>
 </head>
 <body>
-<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="muted">v1.6</span></div><div id="today" class="date"></div></div><button class="btn ghost" onclick="exportData()">Backup</button></div></header>
+<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="muted">v1.7</span></div><div id="today" class="date"></div></div><button class="btn ghost" onclick="exportData()">Backup</button></div></header>
 <main>
 
 <section id="oggi" class="view active">
   <div class="hero">
     <h1 id="greeting">Lorenzo Hub</h1>
-    <p>Fenice Palcoscenico 4.9.3, ACTV Rapido e Calendario Samsung in un unico punto.</p>
-    <div class="status">● Collegamenti completi</div>
+    <p>Fenice Palcoscenico 4.9.3, ACTV Rapido, Calendario Samsung e Pensione AI in un unico punto.</p>
+    <div class="status">● 4 collegamenti completi</div>
   </div>
 
-  <div class="sectionTitle">Le due app principali</div>
-  <div class="appcards">
+  <div class="sectionTitle">Le app principali</div>
+  <div class="appcards primary-appcards">
     <div class="appcard">
       <div class="ico">🎭</div><b>Fenice Palcoscenico 4.9.3</b>
       <small>Produzioni, piano prove, ODG, cast, camerini, calendario e archivio.</small>
@@ -58,6 +58,11 @@ nav .inner{width:min(900px,100%);display:grid;grid-template-columns:repeat(5,1fr
       <div class="ico">📅</div><b>Calendario Samsung</b>
       <small>Apre direttamente l’app Calendario Samsung sul Suo Galaxy.</small>
       <button class="btn blue" onclick="openSamsungCalendar()">Apri Calendario Samsung</button>
+    </div>
+    <div class="appcard">
+      <div class="ico">📈</div><b>Pensione AI</b>
+      <small>Simula pensione FPLS/ex ENPALS, montante, TFR, lordo e netto.</small>
+      <button class="btn pension" onclick="openPensionLatest()">Apri Pensione AI</button>
     </div>
   </div>
 

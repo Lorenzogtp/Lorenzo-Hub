@@ -1,7 +1,7 @@
 {
   "name": "Lorenzo Hub",
-  "version": "1.6",
-  "date": "2026-08-17",
+  "version": "1.7",
+  "date": "2026-08-25",
   "fenice": {
     "version": "4.9.3",
     "url": "https://lorenzogtp.github.io/fenice-palcoscenico-/",
@@ -26,6 +26,18 @@
   "actv": {
     "mode": "latest-published",
     "url": "https://actv-rapido-lorenzo.novecento64.chatgpt.site/"
+  },
+  "pension": {
+    "name": "Simulatore Pensione Lorenzo",
+    "mode": "latest-published",
+    "url": "https://pensione-lorenzo.novecento64.chatgpt.site/",
+    "features": [
+      "FPLS/ex ENPALS",
+      "Montante contributivo",
+      "TFR",
+      "Pensione lorda e netta",
+      "Scenari personalizzati"
+    ]
   },
   "calendar": {
     "type": "Samsung Calendar",

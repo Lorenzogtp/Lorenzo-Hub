@@ -1,6 +1,10 @@
-LORENZO HUB v1.6 — LH MAX
+LORENZO HUB v1.7 — LH MAX + PENSIONE AI
 
 Aggiornamento:
+- nuova scheda Pensione AI nella Home;
+- collegamento diretto al Simulatore Pensione Lorenzo pubblicato;
+- calcoli FPLS/ex ENPALS, montante, TFR, pensione lorda e netta;
+- disposizione 2 × 2 delle quattro app principali;
 - nuova icona LH MAX applicata all'app;
 - logo LH molto più grande e leggibile;
 - icone 192 e 512 per PWA/Android;
