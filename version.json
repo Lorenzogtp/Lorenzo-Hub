@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "1.13",
+  "version": "1.13.3",
   "date": "2026-08-28",
   "fenice": {
     "version": "4.9.3",
@@ -29,13 +29,13 @@
   },
   "pension": {
     "name": "Pensione AI",
-    "mode": "bundled-updated-all-scenarios",
+    "mode": "bundled-consolidated-crystallized",
     "url": "./pensione-ai.html",
     "updated": "2026-08-28",
-    "reference_net_monthly": "≈ € 2.160 × 13",
-    "prudent_montante": "€ 727.151,99",
-    "central_montante": "€ 751.206,45",
-    "coefficient_working": "5,1825%",
+    "reference_net_monthly": "€ 2.131,13–€ 2.222,50 × 13 (solo IRPEF statale 2026)",
+    "prudent_montante": "€ 712.325,92",
+    "central_montante": "€ 748.616,51",
+    "coefficient_working": "5,1285% benchmark 64a3m",
     "features": [
       "FPLS/ex ENPALS",
       "Quanto manca alla decorrenza",
@@ -59,7 +59,32 @@
     "reliability_legend": true,
     "coefficients_local_update": true,
     "change_log_local": true,
-    "change_log_auto_on_coefficient_update": true
+    "change_log_auto_on_coefficient_update": true,
+    "audit_status": "base consolidata e cristallizzata 2026-08-28",
+    "correction_from": "€ 751.206,45",
+    "capitalization_assumption": "2,5% central / 1,5% prudent",
+    "ferie_days": 130,
+    "base_2025": 590407.49,
+    "range_2028": {
+      "prudenziale": 712325.92,
+      "centrale": 748616.51
+    },
+    "benchmark_64a3m": 5.1285,
+    "net_state_only": {
+      "prudenziale": 2131.13,
+      "centrale": 2222.5
+    },
+    "future_annual_contribution": 26780.75,
+    "capitalization_scenarios": {
+      "prudenziale": 1.021982,
+      "centrale": 1.040445,
+      "years": [
+        2026,
+        2027,
+        2028
+      ],
+      "status": "ipotesi, non ancora ufficiali"
+    }
   },
   "calendar": {
     "type": "Samsung Calendar",

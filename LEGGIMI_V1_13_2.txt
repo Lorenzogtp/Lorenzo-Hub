@@ -1,0 +1,11 @@
+LORENZO HUB v1.13.2 — CORREZIONE BASE PREVIDENZIALE
+
+Base 31/12/2025: € 590.407,49.
+Scenario prudenziale 2028: € 697.580,40.
+Scenario centrale 2028: € 720.556,74.
+Benchmark coefficiente 64 anni + 3 mesi: 5,1285%.
+Lordo x13: € 2.751,95 – € 2.842,60.
+Netto x13 (solo IRPEF statale 2026 + detrazione pensione, addizionali escluse): € 2.094,01 – € 2.151,86.
+Contributi futuri annui: € 26.780,75.
+2028 non rivalutato nello scenario operativo.
+La simulazione con 130 giorni di ferie resta presente.

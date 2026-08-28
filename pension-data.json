@@ -1,15 +1,28 @@
 {
-  "version": "2026-08-28-v1.12",
-  "source_status": "working-set",
-  "coefficient_2028_working": 5.1825,
-  "coefficient_67_working": 5.608,
-  "capitalization_assumption": 2.5,
-  "official_2029_coefficient_published": false,
-  "monitor": "Normativa Pensioni Watch quotidiano",
-  "sources": [
-    "INPS",
-    "Ministero del Lavoro",
-    "Gazzetta Ufficiale",
-    "Normattiva"
-  ]
+  "version": "2026-08-28-v1.13.3-cristallizzata",
+  "source_status": "consolidated-working-set",
+  "base_montante_2025_12_31": 590407.49,
+  "future_annual_contribution": 26780.75,
+  "capitalization_2026_2028": {
+    "prudenziale": 1.021982,
+    "centrale": 1.040445,
+    "status": "ipotesi dichiarate, non ancora ufficiali"
+  },
+  "montante_decorrenza_2029_01_01": {
+    "prudenziale": 712325.92,
+    "centrale": 748616.51
+  },
+  "coefficient_64y3m_working": 5.1285,
+  "gross_monthly_13": {
+    "prudenziale": 2810.13,
+    "centrale": 2953.29
+  },
+  "net_state_only_monthly_13": {
+    "prudenziale": 2131.13,
+    "centrale": 2222.5
+  },
+  "tax_baseline": "IRPEF statale 2026 + detrazione pensione; addizionali escluse",
+  "ferie_residue_days": 130,
+  "ferie_start_assumption": "2028-08-01",
+  "pension_start_assumption": "2029-01-01"
 }

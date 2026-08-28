@@ -1,0 +1,15 @@
+LORENZO HUB v1.13.1 — PENSIONE AI VERIFICATA
+
+Rettifica tecnica del 28/08/2026:
+- eliminato il montante 2028 errato € 751.206,45;
+- montante centrale 2028: € 706.011,45 (ipotesi futura 2,5%);
+- scenario prudenziale 2028: € 687.137,56 (1,5%);
+- benchmark coefficiente a 64 anni e 6 mesi: 5,1690%, ricavato dalla tabella ufficiale oggi vigente 5,088% a 64 e 5,250% a 65; NON è il coefficiente ufficiale 2029;
+- lordo centrale: € 2.807,21 x13;
+- netto medio indicativo: € 2.072,29 x13 usando fiscalità 2026;
+- scenario Stop 2026 e Fino a 67 anni ricalcolati;
+- 130 giorni ferie conservati: ferie dal 01/08/2028 al 31/12/2028;
+- il pannello Coefficienti LIVE ora ricalcola davvero anche i montanti quando cambia il tasso di rivalutazione;
+- nuova chiave locale per impedire che vecchi valori errati memorizzati nel browser sovrascrivano la patch.
+
+Per GitHub: caricare tutti i file sostituendo gli esistenti, commit su main, attendere Pages, poi chiudere e riaprire la PWA.
