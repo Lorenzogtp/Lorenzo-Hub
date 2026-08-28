@@ -1,5 +1,5 @@
 
-const CACHE='lorenzo-hub-v1.13-cosa-e-cambiato-20260828';
+const CACHE='lorenzo-hub-v1.13-ferie-130-20260828';
 const CORE=[
  './','./index.html','./manifest.webmanifest','./config.js','./links.js',
  './fenice-bridge.html','./pensione-ai.html','./normativa-pensioni.html','./pension-data.json','./docs/EcoCert_12-06-2025.pdf','./docs/Estratto_Conto_FPLS_18-06-2025.pdf','./docs/Estratto_Casellario_Attivi_18-06-2025.pdf','./docs/Studio_Miapensione_25-10-2023.pdf','./404.html','./version.json','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./favicon.png'

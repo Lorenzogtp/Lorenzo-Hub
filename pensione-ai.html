@@ -96,7 +96,7 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
 .tool-nav a{text-decoration:none;background:rgba(250,249,246,.7);border:1px solid var(--line);border-radius:18px;padding:12px 10px;text-align:center;color:var(--ink);font-weight:850;font-size:13px;box-shadow:var(--shadow)}
 .countdown{margin-top:22px;background:var(--ink);color:#fff;border-radius:30px;padding:24px;box-shadow:var(--shadow)}
 .countdown .section-title{color:#d7be84}
-.count-grid{display:grid;grid-template-columns:1.1fr repeat(3,.8fr);gap:12px}
+.count-grid{display:grid;grid-template-columns:1.1fr 1.1fr repeat(3,.8fr);gap:12px}
 .count-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:16px}
 .count-box b{display:block;font-family:Georgia,'Times New Roman',serif;font-size:clamp(28px,5vw,46px);font-weight:500;letter-spacing:-.03em;margin-top:5px}
 .count-box small{color:rgba(255,255,255,.72);line-height:1.35}
@@ -206,6 +206,7 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
     <div class="section-title">Quanto manca alla decorrenza</div>
     <div class="count-grid">
       <div class="count-box"><small>Tempo residuo</small><b id="daysLeft">—</b><small id="daysLabel">giorni alla decorrenza stimata</small></div>
+      <div class="count-box"><small>Con 130 gg ferie residue</small><b id="workDaysLeft">—</b><small id="workDaysLabel">giorni al termine effettivo del lavoro · poi ferie dal 01/08/2028 al 31/12/2028 (130 ÷ 26 = 5 mesi)</small></div>
       <div class="count-box"><small>Decorrenza obiettivo</small><b style="font-size:32px">01/01/2029</b><small>scenario uscita 2028</small></div>
       <div class="count-box"><small>Montante centrale</small><b style="font-size:32px">€ 751.206</b><small>proiezione attuale</small></div>
       <div class="count-box"><small>Netto operativo</small><b style="font-size:32px">≈ € 2.160</b><small>× 13 mensilità</small></div>
@@ -525,6 +526,15 @@ function updateCountdown(){
   const days = Math.max(0, Math.ceil((target-now)/86400000));
   document.getElementById('daysLeft').textContent = new Intl.NumberFormat('it-IT').format(days);
   document.getElementById('daysLabel').textContent = days===1 ? 'giorno alla decorrenza stimata' : 'giorni alla decorrenza stimata';
+
+  const ferieStart = new Date('2028-08-01T00:00:00');
+  const workDays = Math.max(0, Math.ceil((ferieStart-now)/86400000));
+  const el = document.getElementById('workDaysLeft');
+  const lab = document.getElementById('workDaysLabel');
+  if(el) el.textContent = new Intl.NumberFormat('it-IT').format(workDays);
+  if(lab) lab.textContent = workDays===1
+    ? 'giorno all’inizio delle ferie · ultimo giorno effettivo 31/07/2028 · 130 gg = 5 mesi (26 gg/mese)'
+    : 'giorni all’inizio delle ferie · ultimo giorno effettivo 31/07/2028 · 130 gg = 5 mesi (26 gg/mese)';
 }
 function euro2(n){return new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR',minimumFractionDigits:2}).format(n)}
 function applyCoefficients(silent=false){
