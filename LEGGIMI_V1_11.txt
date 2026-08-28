@@ -1,0 +1,6 @@
+LORENZO HUB v1.11
+
+Correzione richiesta:
+- Normativa Pensioni LIVE ora è visibile anche DENTRO Pensione AI, subito sopra le schede Uscita 2028 / Stop 2026 / Fino a 67 anni.
+- Il pulsante apre la pagina Normativa Pensioni LIVE con le fonti ufficiali.
+- Cache PWA aggiornata per forzare il refresh.

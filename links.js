@@ -1,4 +1,4 @@
-/* Lorenzo Hub v1.10 — routing */
+/* Lorenzo Hub v1.11 — routing */
 (function(){
   function cfg(){ return window.LORENZO_HUB_CONFIG || {}; }
 

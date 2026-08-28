@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "1.10",
+  "version": "1.11",
   "date": "2026-08-28",
   "fenice": {
     "version": "4.9.3",
@@ -48,7 +48,8 @@
       "Uscita 2028",
       "Stop 2026",
       "Fino a 67 anni"
-    ]
+    ],
+    "normativa_live_embedded": true
   },
   "calendar": {
     "type": "Samsung Calendar",
