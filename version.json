@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "1.9",
+  "version": "1.10",
   "date": "2026-08-28",
   "fenice": {
     "version": "4.9.3",
@@ -56,5 +56,23 @@
     "launch": "Android VIEW intent to current time",
     "fallback": "https://play.google.com/store/apps/details?id=com.samsung.android.calendar"
   },
-  "icon": "LH MAX"
+  "icon": "LH MAX",
+  "normativa_pensioni": {
+    "name": "Normativa Pensioni LIVE",
+    "url": "./normativa-pensioni.html",
+    "sources": [
+      "INPS",
+      "Normattiva",
+      "Gazzetta Ufficiale",
+      "Ministero del Lavoro"
+    ],
+    "focus": [
+      "FPLS/ex ENPALS",
+      "requisiti",
+      "decorrenze",
+      "coefficienti",
+      "montante",
+      "fiscalità"
+    ]
+  }
 }

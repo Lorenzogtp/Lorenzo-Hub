@@ -1,0 +1,7 @@
+LORENZO HUB v1.10 — NORMATIVA PENSIONI LIVE
+
+Novità:
+- nuova scheda Normativa Pensioni LIVE nella Home;
+- collegamenti diretti a INPS, Normattiva, Gazzetta Ufficiale e Ministero del Lavoro;
+- focus operativo su FPLS/ex ENPALS, requisiti, decorrenze, coefficienti, montante e fiscalità;
+- monitoraggio automatico quotidiano attivo in ChatGPT, con notifica solo in caso di novità sostanziali.

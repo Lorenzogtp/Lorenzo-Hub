@@ -1,4 +1,4 @@
-/* Lorenzo Hub v1.9 — routing */
+/* Lorenzo Hub v1.10 — routing */
 (function(){
   function cfg(){ return window.LORENZO_HUB_CONFIG || {}; }
 
@@ -19,6 +19,10 @@
     window.location.href = cfg().pensionLatest || './pensione-ai.html';
   };
 
+
+  window.openPensionRules = function(){
+    window.location.href = './normativa-pensioni.html';
+  };
 
   window.openSamsungCalendar = function(){
     const ms = Date.now();

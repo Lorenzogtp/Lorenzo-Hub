@@ -1,8 +1,8 @@
 
-const CACHE='lorenzo-hub-v1.9-pensione-all-scenarios-20260828';
+const CACHE='lorenzo-hub-v1.10-normativa-live-20260828';
 const CORE=[
  './','./index.html','./manifest.webmanifest','./config.js','./links.js',
- './fenice-bridge.html','./pensione-ai.html','./404.html','./version.json','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./favicon.png'
+ './fenice-bridge.html','./pensione-ai.html','./normativa-pensioni.html','./404.html','./version.json','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./favicon.png'
 ];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)))});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

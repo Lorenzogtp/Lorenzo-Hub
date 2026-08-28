@@ -32,14 +32,14 @@ nav .inner{width:min(900px,100%);display:grid;grid-template-columns:repeat(5,1fr
 <script src="./links.js"></script>
 </head>
 <body>
-<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="muted">v1.9</span></div><div id="today" class="date"></div></div><button class="btn ghost" onclick="exportData()">Backup</button></div></header>
+<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="muted">v1.10</span></div><div id="today" class="date"></div></div><button class="btn ghost" onclick="exportData()">Backup</button></div></header>
 <main>
 
 <section id="oggi" class="view active">
   <div class="hero">
     <h1 id="greeting">Lorenzo Hub</h1>
-    <p>Fenice Palcoscenico 4.9.3, ACTV Rapido, Calendario Samsung e Pensione AI in un unico punto.</p>
-    <div class="status">● 4 collegamenti completi</div>
+    <p>Fenice Palcoscenico 4.9.3, ACTV Rapido, Calendario Samsung, Pensione AI e Normativa Pensioni LIVE in un unico punto.</p>
+    <div class="status">● 5 collegamenti completi</div>
   </div>
 
   <div class="sectionTitle">Le app principali</div>
@@ -63,6 +63,11 @@ nav .inner{width:min(900px,100%);display:grid;grid-template-columns:repeat(5,1fr
       <div class="ico">📈</div><b>Pensione AI</b>
       <small>Aggiornata al 28/08/2026 · montante, lordo e netto pensione. Netto centrale ≈ € 2.160 × 13.</small>
       <button class="btn pension" onclick="openPensionLatest()">Apri Pensione AI</button>
+    </div>
+    <div class="appcard">
+      <div class="ico">⚖️</div><b>Normativa Pensioni LIVE</b>
+      <small>Monitor ufficiale INPS, Normattiva, Gazzetta Ufficiale e Ministero del Lavoro. Focus FPLS/ex ENPALS.</small>
+      <button class="btn pension" onclick="openPensionRules()">Apri Normativa LIVE</button>
     </div>
   </div>
 
