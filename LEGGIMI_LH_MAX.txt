@@ -1,13 +1,10 @@
-LORENZO HUB v1.8 — LH MAX + PENSIONE AI AGGIORNATA
 
-Aggiornamento 28/08/2026:
-- sostituita Pensione AI nel cruscotto Lorenzo Hub;
-- la scheda Pensione AI apre ora la versione locale aggiornata inclusa nel pacchetto;
-- riferimento centrale: ≈ € 2.160 netti/mese × 13;
-- montante prudenziale € 727.151,99; montante centrale € 751.206,45;
-- coefficiente di lavoro 5,1825% (provvisorio);
-- aggiunto calcolatore lordo e stampa/salvataggio PDF;
-- cache Service Worker portata a v1.8 per forzare l’aggiornamento.
+LORENZO HUB v1.9 — VERSIONE DEFINITIVA
 
-Per GitHub Pages:
-caricare/sostituire tutti i file del pacchetto nella root del repository Lorenzo-Hub e attendere il deploy Pages.
+Contenuto:
+- Pensione AI con stile classico ripristinato;
+- tutte le uscite presenti: Uscita 2028, Stop 2026, Fino a 67 anni;
+- Fenice Palcoscenico 4.9.3;
+- ACTV Rapido pubblicata;
+- Calendario Samsung;
+- cache aggiornata per forzare il refresh.

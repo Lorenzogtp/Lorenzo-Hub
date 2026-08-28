@@ -1,4 +1,5 @@
-const CACHE='lorenzo-hub-v1.8-pensione-ai-20260828';
+
+const CACHE='lorenzo-hub-v1.9-pensione-all-scenarios-20260828';
 const CORE=[
  './','./index.html','./manifest.webmanifest','./config.js','./links.js',
  './fenice-bridge.html','./pensione-ai.html','./404.html','./version.json','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./favicon.png'

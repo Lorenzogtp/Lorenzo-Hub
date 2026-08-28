@@ -1,65 +1,9 @@
-LORENZO HUB v1.5 — COLLEGAMENTI COMPLETI
 
-CORREZIONI
-1. Fenice Palcoscenico 4.9.3:
-   ora Lorenzo Hub contiene accessi diretti a:
-   - Home
-   - Oggi
-   - Domani
-   - ODG Smart
-   - Produzioni
-   - Nuova produzione
-   - Archivio produzioni
-   - Piano prove
-   - ODG da Piano prove
-   - Cast / Solisti
-   - Camerini
-   - Calendario
-   - Ricerca globale
-   - Modalità Palcoscenico
-   - Backup / Import
+LORENZO HUB v1.9 — ISTRUZIONI GITHUB
 
-2. ACTV Rapido:
-   NON usa più la vecchia copia locale v20.
-   Ora punta all'app pubblicata aggiornata:
-   https://actv-rapido-lorenzo.novecento64.chatgpt.site/
-
-COME AGGIORNARE GITHUB
-- Estrarre questo ZIP.
-- Repository Lorenzo-Hub > Code > Add file > Upload files.
-- Caricare tutti i file estratti.
-- Commit changes su main.
-- Attendere il deploy Pages verde.
-- Chiudere e riaprire Lorenzo Hub.
-
-NOTA TECNICA
-fenice-bridge.html apre Fenice 4.9.3 e tenta di entrare direttamente nella sezione richiesta,
-usando sia le funzioni della app sia la ricerca del comando per testo.
-Se GitHub/Chrome conserva una vecchia cache, chiudere completamente l'app e riaprirla.
-
-I vecchi file actv-rapido.html e piano-prove-elisir.html presenti nel repository possono restare:
-la v1.3 non li usa più.
-
-
-NUOVO COLLEGAMENTO CALENDARIO
-- Pulsante: Il mio Calendario
-- Destinazione: Google Calendar
-- URL: https://calendar.google.com/calendar/u/0/r
-- Su Android/Chrome utilizza l'account Google già attivo sul dispositivo.
-
-Per aggiornare GitHub:
-estrarre questo ZIP, caricare tutti i file nel repository Lorenzo-Hub e fare Commit changes su main.
-
-
-CORREZIONE CALENDARIO
-- Il precedente collegamento Google Calendar è stato sostituito.
-- Il pulsante ora apre l'app CALENDARIO SAMSUNG.
-- Pacchetto Android: com.samsung.android.calendar
-- Il collegamento usa un Android Intent VIEW al momento corrente.
-- Se l'intent non viene gestito, Chrome usa come fallback la pagina ufficiale dell'app.
-
-NOTA:
-Una PWA pubblicata su GitHub Pages può avviare Calendario Samsung, ma non può leggere
-direttamente il database locale degli appuntamenti del telefono senza i permessi di
-un'app Android nativa. Per questo questa versione implementa il collegamento diretto
-all'app Samsung.
+1. Estrarre questo ZIP.
+2. Repository Lorenzo-Hub > Code > Add file > Upload files.
+3. Caricare tutti i file estratti e sostituire quelli esistenti.
+4. Commit changes su main.
+5. Attendere il deploy Pages verde.
+6. Chiudere e riaprire Lorenzo Hub.

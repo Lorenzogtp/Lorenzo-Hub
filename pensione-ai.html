@@ -1,113 +1,266 @@
+
 <!doctype html>
 <html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#10243f">
-<title>Pensione AI – Aggiornamento 28/08/2026</title>
+<meta name="theme-color" content="#0c1d3a">
+<title>Pensione AI – scenari completi</title>
 <style>
 :root{
-  --bg:#f4f7fb; --card:#ffffff; --ink:#132238; --muted:#64748b;
-  --accent:#173b67; --accent2:#2b5f98; --ok:#0f766e; --line:#dbe4ee;
-  --shadow:0 12px 34px rgba(15,35,60,.10);
+  --bg:#ece7dc;
+  --paper:#f7f4ed;
+  --card:#f4f2ec;
+  --white:#faf9f6;
+  --sand:#e8dbb7;
+  --ink:#0c1d3a;
+  --muted:#5f6767;
+  --gold:#b99547;
+  --line:#d6cfbf;
+  --shadow:0 10px 28px rgba(14,22,38,.08);
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#eef4fb 0,#f8fafc 34%,#f4f7fb 100%);color:var(--ink)}
-header{background:linear-gradient(135deg,#10243f,#245181);color:white;padding:22px 18px 30px}
-.wrap{max-width:980px;margin:auto}
-h1{margin:0;font-size:clamp(28px,6vw,44px);letter-spacing:-.03em}
-.sub{opacity:.88;margin-top:6px}
-.badge{display:inline-flex;margin-top:14px;padding:7px 11px;border:1px solid rgba(255,255,255,.32);border-radius:999px;font-size:13px;background:rgba(255,255,255,.08)}
-main{padding:18px;margin-top:-16px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
-.card h2{font-size:17px;margin:0 0 12px}
-.metric{font-size:30px;font-weight:800;letter-spacing:-.03em}
-.label{font-size:13px;color:var(--muted);margin-top:2px}
-.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:14px}
-.kpi{background:white;border:1px solid var(--line);border-radius:16px;padding:15px}
-.kpi b{display:block;font-size:19px;margin-top:4px}
-.scenario{position:relative;overflow:hidden}
-.scenario:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--accent2)}
-.scenario.central:before{background:var(--ok)}
-.row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dashed #e5ebf2}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+main{max-width:1040px;margin:0 auto;padding:24px 18px 40px}
+.hero{padding:14px 2px 8px}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hero h1{margin:0;font-family:Georgia,'Times New Roman',serif;font-weight:500;line-height:.96;letter-spacing:-.04em;font-size:clamp(42px,9vw,76px)}
+.hero p{margin:26px 0 0;max-width:760px;font-size:clamp(19px,3.8vw,22px);line-height:1.45;color:#4d5668}
+.info-strip{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+.pill{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;background:rgba(12,29,58,.08);font-size:13px;font-weight:700;color:#384252}
+.segment-shell{margin-top:30px;background:rgba(250,249,246,.55);border:1px solid var(--line);border-radius:32px;padding:10px;box-shadow:var(--shadow)}
+.segmented{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.seg-btn{appearance:none;border:0;background:transparent;color:#67706d;font-size:clamp(16px,2.8vw,22px);font-weight:800;border-radius:24px;padding:16px 12px;cursor:pointer;transition:.18s ease}
+.seg-btn.active{background:var(--ink);color:#fff;box-shadow:0 8px 18px rgba(12,29,58,.22)}
+.panel{display:none;margin-top:22px}
+.panel.active{display:block}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.stat-card{border-radius:34px;padding:28px 30px;box-shadow:var(--shadow);border:1px solid var(--line);min-height:210px;display:flex;flex-direction:column;justify-content:space-between}
+.stat-card.white{background:var(--white)}
+.stat-card.sand{background:var(--sand)}
+.stat-card.navy{background:var(--ink);color:#fff;border-color:#0c1d3a}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#70776d}
+.stat-card.navy .kicker{color:#d7be84}
+.value{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.04em;line-height:.92;font-size:clamp(42px,7vw,74px);margin:12px 0 10px}
+.sub{font-size:15px;line-height:1.35;color:#6d7269}
+.stat-card.navy .sub{color:rgba(255,255,255,.82)}
+.section-card{margin-top:18px;background:var(--paper);border-radius:30px;border:1px solid var(--line);box-shadow:var(--shadow);padding:24px}
+.section-title{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#6e746d;margin-bottom:16px}
+.detail-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.list{display:grid;gap:12px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid rgba(12,29,58,.08)}
 .row:last-child{border-bottom:0}
-.row span{color:var(--muted)}
-.row strong{text-align:right}
-.note{font-size:13px;line-height:1.45;color:var(--muted)}
-.highlight{background:#eef7f5;border:1px solid #cfe8e3;border-radius:14px;padding:13px;margin-top:12px}
-.calc{margin-top:14px}
-.formgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px}
-label{font-size:13px;color:var(--muted)}
-input,select{width:100%;margin-top:6px;padding:12px 13px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;background:#fff;color:var(--ink)}
-button{border:0;border-radius:12px;padding:12px 16px;background:var(--accent);color:#fff;font-weight:700;font-size:15px;cursor:pointer}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.out{margin-top:12px;background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:14px}
-footer{padding:8px 18px 30px;text-align:center;color:var(--muted);font-size:12px}
-@media(max-width:720px){
-  .grid,.kpis,.formgrid{grid-template-columns:1fr}
-  main{padding:12px}
-  .metric{font-size:27px}
+.row span{color:#667085}
+.row strong{text-align:right;font-weight:800}
+.callout{background:#fffdf7;border:1px solid #ddd2b5;border-radius:24px;padding:18px}
+.callout .lead{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#8c6f33}
+.callout .big{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,5vw,50px);letter-spacing:-.04em;line-height:1.02;margin:10px 0 8px}
+.note{font-size:14px;line-height:1.55;color:#5b6470;margin:0}
+.scenario-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.mini-card{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:20px}
+.mini-card h3{margin:0 0 14px;font-size:17px}
+.calc-card{margin-top:18px;background:var(--ink);color:#fff;border-radius:30px;padding:24px;box-shadow:var(--shadow)}
+.calc-title{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#d7be84;margin-bottom:16px}
+.formgrid{display:grid;grid-template-columns:1.2fr .9fr .7fr;gap:12px}
+label{display:block;font-size:13px;font-weight:700;color:rgba(255,255,255,.82)}
+input,select{width:100%;margin-top:7px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);color:#fff;border-radius:16px;padding:14px 14px;font:inherit}
+button.action{appearance:none;border:0;border-radius:16px;padding:14px 18px;background:#d7be84;color:var(--ink);font-size:15px;font-weight:800;cursor:pointer}
+button.secondary{background:rgba(255,255,255,.14);color:#fff}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.out{margin-top:16px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:18px}
+.out .row{border-bottom-color:rgba(255,255,255,.12)}
+.out .row span{color:rgba(255,255,255,.72)}
+.out .note{color:rgba(255,255,255,.78)}
+.footer{padding:18px 0 4px;text-align:center;color:#72787a;font-size:12px}
+@media (max-width: 860px){
+  .cards,.detail-grid,.scenario-grid,.formgrid{grid-template-columns:1fr}
+  .section-card,.calc-card,.stat-card{padding:22px}
+}
+@media (max-width: 700px){
+  .segmented{grid-template-columns:1fr}
+  .segment-shell{border-radius:28px}
+  .seg-btn{padding:14px 12px}
 }
 @media print{
   body{background:#fff}
-  header{background:#fff;color:#000;padding:10px 0 16px}
-  main{margin:0;padding:0}
-  .card,.kpi{box-shadow:none;break-inside:avoid}
-  .actions{display:none}
+  .segment-shell,.actions{display:none}
+  main{max-width:none;padding:0}
+  .panel{display:block!important}
+  .panel:not(:first-of-type){margin-top:18px;page-break-before:always}
+  .section-card,.stat-card,.calc-card{box-shadow:none}
 }
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <h1>Pensione AI</h1>
-    <div class="sub">Cruscotto personale di proiezione pensionistica</div>
-    <div class="badge">Dati aggiornati al 28 agosto 2026</div>
-  </div>
-</header>
-
-<main class="wrap">
-  <section class="kpis">
-    <div class="kpi"><span class="label">Decorrenza stimata</span><b>01/01/2029</b></div>
-    <div class="kpi"><span class="label">Retribuzione annua</span><b>€ 81.153,80</b></div>
-    <div class="kpi"><span class="label">Contribuzione annua</span><b>33%</b></div>
-    <div class="kpi"><span class="label">Coefficiente usato</span><b>5,1825%</b></div>
-  </section>
-
-  <section class="grid">
-    <article class="card scenario">
-      <h2>Scenario prudenziale</h2>
-      <div class="metric">€ 727.151,99</div>
-      <div class="label">Montante proiettato</div>
-      <div class="row"><span>Lordo annuo</span><strong>€ 37.684,65</strong></div>
-      <div class="row"><span>Lordo mensile ×13</span><strong>€ 2.898,82</strong></div>
-      <div class="row"><span>Netto mensile stimato</span><strong>≈ € 2.125</strong></div>
-    </article>
-
-    <article class="card scenario central">
-      <h2>Scenario centrale</h2>
-      <div class="metric">€ 751.206,45</div>
-      <div class="label">Montante proiettato</div>
-      <div class="row"><span>Lordo annuo</span><strong>€ 38.931,27</strong></div>
-      <div class="row"><span>Lordo mensile ×13</span><strong>€ 2.994,71</strong></div>
-      <div class="row"><span>Netto mensile stimato</span><strong>≈ € 2.190</strong></div>
-    </article>
-  </section>
-
-  <section class="card" style="margin-top:14px">
-    <h2>Riferimento operativo</h2>
-    <div class="highlight">
-      <div class="label">Netto mensile centrale da usare nelle proiezioni</div>
-      <div class="metric" style="color:var(--ok)">≈ € 2.160 × 13</div>
+<main>
+  <section class="hero">
+    <div class="eyebrow">Simulazione FPLS · Ex ENPALS</div>
+    <h1>La pensione,<br>scenario per<br>scenario.</h1>
+    <p>Un motore trasparente costruito sul montante certificato. Ogni ipotesi resta visibile e modificabile. Sono ora presenti tutte le uscite principali: stop 2026, uscita 2028 e prosecuzione fino a 67 anni.</p>
+    <div class="info-strip">
+      <div class="pill">Dati aggiornati al 28 agosto 2026</div>
+      <div class="pill">Decorrenza standard stimata: 01/01/2029</div>
+      <div class="pill">Coefficiente di lavoro 2028: 5,1825%</div>
     </div>
-    <div class="row"><span>Contribuzione annua stimata (33%)</span><strong>€ 26.780,75</strong></div>
-    <div class="row"><span>IRPEF di riferimento</span><strong>23% / 33% / 43%</strong></div>
-    <p class="note">Il coefficiente 5,1825% è un valore provvisorio di lavoro per la decorrenza 2029 e dovrà essere sostituito con il coefficiente ufficiale applicabile quando disponibile. La stima netta include una valutazione delle imposte e delle addizionali e resta quindi indicativa.</p>
   </section>
 
-  <section class="card calc">
-    <h2>Calcolatore lordo</h2>
+  <section class="segment-shell">
+    <div class="segmented">
+      <button class="seg-btn active" data-panel="uscita2028">Uscita 2028</button>
+      <button class="seg-btn" data-panel="stop2026">Stop 2026</button>
+      <button class="seg-btn" data-panel="fino67">Fino a 67 anni</button>
+    </div>
+  </section>
+
+  <section id="uscita2028" class="panel active">
+    <div class="cards">
+      <article class="stat-card white">
+        <div>
+          <div class="kicker">Montante proiettato</div>
+          <div class="value">751.206 €</div>
+        </div>
+        <div class="sub">scenario centrale · uscita 2028</div>
+      </article>
+      <article class="stat-card sand">
+        <div>
+          <div class="kicker">Pensione lorda</div>
+          <div class="value">2.994,71 €</div>
+        </div>
+        <div class="sub">mensile · 13 mensilità</div>
+      </article>
+      <article class="stat-card navy">
+        <div>
+          <div class="kicker">Pensione netta stimata</div>
+          <div class="value">≈ 2.160 €</div>
+        </div>
+        <div class="sub">riferimento operativo da usare nelle prossime proiezioni</div>
+      </article>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">Lettura operativa</div>
+      <div class="detail-grid">
+        <div class="list">
+          <div class="row"><span>Retribuzione annua</span><strong>€ 81.153,80</strong></div>
+          <div class="row"><span>Contribuzione annua stimata</span><strong>€ 26.780,75</strong></div>
+          <div class="row"><span>Aliquota contributiva</span><strong>33%</strong></div>
+          <div class="row"><span>IRPEF di riferimento</span><strong>23% / 33% / 43%</strong></div>
+          <div class="row"><span>Netto tecnico scenario centrale</span><strong>≈ € 2.190</strong></div>
+        </div>
+        <div class="callout">
+          <div class="lead">Sintesi da ricordare</div>
+          <div class="big">≈ € 2.160 × 13</div>
+          <p class="note">Questo è il valore di lavoro da tenere come riferimento. A fianco resta visibile anche la distinzione tra scenario prudenziale e scenario centrale.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">Confronto rapido 2028</div>
+      <div class="scenario-grid">
+        <div class="mini-card">
+          <h3>Scenario prudenziale</h3>
+          <div class="row"><span>Montante</span><strong>€ 727.151,99</strong></div>
+          <div class="row"><span>Lordo mensile ×13</span><strong>€ 2.898,82</strong></div>
+          <div class="row"><span>Netto stimato</span><strong>≈ € 2.125</strong></div>
+        </div>
+        <div class="mini-card">
+          <h3>Scenario centrale</h3>
+          <div class="row"><span>Montante</span><strong>€ 751.206,45</strong></div>
+          <div class="row"><span>Lordo mensile ×13</span><strong>€ 2.994,71</strong></div>
+          <div class="row"><span>Netto stimato</span><strong>≈ € 2.190</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stop2026" class="panel">
+    <div class="cards">
+      <article class="stat-card white">
+        <div>
+          <div class="kicker">Montante proiettato</div>
+          <div class="value">651.238 €</div>
+        </div>
+        <div class="sub">ipotesi di stop nel 2026, senza ulteriori contributi e con sola rivalutazione</div>
+      </article>
+      <article class="stat-card sand">
+        <div>
+          <div class="kicker">Pensione lorda</div>
+          <div class="value">2.596,19 €</div>
+        </div>
+        <div class="sub">mensile · 13 mensilità</div>
+      </article>
+      <article class="stat-card navy">
+        <div>
+          <div class="kicker">Pensione netta stimata</div>
+          <div class="value">≈ 1.900 €</div>
+        </div>
+        <div class="sub">scenario di fermata anticipata</div>
+      </article>
+    </div>
+    <div class="section-card">
+      <div class="section-title">Dettaglio stop 2026</div>
+      <div class="detail-grid">
+        <div class="list">
+          <div class="row"><span>Montante base fine 2026</span><strong>€ 619.857,86</strong></div>
+          <div class="row"><span>Montante rivalutato a fine 2028</span><strong>€ 651.238,16</strong></div>
+          <div class="row"><span>Pensione lorda annua</span><strong>€ 33.750,42</strong></div>
+          <div class="row"><span>Pensione lorda mensile ×13</span><strong>€ 2.596,19</strong></div>
+        </div>
+        <div class="callout">
+          <div class="lead">Ipotesi</div>
+          <div class="big">Stop lavoro 2026</div>
+          <p class="note">Questo scenario simula l’assenza di ulteriori contributi dal 2027 in avanti. Il montante cresce solo per rivalutazione teorica annua del 2,5%, senza nuovi versamenti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fino67" class="panel">
+    <div class="cards">
+      <article class="stat-card white">
+        <div>
+          <div class="kicker">Montante proiettato</div>
+          <div class="value">856.858 €</div>
+        </div>
+        <div class="sub">ipotesi di prosecuzione fino ai 67 anni</div>
+      </article>
+      <article class="stat-card sand">
+        <div>
+          <div class="kicker">Pensione lorda</div>
+          <div class="value">3.696,35 €</div>
+        </div>
+        <div class="sub">mensile · 13 mensilità · coefficiente indicativo 67 anni 5,608%</div>
+      </article>
+      <article class="stat-card navy">
+        <div>
+          <div class="kicker">Pensione netta stimata</div>
+          <div class="value">≈ 2.670 €</div>
+        </div>
+        <div class="sub">scenario di prosecuzione lavorativa</div>
+      </article>
+    </div>
+    <div class="section-card">
+      <div class="section-title">Dettaglio fino a 67 anni</div>
+      <div class="detail-grid">
+        <div class="list">
+          <div class="row"><span>Base di partenza post uscita 2028</span><strong>€ 751.206,45</strong></div>
+          <div class="row"><span>Contribuzione annua ipotizzata</span><strong>€ 26.780,75</strong></div>
+          <div class="row"><span>Montante stimato a metà 2031</span><strong>€ 856.857,67</strong></div>
+          <div class="row"><span>Pensione lorda annua</span><strong>€ 48.052,58</strong></div>
+          <div class="row"><span>Pensione lorda mensile ×13</span><strong>€ 3.696,35</strong></div>
+        </div>
+        <div class="callout">
+          <div class="lead">Ipotesi</div>
+          <div class="big">Prosecuzione fino a 67 anni</div>
+          <p class="note">Scenario costruito ipotizzando la prosecuzione del lavoro con retribuzione e aliquota contributiva costanti, più rivalutazione teorica del montante al 2,5% annuo. Va considerato come stima operativa, non certificativa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="calc-card">
+    <div class="calc-title">Calcolatore lordo</div>
     <div class="formgrid">
       <label>Montante (€)
         <input id="montante" type="number" step="0.01" value="751206.45">
@@ -120,29 +273,34 @@ footer{padding:8px 18px 30px;text-align:center;color:var(--muted);font-size:12px
       </label>
     </div>
     <div class="actions">
-      <button onclick="calcola()">Calcola</button>
-      <button onclick="window.print()" style="background:#475569">Stampa / Salva PDF</button>
+      <button class="action" onclick="calcola()">Calcola</button>
+      <button class="action secondary" onclick="window.print()">Stampa / Salva PDF</button>
     </div>
     <div id="out" class="out"></div>
   </section>
-</main>
 
-<footer>
-  Pensione AI · simulazione personale · aggiornamento 28/08/2026
-</footer>
+  <div class="footer">Pensione AI · scenari completi reinseriti · aggiornamento 28/08/2026</div>
+</main>
 
 <script>
 const euro = n => new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR'}).format(n);
+const btns = [...document.querySelectorAll('.seg-btn')];
+const panels = [...document.querySelectorAll('.panel')];
+btns.forEach(btn=>btn.addEventListener('click',()=>{
+  btns.forEach(b=>b.classList.toggle('active', b===btn));
+  panels.forEach(p=>p.classList.toggle('active', p.id===btn.dataset.panel));
+  window.scrollTo({top:document.querySelector('.segment-shell').offsetTop-12,behavior:'smooth'});
+}));
 function calcola(){
-  const m=Number(document.getElementById('montante').value||0);
-  const c=Number(document.getElementById('coeff').value||0)/100;
-  const mesi=Number(document.getElementById('mesi').value||13);
-  const annuo=m*c;
-  const mens=annuo/mesi;
+  const m = Number(document.getElementById('montante').value||0);
+  const c = Number(document.getElementById('coeff').value||0)/100;
+  const mesi = Number(document.getElementById('mesi').value||13);
+  const annuo = m*c;
+  const mensile = annuo/mesi;
   document.getElementById('out').innerHTML =
     '<div class="row"><span>Pensione lorda annua</span><strong>'+euro(annuo)+'</strong></div>'+
-    '<div class="row"><span>Pensione lorda mensile ×'+mesi+'</span><strong>'+euro(mens)+'</strong></div>'+
-    '<p class="note">Il calcolo automatico qui esposto riguarda il lordo. Per il netto resta valida la forchetta fiscale aggiornata riportata nel cruscotto.</p>';
+    '<div class="row"><span>Pensione lorda mensile ×'+mesi+'</span><strong>'+euro(mensile)+'</strong></div>'+
+    '<p class="note" style="margin-top:12px">Il calcolatore determina il lordo. Il netto resta una stima indicativa e dipende da fiscalità e addizionali.</p>';
 }
 calcola();
 </script>

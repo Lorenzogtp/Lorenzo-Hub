@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "1.8",
+  "version": "1.9",
   "date": "2026-08-28",
   "fenice": {
     "version": "4.9.3",
@@ -29,7 +29,7 @@
   },
   "pension": {
     "name": "Pensione AI",
-    "mode": "bundled-updated",
+    "mode": "bundled-updated-all-scenarios",
     "url": "./pensione-ai.html",
     "updated": "2026-08-28",
     "reference_net_monthly": "≈ € 2.160 × 13",
@@ -42,6 +42,12 @@
       "Pensione lorda e netta",
       "Calcolatore lordo",
       "Stampa / Salva PDF"
+    ],
+    "style": "classic-complete-scenarios",
+    "scenarios": [
+      "Uscita 2028",
+      "Stop 2026",
+      "Fino a 67 anni"
     ]
   },
   "calendar": {

@@ -1,12 +1,13 @@
-/* Lorenzo Hub v1.8 — collegamenti completi
+
+/* Lorenzo Hub v1.9 — collegamenti completi
    Fenice: versione pubblicata 4.9.3
    ACTV: app ACTV Rapido pubblicata e aggiornata
-   Pensione AI: simulatore pensionistico pubblicato e aggiornato
+   Pensione AI: simulatore pensionistico aggiornato con tutte le uscite principali
 */
 window.LORENZO_HUB_CONFIG = {
   samsungCalendarPackage: "com.samsung.android.calendar",
   samsungCalendarFallback: "https://play.google.com/store/apps/details?id=com.samsung.android.calendar",
-  version: "1.8",
+  version: "1.9",
   feniceBase: "https://lorenzogtp.github.io/fenice-palcoscenico-/",
   actvLatest: "https://actv-rapido-lorenzo.novecento64.chatgpt.site/",
   pensionLatest: "./pensione-ai.html",
