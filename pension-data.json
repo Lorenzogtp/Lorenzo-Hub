@@ -1,0 +1,15 @@
+{
+  "version": "2026-08-28-v1.12",
+  "source_status": "working-set",
+  "coefficient_2028_working": 5.1825,
+  "coefficient_67_working": 5.608,
+  "capitalization_assumption": 2.5,
+  "official_2029_coefficient_published": false,
+  "monitor": "Normativa Pensioni Watch quotidiano",
+  "sources": [
+    "INPS",
+    "Ministero del Lavoro",
+    "Gazzetta Ufficiale",
+    "Normattiva"
+  ]
+}

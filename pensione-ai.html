@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0c1d3a">
-<title>Pensione AI – scenari completi</title>
+<title>Pensione AI v1.12 – cruscotto previdenziale</title>
 <style>
 :root{
   --bg:#ece7dc;
@@ -90,6 +90,43 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
   .segment-shell{border-radius:28px}
   .seg-btn{padding:14px 12px}
 }
+
+/* v1.12 · dashboard / confronto / coefficienti / documenti / affidabilità */
+.tool-nav{margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tool-nav a{text-decoration:none;background:rgba(250,249,246,.7);border:1px solid var(--line);border-radius:18px;padding:12px 10px;text-align:center;color:var(--ink);font-weight:850;font-size:13px;box-shadow:var(--shadow)}
+.countdown{margin-top:22px;background:var(--ink);color:#fff;border-radius:30px;padding:24px;box-shadow:var(--shadow)}
+.countdown .section-title{color:#d7be84}
+.count-grid{display:grid;grid-template-columns:1.1fr repeat(3,.8fr);gap:12px}
+.count-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:16px}
+.count-box b{display:block;font-family:Georgia,'Times New Roman',serif;font-size:clamp(28px,5vw,46px);font-weight:500;letter-spacing:-.03em;margin-top:5px}
+.count-box small{color:rgba(255,255,255,.72);line-height:1.35}
+.timeline{margin-top:16px;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;position:relative}
+.timeline:before{content:"";position:absolute;top:18px;left:7%;right:7%;height:2px;background:rgba(255,255,255,.25)}
+.tstep{position:relative;text-align:center;font-size:11px;color:rgba(255,255,255,.72)}
+.tstep i{display:block;width:14px;height:14px;border-radius:50%;background:#d7be84;border:3px solid var(--ink);margin:12px auto 8px;position:relative;z-index:1}
+.compare-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.compare{width:100%;border-collapse:separate;border-spacing:0;min-width:680px}
+.compare th,.compare td{padding:13px 12px;border-bottom:1px solid #e2dbcf;text-align:right;white-space:nowrap}
+.compare th:first-child,.compare td:first-child{text-align:left}
+.compare thead th{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#6d746d}
+.compare .best{font-weight:850;color:#1f6d51}
+.livebar{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#e7f2ed;border:1px solid #c7dfd4;border-radius:18px;padding:13px 15px;margin-bottom:15px}
+.livebar b{color:#1f6d51}.livebar small{color:#52635d}
+.coef-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.coef-grid label{color:#5f6767}
+.coef-grid input{background:#fff;color:var(--ink);border:1px solid #cfc7b7}
+.coef-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.coef-actions button,.doc-btn{border:0;border-radius:14px;padding:11px 14px;background:var(--ink);color:#fff;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.coef-actions .light{background:#e5dfd3;color:var(--ink)}
+.doc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.doc-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.doc-card h4{margin:0;font-size:16px}.doc-card p{margin:0;color:#667085;font-size:13px;line-height:1.4}.doc-meta{font-size:12px;color:#7d837d}.doc-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.doc-btn{font-size:13px;padding:9px 12px}.doc-btn.disabled{background:#e6e0d5;color:#777;pointer-events:none}
+.trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.trust{border-radius:20px;padding:15px;border:1px solid var(--line);background:#fff}.trust b{display:block;margin-bottom:5px}.trust p{font-size:13px;line-height:1.4;color:#667085;margin:0}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px}.green{background:#2a8b62}.yellow{background:#c59b28}.orange{background:#cc7435}.blue-dot{background:#3b6fc0}
+.source-tag{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800;margin-left:6px;background:#ebe6dc;color:#5b6470}
+@media(max-width:860px){.tool-nav{grid-template-columns:repeat(2,1fr)}.count-grid,.coef-grid,.doc-grid,.trust-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.timeline:before{display:none}.tstep{display:flex;align-items:center;gap:8px;text-align:left}.tstep i{margin:5px 0}.countdown{padding:20px}}
+
 @media print{
   body{background:#fff}
   .segment-shell,.actions{display:none}
@@ -98,6 +135,40 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
   .panel:not(:first-of-type){margin-top:18px;page-break-before:always}
   .section-card,.stat-card,.calc-card{box-shadow:none}
 }
+
+/* v1.13 · Cosa è cambiato */
+.change-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.change-kpi{border:1px solid var(--line);border-radius:20px;padding:16px;background:var(--white)}
+.change-kpi small{display:block;color:var(--muted);font-weight:700;margin-bottom:6px}
+.change-kpi b{font-family:Georgia,'Times New Roman',serif;font-size:27px;font-weight:500}
+.change-kpi .pos{color:#1f7a5a}.change-kpi .neg{color:#a63a32}
+.change-list{display:grid;gap:12px;margin-top:14px}
+.change-item{border:1px solid var(--line);border-radius:22px;background:var(--white);padding:18px}
+.change-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.change-head h4{margin:0;font-size:17px}
+.change-head small{color:var(--muted);text-align:right}
+.before-after{display:grid;grid-template-columns:1fr 38px 1fr;gap:8px;align-items:stretch;margin-top:13px}
+.ba{border-radius:16px;padding:13px;background:#f0ede6}
+.ba b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#747b79;margin-bottom:5px}
+.arrow{display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:var(--gold)}
+.impact{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.impact span{padding:8px 10px;border-radius:999px;background:#e9eef4;color:var(--ink);font-size:12px;font-weight:800}
+.change-form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.change-form .wide{grid-column:1/-1}
+.change-form label{color:#59616c}
+.change-form input,.change-form textarea{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.change-form textarea{min-height:82px;resize:vertical}
+.change-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.change-actions button{border:0;border-radius:14px;padding:12px 15px;background:var(--ink);color:#fff;font-weight:800;cursor:pointer}
+.change-actions button.light{background:#ece8df;color:var(--ink);border:1px solid var(--line)}
+.empty-change{padding:18px;border-radius:18px;background:#f1eee7;color:var(--muted);line-height:1.5}
+@media(max-width:700px){
+  .change-summary,.change-form{grid-template-columns:1fr}
+  .change-form .wide{grid-column:auto}
+  .before-after{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg)}
+}
+
 </style>
 </head>
 <body>
@@ -123,6 +194,31 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
     <a class="nl-btn" href="./normativa-pensioni.html">Apri LIVE →</a>
   </section>
 
+  <nav class="tool-nav" aria-label="Strumenti Pensione AI">
+    <a href="#quanto-manca">⏳ Quanto manca</a>
+    <a href="#confronto">↔️ Confronto</a>
+    <a href="#coefficienti">🔄 Coefficienti LIVE</a>
+    <a href="#cosa-cambiato">🧭 Cosa è cambiato</a>
+    <a href="#documenti">📁 Documenti</a>
+  </nav>
+
+  <section class="countdown" id="quanto-manca">
+    <div class="section-title">Quanto manca alla decorrenza</div>
+    <div class="count-grid">
+      <div class="count-box"><small>Tempo residuo</small><b id="daysLeft">—</b><small id="daysLabel">giorni alla decorrenza stimata</small></div>
+      <div class="count-box"><small>Decorrenza obiettivo</small><b style="font-size:32px">01/01/2029</b><small>scenario uscita 2028</small></div>
+      <div class="count-box"><small>Montante centrale</small><b style="font-size:32px">€ 751.206</b><small>proiezione attuale</small></div>
+      <div class="count-box"><small>Netto operativo</small><b style="font-size:32px">≈ € 2.160</b><small>× 13 mensilità</small></div>
+    </div>
+    <div class="timeline" aria-label="Timeline previdenziale">
+      <div class="tstep"><i></i><span>Oggi<br><b>2026</b></span></div>
+      <div class="tstep"><i></i><span>64 anni<br><b>05/06/2028</b></span></div>
+      <div class="tstep"><i></i><span>Finestra / uscita<br><b>2028</b></span></div>
+      <div class="tstep"><i></i><span>Decorrenza<br><b>01/01/2029</b></span></div>
+      <div class="tstep"><i></i><span>Scenario alternativo<br><b>67 anni</b></span></div>
+    </div>
+  </section>
+
   <section class="segment-shell">
     <div class="segmented">
       <button class="seg-btn active" data-panel="uscita2028">Uscita 2028</button>
@@ -143,7 +239,7 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
       <article class="stat-card sand">
         <div>
           <div class="kicker">Pensione lorda</div>
-          <div class="value">2.994,71 €</div>
+          <div class="value" id="gross2028">2.994,71 €</div>
         </div>
         <div class="sub">mensile · 13 mensilità</div>
       </article>
@@ -205,7 +301,7 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
       <article class="stat-card sand">
         <div>
           <div class="kicker">Pensione lorda</div>
-          <div class="value">2.596,19 €</div>
+          <div class="value" id="grossStop">2.596,19 €</div>
         </div>
         <div class="sub">mensile · 13 mensilità</div>
       </article>
@@ -247,7 +343,7 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
       <article class="stat-card sand">
         <div>
           <div class="kicker">Pensione lorda</div>
-          <div class="value">3.696,35 €</div>
+          <div class="value" id="gross67">3.696,35 €</div>
         </div>
         <div class="sub">mensile · 13 mensilità · coefficiente indicativo 67 anni 5,608%</div>
       </article>
@@ -278,6 +374,105 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
     </div>
   </section>
 
+
+  <section class="section-card" id="confronto">
+    <div class="section-title">Confronto decisionale completo</div>
+    <div class="compare-wrap">
+      <table class="compare">
+        <thead><tr><th>Indicatore</th><th>Stop 2026</th><th>Uscita 2028</th><th>Fino a 67 anni</th></tr></thead>
+        <tbody>
+          <tr><td>Montante stimato</td><td>€ 651.238</td><td>€ 751.206</td><td class="best">€ 856.858</td></tr>
+          <tr><td>Lordo mensile ×13</td><td id="cmpStopGross">€ 2.596,19</td><td id="cmp2028Gross">€ 2.994,71</td><td id="cmp67Gross" class="best">€ 3.696,35</td></tr>
+          <tr><td>Netto mensile stimato</td><td>≈ € 1.900</td><td>≈ € 2.160</td><td class="best">≈ € 2.670</td></tr>
+          <tr><td>Netto annuo ×13</td><td>≈ € 24.700</td><td>≈ € 28.080</td><td class="best">≈ € 34.710</td></tr>
+          <tr><td>Lavoro aggiuntivo rispetto a stop 2026</td><td>—</td><td>≈ 2 anni</td><td>≈ 5 anni</td></tr>
+          <tr><td>Tipo dato prevalente</td><td>Proiezione</td><td>Proiezione su base certificata</td><td>Proiezione lunga</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:14px">Il confronto serve a leggere rapidamente il trade-off fra tempo di lavoro aggiuntivo e incremento della rendita. Le stime nette restano soggette alla fiscalità effettiva dell'anno di decorrenza.</p>
+  </section>
+
+  <section class="section-card" id="coefficienti">
+    <div class="section-title">Coefficienti LIVE · punto 6</div>
+    <div class="livebar"><div><b>● Monitor ufficiale attivo</b><br><small>Controllo quotidiano INPS / Ministero / Gazzetta / Normattiva</small></div><span class="source-tag">FPLS/ex ENPALS</span></div>
+    <div class="coef-grid">
+      <label>Coefficiente uscita 2028 (%)<input id="coef2028" type="number" step="0.0001" value="5.1825"></label>
+      <label>Coefficiente 67 anni (%)<input id="coef67" type="number" step="0.0001" value="5.6080"></label>
+      <label>Rivalutazione montante (%)<input id="capRate" type="number" step="0.01" value="2.50"></label>
+    </div>
+    <div class="coef-actions">
+      <button onclick="applyCoefficients()">Applica e salva</button>
+      <button class="light" onclick="resetCoefficients()">Ripristina valori base</button>
+      <a class="doc-btn" href="./normativa-pensioni.html">Verifica fonti ufficiali →</a>
+    </div>
+    <p class="note" style="margin-top:13px"><span class="dot orange"></span><b>5,1825% è un coefficiente di lavoro/provvisorio</b>, non un coefficiente ufficiale 2029. Quando il monitor segnala un nuovo valore ufficiale, può inserirlo qui: il lordo degli scenari viene ricalcolato e salvato sul dispositivo senza modificare il file dell'app.</p>
+    <p class="note" id="coefStatus" style="margin-top:7px">Ultimo set base app: 28/08/2026.</p>
+  </section>
+
+
+  <section class="section-card" id="cosa-cambiato">
+    <div class="section-title">Cosa è cambiato · PRIMA → DOPO → effetto €</div>
+    <div class="livebar">
+      <div><b>🧭 Registro impatto previdenziale</b><br><small>Le variazioni dei coefficienti applicate nell'app vengono registrate automaticamente.</small></div>
+      <span class="source-tag">v1.13</span>
+    </div>
+
+    <div class="change-summary">
+      <div class="change-kpi"><small>Ultima variazione 2028</small><b id="lastImpact28">€ 0,00</b></div>
+      <div class="change-kpi"><small>Ultima variazione 67 anni</small><b id="lastImpact67">€ 0,00</b></div>
+      <div class="change-kpi"><small>Aggiornamenti registrati</small><b id="changeCount">0</b></div>
+    </div>
+
+    <div id="changeList" class="change-list"></div>
+
+    <div class="change-form">
+      <label class="wide">Titolo modifica<input id="chgTitle" placeholder="Es. Nuovo coefficiente di trasformazione 2029"></label>
+      <label>Data<input id="chgDate" type="date"></label>
+      <label>Fonte ufficiale<input id="chgSource" placeholder="INPS / D.M. / Gazzetta Ufficiale"></label>
+      <label>PRIMA<input id="chgBefore" placeholder="Es. coefficiente 5,1825%"></label>
+      <label>DOPO<input id="chgAfter" placeholder="Es. coefficiente ufficiale 5,25%"></label>
+      <label>Effetto Uscita 2028 (€ / mese)<input id="chgImpact28" type="number" step="0.01" value="0"></label>
+      <label>Effetto fino a 67 anni (€ / mese)<input id="chgImpact67" type="number" step="0.01" value="0"></label>
+      <label class="wide">Nota<textarea id="chgNote" placeholder="Cosa cambia concretamente e con quale grado di affidabilità."></textarea></label>
+    </div>
+    <div class="change-actions">
+      <button onclick="addManualChange()">Registra aggiornamento</button>
+      <button class="light" onclick="clearChangeHistory()">Azzera registro locale</button>
+    </div>
+    <p class="note" style="margin-top:12px">Il monitor quotidiano è stato aggiornato per restituire ogni novità sostanziale nello stesso formato <b>PRIMA → DOPO → effetto mensile</b>. Le modifiche dei coefficienti effettuate nel pannello LIVE vengono invece registrate qui automaticamente sul dispositivo.</p>
+  </section>
+
+
+  <section class="section-card" id="documenti">
+    <div class="section-title">Centro documenti previdenziali · punto 7</div>
+    <div class="doc-grid">
+      <article class="doc-card"><h4>🟢 EcoCert INPS · 12/06/2025</h4><p>Estratto Conto Certificativo PALS. Fonte certificativa storica della posizione.</p><div class="doc-meta">INPS · certificativo</div><div class="doc-actions"><a class="doc-btn" href="./docs/EcoCert_12-06-2025.pdf" target="_blank">Apri PDF</a></div></article>
+      <article class="doc-card"><h4>🟢 Estratto Conto FPLS · 18/06/2025</h4><p>Dettaglio della contribuzione Lavoratori dello Spettacolo e Sportivi Professionisti.</p><div class="doc-meta">INPS · estratto completo</div><div class="doc-actions"><a class="doc-btn" href="./docs/Estratto_Conto_FPLS_18-06-2025.pdf" target="_blank">Apri PDF</a></div></article>
+      <article class="doc-card"><h4>🟢 Casellario degli Attivi · 18/06/2025</h4><p>Estratto Conto Integrato con periodi contributivi e gestioni.</p><div class="doc-meta">INPS · documento ufficiale</div><div class="doc-actions"><a class="doc-btn" href="./docs/Estratto_Casellario_Attivi_18-06-2025.pdf" target="_blank">Apri PDF</a></div></article>
+      <article class="doc-card"><h4>🟡 Studio previdenziale · 25/10/2023</h4><p>Studio Miapensione. Utile come confronto storico, non come fonte normativa corrente.</p><div class="doc-meta">Consulenza privata · storico</div><div class="doc-actions"><a class="doc-btn" href="./docs/Studio_Miapensione_25-10-2023.pdf" target="_blank">Apri PDF</a></div></article>
+      <article class="doc-card"><h4>🟢 EcoCert agosto 2026</h4><p>Riferimento certificativo più recente utilizzato nell'analisi: rilascio 11/08/2026, 8.495 giornate obbligatorie PALS + 52 FIS.</p><div class="doc-meta">Registrato nel modello · file da aggiungere al pacchetto</div><div class="doc-actions"><span class="doc-btn disabled">Registrato</span></div></article>
+      <article class="doc-card"><h4>📥 Archivio da completare</h4><p>CU 2025, risposte/PEC Polo PALS e cedolini 2026 possono essere aggiunti al prossimo pacchetto per avere l'archivio completo offline.</p><div class="doc-meta">Prossimo aggiornamento documentale</div><div class="doc-actions"><span class="doc-btn disabled">In attesa file</span></div></article>
+    </div>
+  </section>
+
+  <section class="section-card" id="affidabilita">
+    <div class="section-title">Semaforo affidabilità dati · punto 8</div>
+    <div class="trust-grid">
+      <div class="trust"><b><span class="dot green"></span>Certificato INPS</b><p>EcoCert, estratti ufficiali, giornate contributive e dati espressamente certificati dall'Istituto.</p></div>
+      <div class="trust"><b><span class="dot yellow"></span>Calcolato su dati certificati</b><p>Valori ottenuti con formule verificabili partendo da dati INPS, ad esempio ricostruzioni del montante.</p></div>
+      <div class="trust"><b><span class="dot orange"></span>Proiezione / ipotesi</b><p>Montanti futuri, pensioni nette future, rivalutazioni ipotetiche e coefficienti non ancora ufficiali per la decorrenza.</p></div>
+      <div class="trust"><b><span class="dot blue-dot"></span>Normativa ufficiale</b><p>Leggi, decreti, circolari e messaggi verificati tramite INPS, Gazzetta Ufficiale, Normattiva o Ministero.</p></div>
+    </div>
+    <div class="list" style="margin-top:14px">
+      <div class="row"><span>Giornate EcoCert agosto 2026</span><strong>🟢 Certificato INPS</strong></div>
+      <div class="row"><span>Montante centrale 2028 € 751.206,45</span><strong>🟠 Proiezione</strong></div>
+      <div class="row"><span>Netto operativo ≈ € 2.160 ×13</span><strong>🟠 Stima fiscale</strong></div>
+      <div class="row"><span>Coefficiente di lavoro 5,1825%</span><strong>🟠 Provvisorio</strong></div>
+      <div class="row"><span>Normativa Pensioni LIVE</span><strong>🔵 Fonti ufficiali</strong></div>
+    </div>
+  </section>
+
   <section class="calc-card">
     <div class="calc-title">Calcolatore lordo</div>
     <div class="formgrid">
@@ -298,7 +493,7 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
     <div id="out" class="out"></div>
   </section>
 
-  <div class="footer">Pensione AI · scenari completi + Normativa Pensioni LIVE · aggiornamento 28/08/2026</div>
+  <div class="footer">Pensione AI v1.13 · dashboard decisionale + Cosa è cambiato + coefficienti LIVE + documenti + affidabilità · 28/08/2026</div>
 </main>
 
 <script>
@@ -321,7 +516,162 @@ function calcola(){
     '<div class="row"><span>Pensione lorda mensile ×'+mesi+'</span><strong>'+euro(mensile)+'</strong></div>'+
     '<p class="note" style="margin-top:12px">Il calcolatore determina il lordo. Il netto resta una stima indicativa e dipende da fiscalità e addizionali.</p>';
 }
+
 calcola();
+
+function updateCountdown(){
+  const target = new Date('2029-01-01T00:00:00');
+  const now = new Date();
+  const days = Math.max(0, Math.ceil((target-now)/86400000));
+  document.getElementById('daysLeft').textContent = new Intl.NumberFormat('it-IT').format(days);
+  document.getElementById('daysLabel').textContent = days===1 ? 'giorno alla decorrenza stimata' : 'giorni alla decorrenza stimata';
+}
+function euro2(n){return new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR',minimumFractionDigits:2}).format(n)}
+function applyCoefficients(silent=false){
+  const c28=Number(document.getElementById('coef2028').value||5.1825);
+  const c67=Number(document.getElementById('coef67').value||5.6080);
+  const cap=Number(document.getElementById('capRate').value||2.5);
+  let previous={c28:5.1825,c67:5.6080,cap:2.5};
+  try{
+    const p=JSON.parse(localStorage.getItem('pensioneAI.coefficients')||'null');
+    if(p) previous=p;
+  }catch(e){}
+  const before28=751206.45*(Number(previous.c28)/100)/13;
+  const before67=856857.67*(Number(previous.c67)/100)/13;
+  const central=751206.45*(c28/100)/13;
+  const stop=651238.16*(c28/100)/13;
+  const v67=856857.67*(c67/100)/13;
+  localStorage.setItem('pensioneAI.coefficients',JSON.stringify({c28,c67,cap,ts:new Date().toISOString()}));
+  document.getElementById('gross2028').textContent=euro2(central);
+  document.getElementById('grossStop').textContent=euro2(stop);
+  document.getElementById('gross67').textContent=euro2(v67);
+  document.getElementById('cmp2028Gross').textContent=euro2(central);
+  document.getElementById('cmpStopGross').textContent=euro2(stop);
+  document.getElementById('cmp67Gross').textContent=euro2(v67);
+  document.getElementById('coeff').value=c28.toFixed(4);
+  document.getElementById('coefStatus').textContent='Valori salvati sul dispositivo il '+new Date().toLocaleString('it-IT')+'. Il netto non viene modificato automaticamente finché non viene aggiornata anche la fiscalità.';
+  if(!silent && (Number(previous.c28)!==c28 || Number(previous.c67)!==c67 || Number(previous.cap)!==cap)){
+    recordChange({
+      title:'Aggiornamento parametri Pensione AI',
+      date:new Date().toISOString().slice(0,10),
+      source:'Coefficienti LIVE · modifica locale',
+      before:'2028 '+Number(previous.c28).toFixed(4)+'% · 67 anni '+Number(previous.c67).toFixed(4)+'% · rivalutazione '+Number(previous.cap).toFixed(2)+'%',
+      after:'2028 '+c28.toFixed(4)+'% · 67 anni '+c67.toFixed(4)+'% · rivalutazione '+cap.toFixed(2)+'%',
+      impact28:central-before28,
+      impact67:v67-before67,
+      note:'Impatto calcolato sul lordo mensile ×13. Il netto richiede l’aggiornamento separato della fiscalità.',
+      kind:'automatico'
+    });
+  }
+}
+function resetCoefficients(){
+  localStorage.removeItem('pensioneAI.coefficients');
+  document.getElementById('coef2028').value='5.1825';
+  document.getElementById('coef67').value='5.6080';
+  document.getElementById('capRate').value='2.50';
+  applyCoefficients();
+  localStorage.removeItem('pensioneAI.coefficients');
+  document.getElementById('coefStatus').textContent='Ripristinati i valori base app del 28/08/2026.';
+}
+function loadCoefficients(){
+  try{
+    const d=JSON.parse(localStorage.getItem('pensioneAI.coefficients')||'null');
+    if(d){
+      document.getElementById('coef2028').value=d.c28;
+      document.getElementById('coef67').value=d.c67;
+      document.getElementById('capRate').value=d.cap;
+      applyCoefficients(true);
+    }
+  }catch(e){}
+}
+
+const CHANGE_KEY='pensioneAI.changeHistory';
+function escHtml(v){
+  return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+}
+function getChanges(){
+  try{return JSON.parse(localStorage.getItem(CHANGE_KEY)||'[]')||[]}catch(e){return []}
+}
+function saveChanges(items){
+  localStorage.setItem(CHANGE_KEY,JSON.stringify(items.slice(0,50)));
+  renderChanges();
+}
+function recordChange(item){
+  const items=getChanges();
+  const fingerprint=[item.title,item.date,item.before,item.after,Number(item.impact28||0).toFixed(2),Number(item.impact67||0).toFixed(2)].join('|');
+  if(items[0] && items[0].fingerprint===fingerprint){renderChanges();return}
+  item.fingerprint=fingerprint;
+  item.ts=new Date().toISOString();
+  items.unshift(item);
+  saveChanges(items);
+}
+function formatImpact(n){
+  n=Number(n||0);
+  const sign=n>0?'+':'';
+  return sign+new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR',minimumFractionDigits:2}).format(n);
+}
+function renderChanges(){
+  const items=getChanges();
+  const list=document.getElementById('changeList');
+  if(!list)return;
+  document.getElementById('changeCount').textContent=items.length;
+  const latest=items[0]||{};
+  const e28=document.getElementById('lastImpact28'), e67=document.getElementById('lastImpact67');
+  e28.textContent=formatImpact(latest.impact28||0);
+  e67.textContent=formatImpact(latest.impact67||0);
+  e28.className=Number(latest.impact28)>0?'pos':Number(latest.impact28)<0?'neg':'';
+  e67.className=Number(latest.impact67)>0?'pos':Number(latest.impact67)<0?'neg':'';
+  if(!items.length){
+    list.innerHTML='<div class="empty-change"><b>Nessuna variazione registrata.</b><br>La base corrente resta quella del 28/08/2026. Quando cambia un coefficiente nel pannello LIVE, il confronto PRIMA → DOPO viene creato automaticamente.</div>';
+    return;
+  }
+  list.innerHTML=items.map(it=>`
+    <article class="change-item">
+      <div class="change-head">
+        <h4>${escHtml(it.title||'Aggiornamento previdenziale')}</h4>
+        <small>${escHtml(it.date||'')}<br>${escHtml(it.source||'')}</small>
+      </div>
+      <div class="before-after">
+        <div class="ba"><b>Prima</b>${escHtml(it.before||'—')}</div>
+        <div class="arrow">→</div>
+        <div class="ba"><b>Dopo</b>${escHtml(it.after||'—')}</div>
+      </div>
+      <div class="impact">
+        <span>Uscita 2028: ${formatImpact(it.impact28)} / mese</span>
+        <span>67 anni: ${formatImpact(it.impact67)} / mese</span>
+        <span>${escHtml(it.kind==='automatico'?'Calcolo automatico':'Aggiornamento registrato')}</span>
+      </div>
+      ${it.note?'<p class="note" style="margin-top:11px">'+escHtml(it.note)+'</p>':''}
+    </article>`).join('');
+}
+function addManualChange(){
+  const title=document.getElementById('chgTitle').value.trim();
+  if(!title){alert('Inserisca il titolo della modifica.');return}
+  recordChange({
+    title,
+    date:document.getElementById('chgDate').value || new Date().toISOString().slice(0,10),
+    source:document.getElementById('chgSource').value.trim() || 'Fonte da verificare',
+    before:document.getElementById('chgBefore').value.trim() || '—',
+    after:document.getElementById('chgAfter').value.trim() || '—',
+    impact28:Number(document.getElementById('chgImpact28').value||0),
+    impact67:Number(document.getElementById('chgImpact67').value||0),
+    note:document.getElementById('chgNote').value.trim(),
+    kind:'normativa'
+  });
+  ['chgTitle','chgSource','chgBefore','chgAfter','chgNote'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('chgImpact28').value='0';
+  document.getElementById('chgImpact67').value='0';
+}
+function clearChangeHistory(){
+  if(confirm('Azzerare il registro locale “Cosa è cambiato”?')){
+    localStorage.removeItem(CHANGE_KEY);
+    renderChanges();
+  }
+}
+
+updateCountdown();
+loadCoefficients();
+renderChanges();
 </script>
 </body>
 </html>

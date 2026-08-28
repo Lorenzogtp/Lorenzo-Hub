@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "1.11",
+  "version": "1.13",
   "date": "2026-08-28",
   "fenice": {
     "version": "4.9.3",
@@ -38,8 +38,13 @@
     "coefficient_working": "5,1825%",
     "features": [
       "FPLS/ex ENPALS",
-      "Montante contributivo",
-      "Pensione lorda e netta",
+      "Quanto manca alla decorrenza",
+      "Confronto decisionale scenari",
+      "Coefficienti LIVE modificabili",
+      "Cosa è cambiato: PRIMA → DOPO → effetto €",
+      "Centro documenti previdenziali",
+      "Semaforo affidabilità",
+      "Normativa Pensioni LIVE",
       "Calcolatore lordo",
       "Stampa / Salva PDF"
     ],
@@ -49,7 +54,12 @@
       "Stop 2026",
       "Fino a 67 anni"
     ],
-    "normativa_live_embedded": true
+    "normativa_live_embedded": true,
+    "documents_bundled": 4,
+    "reliability_legend": true,
+    "coefficients_local_update": true,
+    "change_log_local": true,
+    "change_log_auto_on_coefficient_update": true
   },
   "calendar": {
     "type": "Samsung Calendar",

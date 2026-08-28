@@ -1,0 +1,16 @@
+LORENZO HUB v1.13 — COSA È CAMBIATO
+
+Nuova funzione:
+- registro previdenziale “Cosa è cambiato”;
+- visualizzazione PRIMA → DOPO;
+- calcolo automatico dell'effetto in euro/mese sul lordo Uscita 2028 e Fino a 67 anni quando si modificano i coefficienti LIVE;
+- salvataggio locale dello storico fino a 50 aggiornamenti;
+- possibilità di registrare anche una modifica normativa con fonte, data, prima/dopo, impatto e nota;
+- il monitor quotidiano ChatGPT è stato aggiornato per produrre ogni novità sostanziale nello stesso formato.
+
+Per pubblicare:
+1. estrarre lo ZIP;
+2. caricare tutti i file nel repository Lorenzo Hub sostituendo gli esistenti;
+3. commit su main;
+4. attendere GitHub Pages;
+5. chiudere e riaprire la PWA.

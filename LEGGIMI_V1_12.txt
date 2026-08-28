@@ -1,0 +1,13 @@
+LORENZO HUB v1.12 — PENSIONE AI EVOLUTA
+
+Novità integrate:
+- Dashboard Quanto manca con countdown dinamico e timeline;
+- Confronto decisionale completo Stop 2026 / Uscita 2028 / Fino a 67 anni;
+- Coefficienti LIVE modificabili e salvati localmente;
+- monitor automatico ufficiale già attivo;
+- Centro documenti previdenziali con 4 PDF offline;
+- registrazione EcoCert agosto 2026 come riferimento corrente;
+- Semaforo affidabilità: certificato / calcolato / proiezione / normativa ufficiale;
+- cache PWA aggiornata.
+
+Nota tecnica: una PWA statica non può modificare da sola il codice pubblicato quando esce un nuovo coefficiente. Il monitor ChatGPT segnala la novità; il valore può essere inserito nel pannello Coefficienti LIVE e viene salvato sul dispositivo, aggiornando subito i lordi.
