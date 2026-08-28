@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10243f">
+<title>Pensione AI – Aggiornamento 28/08/2026</title>
+<style>
+:root{
+  --bg:#f4f7fb; --card:#ffffff; --ink:#132238; --muted:#64748b;
+  --accent:#173b67; --accent2:#2b5f98; --ok:#0f766e; --line:#dbe4ee;
+  --shadow:0 12px 34px rgba(15,35,60,.10);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#eef4fb 0,#f8fafc 34%,#f4f7fb 100%);color:var(--ink)}
+header{background:linear-gradient(135deg,#10243f,#245181);color:white;padding:22px 18px 30px}
+.wrap{max-width:980px;margin:auto}
+h1{margin:0;font-size:clamp(28px,6vw,44px);letter-spacing:-.03em}
+.sub{opacity:.88;margin-top:6px}
+.badge{display:inline-flex;margin-top:14px;padding:7px 11px;border:1px solid rgba(255,255,255,.32);border-radius:999px;font-size:13px;background:rgba(255,255,255,.08)}
+main{padding:18px;margin-top:-16px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+.card h2{font-size:17px;margin:0 0 12px}
+.metric{font-size:30px;font-weight:800;letter-spacing:-.03em}
+.label{font-size:13px;color:var(--muted);margin-top:2px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.kpi{background:white;border:1px solid var(--line);border-radius:16px;padding:15px}
+.kpi b{display:block;font-size:19px;margin-top:4px}
+.scenario{position:relative;overflow:hidden}
+.scenario:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--accent2)}
+.scenario.central:before{background:var(--ok)}
+.row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dashed #e5ebf2}
+.row:last-child{border-bottom:0}
+.row span{color:var(--muted)}
+.row strong{text-align:right}
+.note{font-size:13px;line-height:1.45;color:var(--muted)}
+.highlight{background:#eef7f5;border:1px solid #cfe8e3;border-radius:14px;padding:13px;margin-top:12px}
+.calc{margin-top:14px}
+.formgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px}
+label{font-size:13px;color:var(--muted)}
+input,select{width:100%;margin-top:6px;padding:12px 13px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;background:#fff;color:var(--ink)}
+button{border:0;border-radius:12px;padding:12px 16px;background:var(--accent);color:#fff;font-weight:700;font-size:15px;cursor:pointer}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.out{margin-top:12px;background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:14px}
+footer{padding:8px 18px 30px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:720px){
+  .grid,.kpis,.formgrid{grid-template-columns:1fr}
+  main{padding:12px}
+  .metric{font-size:27px}
+}
+@media print{
+  body{background:#fff}
+  header{background:#fff;color:#000;padding:10px 0 16px}
+  main{margin:0;padding:0}
+  .card,.kpi{box-shadow:none;break-inside:avoid}
+  .actions{display:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Pensione AI</h1>
+    <div class="sub">Cruscotto personale di proiezione pensionistica</div>
+    <div class="badge">Dati aggiornati al 28 agosto 2026</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="kpis">
+    <div class="kpi"><span class="label">Decorrenza stimata</span><b>01/01/2029</b></div>
+    <div class="kpi"><span class="label">Retribuzione annua</span><b>€ 81.153,80</b></div>
+    <div class="kpi"><span class="label">Contribuzione annua</span><b>33%</b></div>
+    <div class="kpi"><span class="label">Coefficiente usato</span><b>5,1825%</b></div>
+  </section>
+
+  <section class="grid">
+    <article class="card scenario">
+      <h2>Scenario prudenziale</h2>
+      <div class="metric">€ 727.151,99</div>
+      <div class="label">Montante proiettato</div>
+      <div class="row"><span>Lordo annuo</span><strong>€ 37.684,65</strong></div>
+      <div class="row"><span>Lordo mensile ×13</span><strong>€ 2.898,82</strong></div>
+      <div class="row"><span>Netto mensile stimato</span><strong>≈ € 2.125</strong></div>
+    </article>
+
+    <article class="card scenario central">
+      <h2>Scenario centrale</h2>
+      <div class="metric">€ 751.206,45</div>
+      <div class="label">Montante proiettato</div>
+      <div class="row"><span>Lordo annuo</span><strong>€ 38.931,27</strong></div>
+      <div class="row"><span>Lordo mensile ×13</span><strong>€ 2.994,71</strong></div>
+      <div class="row"><span>Netto mensile stimato</span><strong>≈ € 2.190</strong></div>
+    </article>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2>Riferimento operativo</h2>
+    <div class="highlight">
+      <div class="label">Netto mensile centrale da usare nelle proiezioni</div>
+      <div class="metric" style="color:var(--ok)">≈ € 2.160 × 13</div>
+    </div>
+    <div class="row"><span>Contribuzione annua stimata (33%)</span><strong>€ 26.780,75</strong></div>
+    <div class="row"><span>IRPEF di riferimento</span><strong>23% / 33% / 43%</strong></div>
+    <p class="note">Il coefficiente 5,1825% è un valore provvisorio di lavoro per la decorrenza 2029 e dovrà essere sostituito con il coefficiente ufficiale applicabile quando disponibile. La stima netta include una valutazione delle imposte e delle addizionali e resta quindi indicativa.</p>
+  </section>
+
+  <section class="card calc">
+    <h2>Calcolatore lordo</h2>
+    <div class="formgrid">
+      <label>Montante (€)
+        <input id="montante" type="number" step="0.01" value="751206.45">
+      </label>
+      <label>Coefficiente (%)
+        <input id="coeff" type="number" step="0.0001" value="5.1825">
+      </label>
+      <label>Mensilità
+        <select id="mesi"><option selected>13</option><option>12</option></select>
+      </label>
+    </div>
+    <div class="actions">
+      <button onclick="calcola()">Calcola</button>
+      <button onclick="window.print()" style="background:#475569">Stampa / Salva PDF</button>
+    </div>
+    <div id="out" class="out"></div>
+  </section>
+</main>
+
+<footer>
+  Pensione AI · simulazione personale · aggiornamento 28/08/2026
+</footer>
+
+<script>
+const euro = n => new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR'}).format(n);
+function calcola(){
+  const m=Number(document.getElementById('montante').value||0);
+  const c=Number(document.getElementById('coeff').value||0)/100;
+  const mesi=Number(document.getElementById('mesi').value||13);
+  const annuo=m*c;
+  const mens=annuo/mesi;
+  document.getElementById('out').innerHTML =
+    '<div class="row"><span>Pensione lorda annua</span><strong>'+euro(annuo)+'</strong></div>'+
+    '<div class="row"><span>Pensione lorda mensile ×'+mesi+'</span><strong>'+euro(mens)+'</strong></div>'+
+    '<p class="note">Il calcolo automatico qui esposto riguarda il lordo. Per il netto resta valida la forchetta fiscale aggiornata riportata nel cruscotto.</p>';
+}
+calcola();
+</script>
+</body>
+</html>

@@ -1,18 +1,13 @@
-LORENZO HUB v1.7 — LH MAX + PENSIONE AI
+LORENZO HUB v1.8 — LH MAX + PENSIONE AI AGGIORNATA
 
-Aggiornamento:
-- nuova scheda Pensione AI nella Home;
-- collegamento diretto al Simulatore Pensione Lorenzo pubblicato;
-- calcoli FPLS/ex ENPALS, montante, TFR, pensione lorda e netta;
-- disposizione 2 × 2 delle quattro app principali;
-- nuova icona LH MAX applicata all'app;
-- logo LH molto più grande e leggibile;
-- icone 192 e 512 per PWA/Android;
-- Apple Touch Icon;
-- favicon;
-- cache Service Worker aggiornata per forzare il refresh.
+Aggiornamento 28/08/2026:
+- sostituita Pensione AI nel cruscotto Lorenzo Hub;
+- la scheda Pensione AI apre ora la versione locale aggiornata inclusa nel pacchetto;
+- riferimento centrale: ≈ € 2.160 netti/mese × 13;
+- montante prudenziale € 727.151,99; montante centrale € 751.206,45;
+- coefficiente di lavoro 5,1825% (provvisorio);
+- aggiunto calcolatore lordo e stampa/salvataggio PDF;
+- cache Service Worker portata a v1.8 per forzare l’aggiornamento.
 
 Per GitHub Pages:
-sostituire i file del repository con quelli presenti in questo pacchetto.
-Se Android mostra ancora la vecchia icona, disinstallare il collegamento/app dalla Home
-e reinstallarlo dopo che GitHub Pages ha completato il deploy.
+caricare/sostituire tutti i file del pacchetto nella root del repository Lorenzo-Hub e attendere il deploy Pages.

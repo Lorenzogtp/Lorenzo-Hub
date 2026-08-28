@@ -1,4 +1,4 @@
-/* Lorenzo Hub v1.7 — routing */
+/* Lorenzo Hub v1.8 — routing */
 (function(){
   function cfg(){ return window.LORENZO_HUB_CONFIG || {}; }
 
@@ -16,7 +16,7 @@
   };
 
   window.openPensionLatest = function(){
-    window.location.href = cfg().pensionLatest || 'https://pensione-lorenzo.novecento64.chatgpt.site/';
+    window.location.href = cfg().pensionLatest || './pensione-ai.html';
   };
 
 

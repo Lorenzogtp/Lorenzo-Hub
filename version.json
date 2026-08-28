@@ -1,7 +1,7 @@
 {
   "name": "Lorenzo Hub",
-  "version": "1.7",
-  "date": "2026-08-25",
+  "version": "1.8",
+  "date": "2026-08-28",
   "fenice": {
     "version": "4.9.3",
     "url": "https://lorenzogtp.github.io/fenice-palcoscenico-/",
@@ -28,15 +28,20 @@
     "url": "https://actv-rapido-lorenzo.novecento64.chatgpt.site/"
   },
   "pension": {
-    "name": "Simulatore Pensione Lorenzo",
-    "mode": "latest-published",
-    "url": "https://pensione-lorenzo.novecento64.chatgpt.site/",
+    "name": "Pensione AI",
+    "mode": "bundled-updated",
+    "url": "./pensione-ai.html",
+    "updated": "2026-08-28",
+    "reference_net_monthly": "≈ € 2.160 × 13",
+    "prudent_montante": "€ 727.151,99",
+    "central_montante": "€ 751.206,45",
+    "coefficient_working": "5,1825%",
     "features": [
       "FPLS/ex ENPALS",
       "Montante contributivo",
-      "TFR",
       "Pensione lorda e netta",
-      "Scenari personalizzati"
+      "Calcolatore lordo",
+      "Stampa / Salva PDF"
     ]
   },
   "calendar": {
