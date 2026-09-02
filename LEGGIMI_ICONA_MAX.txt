@@ -1,0 +1,18 @@
+LORENZO HUB — ICONA MAX LEGGIBILE
+
+Correzione:
+- eliminata la scritta piccola “LORENZO HUB” dall’interno dell’icona;
+- mantenuto solo “LH” grande, ad alto contrasto;
+- il nome “Lorenzo Hub” resta visualizzato dal sistema sotto l’icona;
+- inclusi gli asset già richiamati dalla PWA:
+  icon-192.png
+  icon-512.png
+  apple-touch-icon.png
+  favicon.png
+- incluso anche icon-1024.png come master.
+
+Per aggiornare GitHub:
+1. Sostituire nella root del repository i quattro file:
+   icon-192.png, icon-512.png, apple-touch-icon.png, favicon.png
+2. Fare Commit changes.
+3. Dopo il deploy, rimuovere l’icona/app dalla schermata Home e reinstallarla se il telefono conserva la vecchia icona in cache.
