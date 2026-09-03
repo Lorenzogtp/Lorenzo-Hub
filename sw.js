@@ -1,4 +1,4 @@
-const CACHE='lorenzo-hub-v2.0-operativo-20260903';
+const CACHE='lorenzo-hub-v2.0.1-pensione-20260903';
 const CORE=[
  './','./index.html','./manifest.webmanifest','./config.js','./links.js',
  './fenice-bridge.html','./404.html','./version.json','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./favicon.png'
