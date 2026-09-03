@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "date": "2026-09-03",
   "fenice": {
     "version": "aggiornata",
@@ -28,8 +28,13 @@
     "url": "https://actv-rapido-lorenzo.novecento64.chatgpt.site/"
   },
   "pensione": {
-    "name": "Pensione Lorenzo",
-    "url": "https://pensione-lorenzo.novecento64.chatgpt.site/"
+    "name": "Pensione AI",
+    "version": "1.13.3",
+    "mode": "bundled-consolidated-crystallized",
+    "url": "./pensione-ai.html",
+    "normativa": "./normativa-pensioni.html",
+    "documents_bundled": 4,
+    "source_date": "2026-08-28"
   },
   "calendar": {
     "type": "Samsung Calendar",

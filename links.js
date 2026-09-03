@@ -15,8 +15,12 @@
     window.location.href = cfg().actvLatest || 'https://actv-rapido-lorenzo.novecento64.chatgpt.site/';
   };
 
-  window.openPensioneLatest = function(){
-    window.location.href = cfg().pensioneLatest || 'https://pensione-lorenzo.novecento64.chatgpt.site/';
+  window.openPensionLatest = function(){
+    window.location.href = cfg().pensionLatest || './pensione-ai.html';
+  };
+
+  window.openPensionRules = function(){
+    window.location.href = cfg().pensionRules || './normativa-pensioni.html';
   };
 
 

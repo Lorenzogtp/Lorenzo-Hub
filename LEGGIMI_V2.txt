@@ -1,4 +1,4 @@
-LORENZO HUB v2.0.1 — CRUSCOTTO OPERATIVO
+LORENZO HUB v2.0.2 — CRUSCOTTO OPERATIVO
 
 NOVITÀ
 - Home con produzione attiva, prossimo impegno, urgenze e attività di oggi.
@@ -9,7 +9,8 @@ NOVITÀ
 - Nuova icona LH MAX ad alta leggibilità.
 - Dati, attività e note della versione precedente conservati.
 - Collegamenti a Fenice Palcoscenico, ACTV Rapido e Calendario Samsung invariati.
-- Accesso diretto al simulatore Pensione Lorenzo.
+- Pensione AI v1.13.3 consolidata e cristallizzata integrata nel pacchetto.
+- Normativa Pensioni LIVE e quattro documenti previdenziali disponibili anche offline.
 
 AGGIORNAMENTO GITHUB PAGES
 1. Estrarre il contenuto dello ZIP.
