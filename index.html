@@ -3,184 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#141c26">
+<meta name="theme-color" content="#0b1420">
+<meta name="description" content="Cruscotto operativo personale per produzioni, agenda e palcoscenico.">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="icon" href="./favicon.png">
 <title>Lorenzo Hub</title>
 <style>
-:root{--bg:#0f1720;--card:#182330;--txt:#f4f6f8;--muted:#aeb9c5;--accent:#d4484f;--ok:#46a36f;--line:#2d3a47;--blue:#477fa8;--violet:#6d4ec7}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0d141c,#101923 45%,#0e151d);color:var(--txt);min-height:100vh}
-header{position:sticky;top:0;z-index:10;background:rgba(15,23,32,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 16px 10px}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:850;font-size:20px}.date{font-size:13px;color:var(--muted)}
-main{max-width:900px;margin:auto;padding:16px 14px 100px}.hero{background:linear-gradient(135deg,#1c2b39,#223747);border:1px solid #314656;border-radius:20px;padding:18px;margin-bottom:14px}
-.hero h1{font-size:25px;margin:0 0 6px}.hero p{margin:0;color:var(--muted)}.status{display:inline-flex;margin-top:12px;padding:7px 10px;border-radius:999px;background:#112a20;color:#9de0b8;font-weight:750;font-size:13px}
-.sectionTitle{font-size:13px;color:var(--muted);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:18px 2px 8px}
-.appcards,.fenicegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.card,.appcard,.fcard{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:14px}.appcard .ico,.fcard .ico{font-size:26px}.appcard b,.fcard b{display:block;margin:6px 0 3px}.appcard small,.fcard small{display:block;color:var(--muted);line-height:1.35}
-.appcard button,.fcard button{width:100%;margin-top:10px}
-.btn{border:0;border-radius:13px;padding:11px 12px;font-weight:800;background:#263646;color:white}.btn.red{background:var(--accent)}.btn.green{background:var(--ok)}.btn.blue{background:var(--blue)}.btn.pension{background:linear-gradient(135deg,var(--violet),#316aa7)}.btn.ghost{background:transparent;border:1px solid #435465}
-.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.quick button{background:var(--card);border:1px solid var(--line);color:#fff;border-radius:15px;padding:12px 6px;font-size:12px;min-height:72px}.quick .ico{display:block;font-size:24px;margin-bottom:4px}
-input,textarea,select{width:100%;background:#0f1720;border:1px solid #344454;color:#fff;border-radius:12px;padding:11px 12px;font:inherit}textarea{min-height:92px}label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}
-.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.task{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}.task:last-child{border-bottom:0}.meta,.small,.muted{color:var(--muted);font-size:12px}
-nav{position:fixed;left:0;right:0;bottom:0;background:rgba(12,19,27,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:20;padding-bottom:env(safe-area-inset-bottom)}
-nav .inner{width:min(900px,100%);display:grid;grid-template-columns:repeat(5,1fr)}nav button{background:none;border:0;color:#9eabb7;padding:10px 2px 8px;font-size:11px}nav button.active{color:#fff;font-weight:800}nav span{display:block;font-size:20px;margin-bottom:2px}
-.view{display:none}.view.active{display:block}.wide{grid-column:1/-1}.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:86px;background:#fff;color:#111;padding:10px 14px;border-radius:12px;font-weight:700;opacity:0;transition:.2s;z-index:50}.toast.show{opacity:1}
-@media(min-width:720px){.appcards{grid-template-columns:repeat(3,1fr)}.primary-appcards{grid-template-columns:repeat(2,1fr)}.fenicegrid{grid-template-columns:repeat(4,1fr)}.quick{grid-template-columns:repeat(6,1fr)}}
+:root{--bg:#09111b;--card:#142232;--card2:#1a2c3e;--txt:#f7f9fb;--muted:#a9b8c8;--line:#2c4053;--red:#df5059;--green:#45aa74;--blue:#4489bf;--shadow:0 14px 34px #0004}
+*{box-sizing:border-box}html{color-scheme:dark}body{margin:0;min-height:100vh;background:radial-gradient(circle at 90% -8%,#24445f 0,transparent 34%),linear-gradient(180deg,#09111b,#0d1824 52%,#09121c);color:var(--txt);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-tap-highlight-color:transparent}
+button,input,select,textarea{font:inherit}button{cursor:pointer}header{position:sticky;top:0;z-index:20;background:#09111bea;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:12px 16px}.top{max-width:980px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:1.22rem;font-weight:900}.version,.date,.meta,.muted{color:var(--muted);font-size:.8rem}
+main{max-width:980px;margin:auto;padding:16px 14px 106px}.view{display:none}.view.active{display:block}.head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:2px 2px 14px}.head h1{font-size:clamp(1.65rem,5vw,2.3rem);line-height:1.05;letter-spacing:-.04em;margin:0}.head p{margin:6px 0 0;color:var(--muted)}.ready{color:#a6e2c1;font-size:.82rem;font-weight:850;white-space:nowrap}.ready:before{content:"";display:inline-block;width:8px;height:8px;margin-right:7px;background:var(--green);border-radius:50%;box-shadow:0 0 0 4px #45aa7422}
+.overview{display:grid;grid-template-columns:1fr;gap:11px}.panel,.card,.appcard,.fcard{background:linear-gradient(145deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.panel{padding:16px;min-height:156px}.panel.alert{border-color:#653840;background:linear-gradient(145deg,#2b2028,#171e2a)}.paneltop{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:11px}.eyebrow,.sectionTitle{font-size:.78rem;color:var(--muted);font-weight:900;letter-spacing:.08em;text-transform:uppercase}.panel h2{font-size:1.25rem;line-height:1.15;margin:0 0 6px}.panel p{margin:0;color:var(--muted)}.count{display:grid;place-items:center;min-width:29px;height:29px;padding:0 8px;border-radius:99px;background:var(--red);font-weight:900}
+.production{display:flex;gap:8px;margin-top:12px}.production select{flex:1}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.btn{min-height:44px;border:0;border-radius:13px;padding:10px 13px;background:#293e52;color:#fff;font-weight:850}.btn.red{background:var(--red)}.btn.green{background:#2e8a59}.btn.blue{background:#367aac}.btn.ghost{background:transparent;border:1px solid #4a6278}.btn.small{min-height:38px;padding:7px 10px;font-size:.86rem}.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #8bcaff;outline-offset:2px}
+.compact{display:grid;gap:6px}.item{display:flex;align-items:flex-start;gap:9px;padding:8px 0;border-top:1px solid var(--line)}.item:first-child{border-top:0}.dot{width:9px;height:9px;margin-top:6px;flex:0 0 auto;border-radius:50%;background:var(--blue)}.dot.high{background:var(--red)}.copy{flex:1;min-width:0}.copy b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.empty{color:var(--muted);padding:7px 0}
+.sectionTitle{margin:20px 2px 9px}.range{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:5px;background:#0d1925;border:1px solid var(--line);border-radius:15px}.range button{border:0;border-radius:11px;padding:9px 5px;background:transparent;color:var(--muted);font-weight:850}.range button.active{background:#2b465e;color:white}.agenda{margin-top:10px;padding:15px}.day{padding:12px 0;border-top:1px solid var(--line)}.day:first-child{border-top:0;padding-top:0}.daytitle{font-weight:900;margin-bottom:5px}.agendaitem{display:flex;align-items:center;gap:9px;padding:7px 0}.agendaitem input,.task>input{width:21px;height:21px;accent-color:var(--green);flex:0 0 auto}.agendacopy{flex:1;min-width:0}.priority{font-size:.72rem;font-weight:900;border-radius:99px;padding:3px 7px;background:#294158}.priority.Alta{background:#792c34;color:#ffe1e3}.priority.Bassa{background:#254036;color:#c0e9d0}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.quick button{min-height:82px;border:1px solid var(--line);border-radius:15px;background:var(--card);color:#fff;padding:10px 5px;font-size:.8rem;font-weight:800}.quick span{display:block;font-size:1.55rem;margin-bottom:4px}
+.appcards,.fenicegrid{display:grid;grid-template-columns:1fr;gap:10px}.appcard,.fcard{padding:15px}.ico{font-size:1.65rem}.appcard b,.fcard b{display:block;margin:7px 0 3px}.appcard small,.fcard small{display:block;color:var(--muted);line-height:1.4}.appcard .btn,.fcard .btn{width:100%;margin-top:11px}
+input,select,textarea{width:100%;background:#0b1622;border:1px solid #3c5368;color:#fff;border-radius:12px;padding:11px 12px}textarea{min-height:104px;resize:vertical}label{display:block;font-size:.82rem;color:var(--muted);margin:10px 0 6px;font-weight:750}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.task{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}.task:last-child{border-bottom:0}
+nav{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#07101af5;backdrop-filter:blur(14px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}nav .inner{width:min(980px,100%);margin:auto;display:grid;grid-template-columns:repeat(5,1fr)}nav button{min-height:62px;background:none;border:0;color:#98a9ba;padding:8px 2px 7px;font-size:.72rem}nav button.active{color:white;font-weight:900}nav span{display:block;font-size:1.3rem}.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:88px;background:#fff;color:#111;padding:10px 14px;border-radius:12px;font-weight:800;opacity:0;pointer-events:none;transition:.2s;z-index:50}.toast.show{opacity:1}
+@media(min-width:700px){.overview{grid-template-columns:repeat(2,1fr)}.appcards{grid-template-columns:repeat(3,1fr)}.fenicegrid{grid-template-columns:repeat(4,1fr)}.quick{grid-template-columns:repeat(6,1fr)}}@media(max-width:390px){.head{display:block}.ready{display:block;margin-top:7px}.formgrid{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
-<script src="./config.js"></script>
-<script src="./links.js"></script>
+<script src="./config.js"></script><script src="./links.js"></script>
 </head>
 <body>
-<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="muted">v1.13.3</span></div><div id="today" class="date"></div></div><button class="btn ghost" onclick="exportData()">Backup</button></div></header>
+<header><div class="top"><div><div class="brand">Lorenzo Hub <span class="version">v2.0</span></div><div id="today" class="date"></div></div><button class="btn ghost small" onclick="exportData()">Backup</button></div></header>
 <main>
-
 <section id="oggi" class="view active">
-  <div class="hero">
-    <h1 id="greeting">Lorenzo Hub</h1>
-    <p>Fenice Palcoscenico 4.9.3, ACTV Rapido, Calendario Samsung, Pensione AI e Normativa Pensioni LIVE in un unico punto.</p>
-    <div class="status">● 5 collegamenti completi</div>
+  <div class="head"><div><h1 id="greeting">Buongiorno, Lorenzo</h1><p>La regia operativa della giornata.</p></div><div class="ready">Pronto all’uso</div></div>
+  <div class="overview">
+    <article class="panel"><div class="paneltop"><span class="eyebrow">Produzione attiva</span><span class="ico">🎭</span></div><h2 id="productionTitle">Dittico</h2><p>Accesso immediato agli strumenti della produzione.</p><div class="production"><select id="activeProduction" aria-label="Produzione attiva"><option>Dittico</option><option>Pagliacci</option><option>Fedora 2026</option><option>L’elisir d’amore</option><option>Generale</option></select></div><div class="actions"><button class="btn red small" onclick="openFeniceSection('today')">Apri oggi</button><button class="btn ghost small" onclick="openFeniceSection('plan')">Piano prove</button></div></article>
+    <article class="panel"><div class="paneltop"><span class="eyebrow">Prossimo impegno</span><span class="ico">🕒</span></div><div id="nextCommitment"></div><div class="actions"><button class="btn blue small" onclick="showView('tasks')">Gestisci agenda</button><button class="btn ghost small" onclick="openSamsungCalendar()">Calendario</button></div></article>
+    <article class="panel alert"><div class="paneltop"><span class="eyebrow">Urgenze e solleciti</span><span id="urgentCount" class="count">0</span></div><div id="urgentList" class="compact"></div><div class="actions"><button class="btn red small" onclick="showView('tasks')">Apri attività</button></div></article>
+    <article class="panel"><div class="paneltop"><span class="eyebrow">Cosa devo fare adesso</span><span class="ico">✓</span></div><div id="nowList" class="compact"></div><div class="actions"><button class="btn green small" onclick="showView('tasks')">Aggiungi attività</button></div></article>
   </div>
-
-  <div class="sectionTitle">Le app principali</div>
-  <div class="appcards primary-appcards">
-    <div class="appcard">
-      <div class="ico">🎭</div><b>Fenice Palcoscenico 4.9.3</b>
-      <small>Produzioni, piano prove, ODG, cast, camerini, calendario e archivio.</small>
-      <button class="btn red" onclick="openFeniceSection('home')">Apri Fenice</button>
-    </div>
-    <div class="appcard">
-      <div class="ico">🚌</div><b>ACTV Rapido · ultimo</b>
-      <small>Apre direttamente la Sua app ACTV Rapido pubblicata e aggiornata.</small>
-      <button class="btn green" onclick="openACTVLatest()">Apri ACTV Rapido</button>
-    </div>
-    <div class="appcard">
-      <div class="ico">📅</div><b>Calendario Samsung</b>
-      <small>Apre direttamente l’app Calendario Samsung sul Suo Galaxy.</small>
-      <button class="btn blue" onclick="openSamsungCalendar()">Apri Calendario Samsung</button>
-    </div>
-    <div class="appcard">
-      <div class="ico">📈</div><b>Pensione AI</b>
-      <small>v1.13.1 VERIFICATA · montante 2028 € 706.011 · netto medio ≈ € 2.072 ×13 · filiera riconciliata.</small>
-      <button class="btn pension" onclick="openPensionLatest()">Apri Pensione AI</button>
-    </div>
-    <div class="appcard">
-      <div class="ico">⚖️</div><b>Normativa Pensioni LIVE</b>
-      <small>Monitor ufficiale INPS, Normattiva, Gazzetta Ufficiale e Ministero del Lavoro. Focus FPLS/ex ENPALS.</small>
-      <button class="btn pension" onclick="openPensionRules()">Apri Normativa LIVE</button>
-    </div>
-  </div>
-
-  <div class="sectionTitle">Fenice · accessi immediati</div>
-  <div class="quick">
-    <button onclick="openFeniceSection('today')"><span class="ico">🎭</span>Oggi</button>
-    <button onclick="openFeniceSection('tomorrow')"><span class="ico">➡️</span>Domani</button>
-    <button onclick="openFeniceSection('smart')"><span class="ico">⚡</span>ODG Smart</button>
-    <button onclick="openFeniceSection('plan')"><span class="ico">🗓️</span>Piano prove</button>
-    <button onclick="openFeniceSection('cast')"><span class="ico">👤</span>Cast</button>
-    <button onclick="openFeniceSection('rooms')"><span class="ico">🚪</span>Camerini</button>
-  </div>
+  <div class="sectionTitle">Agenda operativa</div><div class="range"><button id="range-today" class="active" onclick="setRange('today')">Oggi</button><button id="range-tomorrow" onclick="setRange('tomorrow')">Domani</button><button id="range-week" onclick="setRange('week')">Settimana</button></div><div class="card agenda" id="agendaPreview"></div>
+  <div class="sectionTitle">Accessi immediati</div><div class="quick"><button onclick="openFeniceSection('today')"><span>🎭</span>Fenice oggi</button><button onclick="openFeniceSection('tomorrow')"><span>➡️</span>Domani</button><button onclick="openFeniceSection('smart')"><span>⚡</span>ODG Smart</button><button onclick="openFeniceSection('plan')"><span>🗓️</span>Piano prove</button><button onclick="openACTVLatest()"><span>🚌</span>ACTV Rapido</button><button onclick="openSamsungCalendar()"><span>📅</span>Calendario</button></div>
 </section>
-
 <section id="tasks" class="view">
-  <div class="sectionTitle">Da fare</div>
-  <div class="card">
-    <label>Nuova attività</label><input id="taskText" placeholder="Es. Confermare camerino">
-    <div class="row"><div style="flex:1"><label>Data</label><input id="taskDate" type="date"></div><div style="flex:1"><label>Priorità</label><select id="taskPriority"><option>Alta</option><option selected>Normale</option><option>Bassa</option></select></div></div>
-    <button class="btn red" style="margin-top:10px" onclick="addTask()">Aggiungi</button>
-  </div>
-  <div class="card" style="margin-top:10px"><div id="taskList"></div></div>
+  <div class="sectionTitle">Agenda e attività</div><div class="card" style="padding:15px"><label for="taskText">Nuova attività</label><input id="taskText" placeholder="Es. Confermare camerino"><div class="formgrid"><div><label for="taskDate">Data</label><input id="taskDate" type="date"></div><div><label for="taskPriority">Priorità</label><select id="taskPriority"><option>Alta</option><option selected>Normale</option><option>Bassa</option></select></div></div><div class="formgrid"><div><label for="taskStatus">Stato</label><select id="taskStatus"><option>Da fare</option><option>In attesa</option></select></div><div><label for="taskProduction">Produzione</label><select id="taskProduction"><option>Produzione attiva</option><option>Generale</option><option>Dittico</option><option>Pagliacci</option><option>Fedora 2026</option><option>L’elisir d’amore</option></select></div></div><button class="btn red" style="margin-top:12px;width:100%" onclick="addTask()">Aggiungi attività</button></div><div class="card" style="margin-top:10px;padding:0 15px"><div id="taskList"></div></div>
 </section>
-
 <section id="odg" class="view">
-  <div class="sectionTitle">ODG</div>
-  <div class="appcards">
-    <div class="appcard"><div class="ico">⚡</div><b>ODG Smart Fenice</b><small>Generatore integrato nella 4.9.3.</small><button class="btn red" onclick="openFeniceSection('smart')">Apri ODG Smart</button></div>
-    <div class="appcard"><div class="ico">🗓️</div><b>ODG da Piano prove</b><small>Apre Piano prove e cerca il comando ODG della sezione.</small><button class="btn blue" onclick="openFeniceSection('plan-smart')">Apri</button></div>
-  </div>
-  <div class="card" style="margin-top:12px">
-    <label>ODG rapido manuale</label><textarea id="odgOut" placeholder="Può incollare o modificare qui il messaggio WhatsApp."></textarea>
-    <button class="btn" onclick="copyODG()">Copia per WhatsApp</button>
-  </div>
+  <div class="sectionTitle">Ordine del giorno</div><div class="appcards"><div class="appcard"><div class="ico">⚡</div><b>ODG Smart Fenice</b><small>Generatore integrato in Fenice Palcoscenico.</small><button class="btn red" onclick="openFeniceSection('smart')">Apri ODG Smart</button></div><div class="appcard"><div class="ico">🗓️</div><b>ODG da Piano prove</b><small>Genera l’ordine del giorno dalla pianificazione.</small><button class="btn blue" onclick="openFeniceSection('plan-smart')">Apri</button></div></div><div class="card" style="margin-top:12px;padding:15px"><label for="odgOut">ODG rapido manuale</label><textarea id="odgOut" placeholder="Incolli o modifichi qui il messaggio WhatsApp."></textarea><button class="btn" onclick="copyODG()">Copia per WhatsApp</button></div>
 </section>
-
 <section id="fenice" class="view">
-  <div class="sectionTitle">Fenice Palcoscenico 4.9.3 · tutte le sezioni</div>
-  <div class="fenicegrid">
-    <div class="fcard"><div class="ico">🏠</div><b>Home</b><small>Cruscotto principale.</small><button class="btn" onclick="openFeniceSection('home')">Apri</button></div>
-    <div class="fcard"><div class="ico">🎭</div><b>Oggi</b><small>Piano della produzione attiva.</small><button class="btn" onclick="openFeniceSection('today')">Apri</button></div>
-    <div class="fcard"><div class="ico">➡️</div><b>Domani</b><small>Anticipazione operativa.</small><button class="btn" onclick="openFeniceSection('tomorrow')">Apri</button></div>
-    <div class="fcard"><div class="ico">⚡</div><b>ODG Smart</b><small>WhatsApp automatico.</small><button class="btn red" onclick="openFeniceSection('smart')">Apri</button></div>
-
-    <div class="fcard"><div class="ico">🎬</div><b>Produzioni</b><small>Cambia titolo e archivio produzioni.</small><button class="btn blue" onclick="openFeniceSection('productions')">Apri</button></div>
-    <div class="fcard"><div class="ico">➕</div><b>Nuova produzione</b><small>Crea opera o concerto.</small><button class="btn blue" onclick="openFeniceSection('new-production')">Apri</button></div>
-    <div class="fcard"><div class="ico">🗂️</div><b>Archivio produzioni</b><small>Produzioni salvate.</small><button class="btn" onclick="openFeniceSection('archive')">Apri</button></div>
-    <div class="fcard"><div class="ico">🗓️</div><b>Piano prove</b><small>Date, orari, sedi e convocati.</small><button class="btn" onclick="openFeniceSection('plan')">Apri</button></div>
-
-    <div class="fcard"><div class="ico">⚡</div><b>ODG Piano prove</b><small>Accesso al comando ODG dalla pianificazione.</small><button class="btn red" onclick="openFeniceSection('plan-smart')">Apri</button></div>
-    <div class="fcard"><div class="ico">👤</div><b>Cast / Solisti</b><small>Ruoli e interpreti.</small><button class="btn" onclick="openFeniceSection('cast')">Apri</button></div>
-    <div class="fcard"><div class="ico">🚪</div><b>Camerini</b><small>Assegnazioni per produzione.</small><button class="btn" onclick="openFeniceSection('rooms')">Apri</button></div>
-    <div class="fcard"><div class="ico">📅</div><b>Calendario</b><small>Stagione Fenice.</small><button class="btn" onclick="openFeniceSection('calendar')">Apri</button></div>
-
-    <div class="fcard"><div class="ico">🔎</div><b>Ricerca globale</b><small>Produzioni, prove, cast e camerini.</small><button class="btn" onclick="openFeniceSection('search')">Apri</button></div>
-    <div class="fcard"><div class="ico">🎚️</div><b>Palcoscenico</b><small>Modalità operativa di giornata.</small><button class="btn" onclick="openFeniceSection('stage')">Apri</button></div>
-    <div class="fcard"><div class="ico">💾</div><b>Backup / Import</b><small>Salva e trasferisce dati.</small><button class="btn" onclick="openFeniceSection('backup')">Apri</button></div>
-  </div>
-
-
-  <div class="sectionTitle">Calendario Samsung</div>
-  <div class="appcards">
-    <div class="appcard"><div class="ico">📅</div><b>Calendario Samsung</b><small>App Calendario Samsung del dispositivo.</small><button class="btn blue" onclick="openSamsungCalendar()">Apri Calendario Samsung</button></div>
-  </div>
-
-  <div class="sectionTitle">ACTV</div>
-  <div class="appcards">
-    <div class="appcard"><div class="ico">🚌</div><b>ACTV Rapido · ultimo</b><small>Versione pubblicata.</small><button class="btn green" onclick="openACTVLatest()">Apri</button></div>
-    <div class="appcard"><div class="ico">🕒</div><b>ACTV Tempo Reale</b><small>Portale ufficiale.</small><button class="btn" onclick="openHubExternal('actvRealtime')">Apri</button></div>
-    <div class="appcard"><div class="ico">📋</div><b>AVM Orari</b><small>Orari e percorsi ufficiali.</small><button class="btn" onclick="openHubExternal('avmOrari')">Apri</button></div>
-  </div>
+  <div class="sectionTitle">Fenice Palcoscenico</div><div class="fenicegrid">
+  <div class="fcard"><div class="ico">🏠</div><b>Home</b><small>Cruscotto principale.</small><button class="btn" onclick="openFeniceSection('home')">Apri</button></div>
+  <div class="fcard"><div class="ico">🎭</div><b>Oggi</b><small>Piano della produzione attiva.</small><button class="btn" onclick="openFeniceSection('today')">Apri</button></div>
+  <div class="fcard"><div class="ico">➡️</div><b>Domani</b><small>Anticipazione operativa.</small><button class="btn" onclick="openFeniceSection('tomorrow')">Apri</button></div>
+  <div class="fcard"><div class="ico">⚡</div><b>ODG Smart</b><small>Messaggio WhatsApp automatico.</small><button class="btn red" onclick="openFeniceSection('smart')">Apri</button></div>
+  <div class="fcard"><div class="ico">🎬</div><b>Produzioni</b><small>Cambia produzione.</small><button class="btn blue" onclick="openFeniceSection('productions')">Apri</button></div>
+  <div class="fcard"><div class="ico">🗂️</div><b>Archivio</b><small>Produzioni salvate.</small><button class="btn" onclick="openFeniceSection('archive')">Apri</button></div>
+  <div class="fcard"><div class="ico">🗓️</div><b>Piano prove</b><small>Date, orari, sedi e convocati.</small><button class="btn" onclick="openFeniceSection('plan')">Apri</button></div>
+  <div class="fcard"><div class="ico">👤</div><b>Cast e solisti</b><small>Ruoli e interpreti.</small><button class="btn" onclick="openFeniceSection('cast')">Apri</button></div>
+  <div class="fcard"><div class="ico">🚪</div><b>Camerini</b><small>Assegnazioni.</small><button class="btn" onclick="openFeniceSection('rooms')">Apri</button></div>
+  <div class="fcard"><div class="ico">🔎</div><b>Ricerca globale</b><small>Prove, cast e camerini.</small><button class="btn" onclick="openFeniceSection('search')">Apri</button></div>
+  <div class="fcard"><div class="ico">💾</div><b>Backup e import</b><small>Salva e trasferisce i dati.</small><button class="btn" onclick="openFeniceSection('backup')">Apri</button></div></div>
+  <div class="sectionTitle">Altri strumenti</div><div class="appcards"><div class="appcard"><div class="ico">🚌</div><b>ACTV Rapido</b><small>Fermate e collegamenti salvati.</small><button class="btn green" onclick="openACTVLatest()">Apri</button></div><div class="appcard"><div class="ico">📅</div><b>Calendario Samsung</b><small>Agenda del dispositivo.</small><button class="btn blue" onclick="openSamsungCalendar()">Apri</button></div><div class="appcard"><div class="ico">🕒</div><b>ACTV tempo reale</b><small>Portale ufficiale.</small><button class="btn" onclick="openHubExternal('actvRealtime')">Apri</button></div></div>
 </section>
-
-<section id="notes" class="view">
-  <div class="sectionTitle">Note</div>
-  <div class="card">
-    <textarea id="noteText" placeholder="Nota di palcoscenico o promemoria..."></textarea>
-    <div class="row"><button class="btn" onclick="startVoice()">🎙️ Detta</button><button class="btn red" onclick="saveNote()">Salva</button></div>
-  </div>
-  <div class="card" style="margin-top:10px"><div id="notesList"></div></div>
-</section>
+<section id="notes" class="view"><div class="sectionTitle">Note di palcoscenico</div><div class="card" style="padding:15px"><textarea id="noteText" placeholder="Nota di palcoscenico o promemoria..."></textarea><div class="row"><button class="btn" onclick="startVoice()">🎙️ Detta</button><button class="btn red" onclick="saveNote()">Salva</button></div></div><div class="card" style="margin-top:10px;padding:0 15px"><div id="notesList"></div></div></section>
 </main>
-
-<nav><div class="inner">
-<button class="active" data-v="oggi" onclick="showView('oggi')"><span>🏠</span>Oggi</button>
-<button data-v="tasks" onclick="showView('tasks')"><span>✅</span>Da fare</button>
-<button data-v="odg" onclick="showView('odg')"><span>⚡</span>ODG</button>
-<button data-v="fenice" onclick="showView('fenice')"><span>🎭</span>Fenice</button>
-<button data-v="notes" onclick="showView('notes')"><span>🎙️</span>Note</button>
-</div></nav>
-<div id="toast" class="toast"></div>
-
+<nav aria-label="Navigazione principale"><div class="inner"><button class="active" data-v="oggi" onclick="showView('oggi')"><span>🏠</span>Oggi</button><button data-v="tasks" onclick="showView('tasks')"><span>✅</span>Agenda</button><button data-v="odg" onclick="showView('odg')"><span>⚡</span>ODG</button><button data-v="fenice" onclick="showView('fenice')"><span>🎭</span>Fenice</button><button data-v="notes" onclick="showView('notes')"><span>🎙️</span>Note</button></div></nav>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script>
-const KEY='lorenzoHubDataV1';let data=JSON.parse(localStorage.getItem(KEY)||'null')||{tasks:[],notes:[]};
+const KEY='lorenzoHubDataV1',stored=JSON.parse(localStorage.getItem(KEY)||'null');let data=stored||{tasks:[],notes:[],activeProduction:'Dittico'};data.tasks=Array.isArray(data.tasks)?data.tasks:[];data.notes=Array.isArray(data.notes)?data.notes:[];data.activeProduction=data.activeProduction||'Dittico';let agendaRange='today';
 function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1800)}
 function save(){localStorage.setItem(KEY,JSON.stringify(data));render()}
-function showView(v){document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));document.getElementById(v).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.v===v));scrollTo(0,0)}
-function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
-function esc(s){return String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
-function addTask(){const t=document.getElementById('taskText').value.trim();if(!t)return;data.tasks.unshift({id:Date.now(),text:t,date:document.getElementById('taskDate').value||todayISO(),priority:document.getElementById('taskPriority').value,done:false});document.getElementById('taskText').value='';save()}
-function toggleTask(id){const x=data.tasks.find(t=>t.id===id);if(x)x.done=!x.done;save()}
-function delTask(id){data.tasks=data.tasks.filter(t=>t.id!==id);save()}
-function saveNote(){const t=document.getElementById('noteText').value.trim();if(!t)return;data.notes.unshift({id:Date.now(),text:t,ts:new Date().toISOString()});document.getElementById('noteText').value='';save()}
-function delNote(id){data.notes=data.notes.filter(n=>n.id!==id);save()}
-function render(){
- document.getElementById('taskList').innerHTML=data.tasks.length?data.tasks.map(t=>`<div class="task"><input type="checkbox" ${t.done?'checked':''} onchange="toggleTask(${t.id})"><div style="flex:1"><div style="${t.done?'text-decoration:line-through;opacity:.6':''}">${esc(t.text)}</div><div class="meta">${esc(t.date)} · ${esc(t.priority)}</div></div><button class="btn ghost" onclick="delTask(${t.id})">×</button></div>`).join(''):'<div class="muted">Nessuna attività.</div>';
- document.getElementById('notesList').innerHTML=data.notes.length?data.notes.map(n=>`<div class="task"><div style="flex:1">${esc(n.text)}<div class="meta">${new Date(n.ts).toLocaleString('it-IT')}</div></div><button class="btn ghost" onclick="delNote(${n.id})">×</button></div>`).join(''):'<div class="muted">Nessuna nota.</div>';
-}
-async function copyODG(){const t=document.getElementById('odgOut').value;if(!t)return;try{await navigator.clipboard.writeText(t);toast('ODG copiato')}catch(e){document.getElementById('odgOut').select();document.execCommand('copy');toast('ODG copiato')}}
-function startVoice(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){toast('Dettatura non disponibile');return}const r=new SR();r.lang='it-IT';r.onresult=e=>{document.getElementById('noteText').value=e.results[0][0].transcript;showView('notes')};r.start()}
-function exportData(){const b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='lorenzo-hub-backup.json';a.click()}
-const now=new Date();document.getElementById('today').textContent=now.toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long',year:'numeric'});document.getElementById('taskDate').value=todayISO();render();
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').then(r=>r.update()).catch(()=>{});
+function showView(v){document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));document.getElementById(v).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.v===v));scrollTo(0,0);render()}
+function localISO(d=new Date()){const x=new Date(d.getTime()-d.getTimezoneOffset()*60000);return x.toISOString().slice(0,10)}
+function datePlus(n){const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+n);return localISO(d)}
+function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function dateLabel(iso){return iso?new Date(iso+'T12:00:00').toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long'}):'Senza data'}
+function taskState(t){return t.status||'Da fare'}function production(v){return v==='Produzione attiva'?data.activeProduction:v}
+function addTask(){const i=document.getElementById('taskText'),text=i.value.trim();if(!text){toast('Inserisca un’attività');return}data.tasks.unshift({id:Date.now(),text,date:taskDate.value||localISO(),priority:taskPriority.value,status:taskStatus.value,production:production(taskProduction.value),done:false});i.value='';save();toast('Attività aggiunta')}
+function toggleTask(id){const x=data.tasks.find(t=>t.id===id);if(x)x.done=!x.done;save()}function delTask(id){data.tasks=data.tasks.filter(t=>t.id!==id);save()}
+function saveNote(){const i=document.getElementById('noteText'),text=i.value.trim();if(!text)return;data.notes.unshift({id:Date.now(),text,ts:new Date().toISOString()});i.value='';save();toast('Nota salvata')}function delNote(id){data.notes=data.notes.filter(n=>n.id!==id);save()}
+function setRange(r){agendaRange=r;document.querySelectorAll('.range button').forEach(b=>b.classList.toggle('active',b.id==='range-'+r));renderAgenda()}
+function rangeTasks(){const start=agendaRange==='tomorrow'?datePlus(1):localISO(),end=agendaRange==='week'?datePlus(6):start,order={Alta:0,Normale:1,Bassa:2};return data.tasks.filter(t=>!t.done&&t.date>=start&&t.date<=end).sort((a,b)=>a.date.localeCompare(b.date)||(order[a.priority]??1)-(order[b.priority]??1))}
+function renderAgenda(){const list=rangeTasks(),box=document.getElementById('agendaPreview');if(!list.length){box.innerHTML='<div class="empty">Nessun impegno in questo intervallo.</div>';return}const groups={};list.forEach(t=>(groups[t.date]??=[]).push(t));box.innerHTML=Object.entries(groups).map(([d,ts])=>`<div class="day"><div class="daytitle">${esc(dateLabel(d))}</div>${ts.map(t=>`<div class="agendaitem"><input type="checkbox" aria-label="Completa ${esc(t.text)}" onchange="toggleTask(${t.id})"><div class="agendacopy"><b>${esc(t.text)}</b><div class="meta">${esc(t.production||data.activeProduction)} · ${esc(taskState(t))}</div></div><span class="priority ${esc(t.priority)}">${esc(t.priority||'Normale')}</span></div>`).join('')}</div>`).join('')}
+function renderDashboard(){const pending=data.tasks.filter(t=>!t.done).sort((a,b)=>(a.date||'9999').localeCompare(b.date||'9999')),urgent=pending.filter(t=>t.priority==='Alta'||t.date<localISO()||taskState(t)==='In attesa');urgentCount.textContent=urgent.length;urgentList.innerHTML=urgent.length?urgent.slice(0,3).map(t=>`<div class="item"><span class="dot high"></span><div class="copy"><b>${esc(t.text)}</b><div class="meta">${esc(dateLabel(t.date))} · ${esc(taskState(t))}</div></div></div>`).join(''):'<div class="empty">Nessuna urgenza aperta.</div>';const today=pending.filter(t=>t.date===localISO());nowList.innerHTML=today.length?today.slice(0,3).map(t=>`<div class="item"><span class="dot ${t.priority==='Alta'?'high':''}"></span><div class="copy"><b>${esc(t.text)}</b><div class="meta">${esc(t.production||data.activeProduction)}</div></div></div>`).join(''):'<div class="empty">Nessuna attività prevista per oggi.</div>';const next=pending.find(t=>t.date>=localISO());nextCommitment.innerHTML=next?`<h2>${esc(next.text)}</h2><p>${esc(dateLabel(next.date))} · ${esc(next.production||data.activeProduction)}</p>`:'<h2>Agenda libera</h2><p>Nessun impegno futuro inserito.</p>'}
+function render(){activeProduction.value=[...activeProduction.options].some(o=>o.value===data.activeProduction)?data.activeProduction:'Generale';productionTitle.textContent=data.activeProduction;taskList.innerHTML=data.tasks.length?data.tasks.slice().sort((a,b)=>(a.done-b.done)||(a.date||'').localeCompare(b.date||'')).map(t=>`<div class="task"><input type="checkbox" ${t.done?'checked':''} aria-label="Completa ${esc(t.text)}" onchange="toggleTask(${t.id})"><div style="flex:1;min-width:0"><div style="${t.done?'text-decoration:line-through;opacity:.55':''}">${esc(t.text)}</div><div class="meta">${esc(dateLabel(t.date))} · ${esc(t.priority||'Normale')} · ${esc(taskState(t))} · ${esc(t.production||data.activeProduction)}</div></div><button class="btn ghost small" aria-label="Elimina" onclick="delTask(${t.id})">×</button></div>`).join(''):'<div class="empty">Nessuna attività.</div>';notesList.innerHTML=data.notes.length?data.notes.map(n=>`<div class="task"><div style="flex:1">${esc(n.text)}<div class="meta">${new Date(n.ts).toLocaleString('it-IT')}</div></div><button class="btn ghost small" aria-label="Elimina nota" onclick="delNote(${n.id})">×</button></div>`).join(''):'<div class="empty">Nessuna nota.</div>';renderDashboard();renderAgenda()}
+async function copyODG(){const t=odgOut.value;if(!t)return;try{await navigator.clipboard.writeText(t);toast('ODG copiato')}catch(e){odgOut.select();document.execCommand('copy');toast('ODG copiato')}}
+function startVoice(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){toast('Dettatura non disponibile');return}const r=new SR();r.lang='it-IT';r.onresult=e=>{noteText.value=e.results[0][0].transcript;showView('notes')};r.start()}
+function exportData(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.download='lorenzo-hub-backup-v2.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+activeProduction.addEventListener('change',e=>{data.activeProduction=e.target.value;save();toast('Produzione attiva aggiornata')});const now=new Date(),h=now.getHours();greeting.textContent=(h<12?'Buongiorno':h<18?'Buon pomeriggio':'Buonasera')+', Lorenzo';today.textContent=now.toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long',year:'numeric'});taskDate.value=localISO();render();if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').then(r=>r.update()).catch(()=>{});
 </script>
-</body>
-</html>
+</body></html>

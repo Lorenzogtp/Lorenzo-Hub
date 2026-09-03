@@ -7,7 +7,7 @@
   "display": "standalone",
   "background_color": "#0f1720",
   "theme_color": "#141c26",
-  "description": "Hub personale con Fenice Palcoscenico, ACTV Rapido, Calendario Samsung e Pensione AI aggiornata al 28/08/2026.",
+  "description": "Cruscotto operativo personale per produzioni, agenda, ODG, Fenice Palcoscenico e ACTV Rapido.",
   "icons": [
     {
       "src": "icon-192.png",

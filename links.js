@@ -1,4 +1,4 @@
-/* Lorenzo Hub v1.11 — routing */
+/* Lorenzo Hub v1.3 — routing */
 (function(){
   function cfg(){ return window.LORENZO_HUB_CONFIG || {}; }
 
@@ -15,14 +15,6 @@
     window.location.href = cfg().actvLatest || 'https://actv-rapido-lorenzo.novecento64.chatgpt.site/';
   };
 
-  window.openPensionLatest = function(){
-    window.location.href = cfg().pensionLatest || './pensione-ai.html';
-  };
-
-
-  window.openPensionRules = function(){
-    window.location.href = './normativa-pensioni.html';
-  };
 
   window.openSamsungCalendar = function(){
     const ms = Date.now();

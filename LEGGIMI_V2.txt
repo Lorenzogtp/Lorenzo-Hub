@@ -1,0 +1,29 @@
+LORENZO HUB v2.0 — CRUSCOTTO OPERATIVO
+
+NOVITÀ
+- Home con produzione attiva, prossimo impegno, urgenze e attività di oggi.
+- Agenda con viste Oggi, Domani e Settimana.
+- Attività associate a priorità, stato e produzione.
+- Stato “In attesa” per solleciti e conferme.
+- Interfaccia più leggibile su smartphone e tablet.
+- Nuova icona LH MAX ad alta leggibilità.
+- Dati, attività e note della versione precedente conservati.
+- Collegamenti a Fenice Palcoscenico, ACTV Rapido e Calendario Samsung invariati.
+
+AGGIORNAMENTO GITHUB PAGES
+1. Estrarre il contenuto dello ZIP.
+2. Aprire il repository Lorenzo-Hub.
+3. Caricare tutti i file nella cartella principale.
+4. Confermare “Commit changes” sul ramo main.
+5. Attendere il completamento di GitHub Pages.
+6. Chiudere e riaprire Lorenzo Hub.
+
+AGGIORNAMENTO DELL’APP INSTALLATA
+La cache v2.0 viene aggiornata automaticamente. Se l’icona o la schermata restano
+quelle precedenti, chiudere completamente l’app. Se necessario, rimuoverla dalla
+schermata Home e installarla nuovamente dopo la pubblicazione.
+
+NOTA CALENDARIO
+Il pulsante Calendario avvia Calendario Samsung su Android. Una PWA può aprire
+l’app, ma non può leggere direttamente gli appuntamenti locali senza i permessi
+di un’app Android nativa.
