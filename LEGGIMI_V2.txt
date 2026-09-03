@@ -1,4 +1,4 @@
-LORENZO HUB v2.0.2 — CRUSCOTTO OPERATIVO
+LORENZO HUB v2.1 — CRUSCOTTO OPERATIVO
 
 NOVITÀ
 - Home con produzione attiva, prossimo impegno, urgenze e attività di oggi.
@@ -9,7 +9,9 @@ NOVITÀ
 - Nuova icona LH MAX ad alta leggibilità.
 - Dati, attività e note della versione precedente conservati.
 - Collegamenti a Fenice Palcoscenico, ACTV Rapido e Calendario Samsung invariati.
-- Pensione AI v1.13.3 consolidata e cristallizzata integrata nel pacchetto.
+- Pensione AI v1.14 con coefficiente operativo 64a6m 5,1690%.
+- Lordo mensile ×13: € 2.832,32–€ 2.976,61.
+- Netto mensile ×13: € 2.145,30–€ 2.237,38.
 - Normativa Pensioni LIVE e quattro documenti previdenziali disponibili anche offline.
 
 AGGIORNAMENTO GITHUB PAGES

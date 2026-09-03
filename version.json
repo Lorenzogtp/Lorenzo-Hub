@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "2.0.2",
+  "version": "2.1",
   "date": "2026-09-03",
   "fenice": {
     "version": "aggiornata",
@@ -29,12 +29,16 @@
   },
   "pensione": {
     "name": "Pensione AI",
-    "version": "1.13.3",
-    "mode": "bundled-consolidated-crystallized",
+    "version": "1.14",
+    "mode": "bundled-consolidated",
     "url": "./pensione-ai.html",
     "normativa": "./normativa-pensioni.html",
     "documents_bundled": 4,
-    "source_date": "2026-08-28"
+    "source_date": "2026-09-03",
+    "coefficient_64y6m": "5,1690%",
+    "gross_monthly_13": "€ 2.832,32–€ 2.976,61",
+    "net_monthly_13": "€ 2.145,30–€ 2.237,38",
+    "pension_start": "01/01/2029"
   },
   "calendar": {
     "type": "Samsung Calendar",

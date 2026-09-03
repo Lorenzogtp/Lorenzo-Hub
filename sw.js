@@ -1,4 +1,4 @@
-const CACHE='lorenzo-hub-v2.0.2-pensione-1.13.3-20260903';
+const CACHE='lorenzo-hub-v2.1-pensione-1.14-20260903';
 const CORE=[
  './','./index.html','./manifest.webmanifest','./config.js','./links.js',
  './fenice-bridge.html','./pensione-ai.html','./normativa-pensioni.html','./pension-data.json',

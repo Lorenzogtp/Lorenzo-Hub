@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0c1d3a">
-<title>Pensione AI v1.13.3 VERIFICATA – cruscotto previdenziale</title>
+<title>Pensione AI v1.14 CONSOLIDATA – cruscotto previdenziale</title>
 <style>
 :root{
   --bg:#ece7dc;
@@ -191,9 +191,9 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
     <h1>La pensione,<br>scenario per<br>scenario.</h1>
     <p>Un motore trasparente costruito sul montante certificato. Ogni ipotesi resta visibile e modificabile. Sono ora presenti tutte le uscite principali: stop 2026, uscita 2028 e prosecuzione fino a 67 anni.</p>
     <div class="info-strip">
-      <div class="pill">Dati aggiornati al 28 agosto 2026</div>
+      <div class="pill">Dati consolidati al 29 agosto 2026</div>
       <div class="pill">Decorrenza standard stimata: 01/01/2029</div>
-      <div class="pill">Benchmark coefficiente 64a3m: 5,1285%</div>
+      <div class="pill">Coefficiente operativo 64a6m: 5,1690%</div>
     </div>
   </section>
 
@@ -225,15 +225,15 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
     <div class="section-title">Quanto manca alla decorrenza</div>
     <div class="count-grid">
       <div class="count-box"><small>Tempo residuo</small><b id="daysLeft">—</b><small id="daysLabel">giorni alla decorrenza stimata</small></div>
-      <div class="count-box"><small>Con 130 gg ferie residue</small><b id="workDaysLeft">—</b><small id="workDaysLabel">giorni al termine effettivo del lavoro · poi ferie dal 01/08/2028 al 31/12/2028 (130 ÷ 26 = 5 mesi)</small></div>
+      <div class="count-box"><small>Simulazione con 130 gg ferie</small><b id="workDaysLeft">—</b><small id="workDaysLabel">giorni al termine effettivo del lavoro · poi ferie dal 01/08/2028 al 31/12/2028 (130 ÷ 26 = 5 mesi)</small></div>
       <div class="count-box"><small>Decorrenza obiettivo</small><b style="font-size:32px">01/01/2029</b><small>scenario uscita 2028</small></div>
       <div class="count-box"><small>Montante centrale</small><b id="countMontante" style="font-size:32px">€ 748.617</b><small>centrale · 1,040445 su 2026–2028</small></div>
-      <div class="count-box"><small>Netto operativo</small><b id="countNet" style="font-size:32px">≈ € 2.152</b><small>× 13 · solo IRPEF statale 2026</small></div>
+      <div class="count-box"><small>Netto operativo</small><b id="countNet" style="font-size:32px">≈ € 2.237</b><small>× 13 · solo IRPEF statale 2026</small></div>
     </div>
     <div class="timeline" aria-label="Timeline previdenziale">
       <div class="tstep"><i></i><span>Oggi<br><b>2026</b></span></div>
       <div class="tstep"><i></i><span>64 anni<br><b>05/06/2028</b></span></div>
-      <div class="tstep"><i></i><span>64 anni + 3 mesi<br><b>05/09/2028</b></span></div>
+      <div class="tstep"><i></i><span>64 anni + 6 mesi<br><b>05/12/2028</b></span></div>
       <div class="tstep"><i></i><span>Decorrenza<br><b>01/01/2029</b></span></div>
       <div class="tstep"><i></i><span>Scenario alternativo<br><b>67 anni</b></span></div>
     </div>
@@ -283,14 +283,14 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
       <article class="stat-card sand">
         <div>
           <div class="kicker">Pensione lorda</div>
-          <div class="value" id="gross2028">2.953,29 €</div>
+          <div class="value" id="gross2028">2.976,61 €</div>
         </div>
         <div class="sub">mensile · 13 mensilità</div>
       </article>
       <article class="stat-card navy">
         <div>
           <div class="kicker">Pensione netta stimata</div>
-          <div class="value" id="net2028">≈ 2.223 €</div>
+          <div class="value" id="net2028">≈ 2.237 €</div>
         </div>
         <div class="sub">stima media mensile ×13 · fiscalità 2026 come benchmark</div>
       </article>
@@ -304,11 +304,11 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
           <div class="row"><span>Contribuzione annua futura al 33%</span><strong>€ 26.780,75</strong></div>
           <div class="row"><span>Aliquota contributiva</span><strong>33%</strong></div>
           <div class="row"><span>IRPEF di riferimento</span><strong>23% / 33% / 43%</strong></div>
-          <div class="row"><span>Netto medio · solo IRPEF statale 2026</span><strong id="opNet2028">≈ € 2.222,50</strong></div>
+          <div class="row"><span>Netto medio · solo IRPEF statale 2026</span><strong id="opNet2028">≈ € 2.237,38</strong></div>
         </div>
         <div class="callout">
           <div class="lead">Sintesi da ricordare</div>
-          <div class="big" id="opNetBig">≈ € 2.223 × 13</div>
+          <div class="big" id="opNetBig">≈ € 2.237 × 13</div>
           <p class="note">Valore medio annuo dopo IRPEF statale 2026 e detrazione per pensione. Addizionali regionali e comunali escluse. La fiscalità effettiva del 2029 potrà modificare il netto.</p>
         </div>
       </div>
@@ -320,14 +320,14 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
         <div class="mini-card">
           <h3>Scenario prudenziale</h3>
           <div class="row"><span>Montante · prudenziale 1,021982 × 3 anni</span><strong>€ 712.325,92</strong></div>
-          <div class="row"><span>Lordo mensile ×13</span><strong>€ 2.810,13</strong></div>
-          <div class="row"><span>Netto stimato*</span><strong>≈ € 2.131,13</strong></div>
+          <div class="row"><span>Lordo mensile ×13</span><strong>€ 2.832,32</strong></div>
+          <div class="row"><span>Netto stimato*</span><strong>≈ € 2.145,30</strong></div>
         </div>
         <div class="mini-card">
           <h3>Scenario centrale</h3>
           <div class="row"><span>Montante · centrale 1,040445 × 3 anni</span><strong>€ 748.616,51</strong></div>
-          <div class="row"><span>Lordo mensile ×13</span><strong>€ 2.953,29</strong></div>
-          <div class="row"><span>Netto stimato*</span><strong>≈ € 2.222,50</strong></div>
+          <div class="row"><span>Lordo mensile ×13</span><strong>€ 2.976,61</strong></div>
+          <div class="row"><span>Netto stimato*</span><strong>≈ € 2.237,38</strong></div>
         </div>
       </div>
     </div>
@@ -345,14 +345,14 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
       <article class="stat-card sand">
         <div>
           <div class="kicker">Pensione lorda</div>
-          <div class="value" id="grossStop">2.737,72 €</div>
+          <div class="value" id="grossStop">2.759,34 €</div>
         </div>
         <div class="sub">mensile · 13 mensilità</div>
       </article>
       <article class="stat-card navy">
         <div>
           <div class="kicker">Pensione netta stimata</div>
-          <div class="value" id="netStop">≈ 2.085 €</div>
+          <div class="value" id="netStop">≈ 2.099 €</div>
         </div>
         <div class="sub">scenario di fermata anticipata</div>
       </article>
@@ -363,8 +363,8 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
         <div class="list">
           <div class="row"><span>Montante base fine 2026</span><strong>€ 641.067,27</strong></div>
           <div class="row"><span>Montante rivalutato a fine 2028</span><strong>€ 693.971,86</strong></div>
-          <div class="row"><span>Pensione lorda annua</span><strong>€ 35.590,35</strong></div>
-          <div class="row"><span>Pensione lorda mensile ×13</span><strong>€ 2.737,72</strong></div>
+          <div class="row"><span>Pensione lorda annua</span><strong>€ 35.871,41</strong></div>
+          <div class="row"><span>Pensione lorda mensile ×13</span><strong>€ 2.759,34</strong></div>
         </div>
         <div class="callout">
           <div class="lead">Ipotesi</div>
@@ -426,9 +426,9 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
         <thead><tr><th>Indicatore</th><th>Stop 2026</th><th>Uscita 2028</th><th>Fino a 67 anni</th></tr></thead>
         <tbody>
           <tr><td>Montante stimato</td><td id="cmpStopMont">€ 693.972</td><td id="cmp2028Mont">€ 748.617</td><td id="cmp67Mont" class="best">€ 913.418</td></tr>
-          <tr><td>Lordo mensile ×13</td><td id="cmpStopGross">€ 2.737,72</td><td id="cmp2028Gross">€ 2.953,29</td><td id="cmp67Gross" class="best">€ 3.940,35</td></tr>
-          <tr><td>Netto medio stimato*</td><td id="cmpStopNet">≈ € 2.084,92</td><td id="cmp2028Net">≈ € 2.222,50</td><td id="cmp67Net" class="best">≈ € 2.846,00</td></tr>
-          <tr><td>Netto annuo ×13</td><td>≈ € 27.104</td><td>≈ € 28.892</td><td class="best">≈ € 36.998</td></tr>
+          <tr><td>Lordo mensile ×13</td><td id="cmpStopGross">€ 2.759,34</td><td id="cmp2028Gross">€ 2.976,61</td><td id="cmp67Gross" class="best">€ 3.940,35</td></tr>
+          <tr><td>Netto medio stimato*</td><td id="cmpStopNet">≈ € 2.098,72</td><td id="cmp2028Net">≈ € 2.237,38</td><td id="cmp67Net" class="best">≈ € 2.846,00</td></tr>
+          <tr><td>Netto annuo ×13</td><td>≈ € 27.283</td><td>≈ € 29.086</td><td class="best">≈ € 36.998</td></tr>
           <tr><td>Lavoro aggiuntivo rispetto a stop 2026</td><td>—</td><td>≈ 2 anni</td><td>≈ 5 anni</td></tr>
           <tr><td>Tipo dato prevalente</td><td>Proiezione</td><td>Proiezione su base ricostruita</td><td>Proiezione lunga</td></tr>
         </tbody>
@@ -441,7 +441,7 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
     <div class="section-title">Coefficienti LIVE · punto 6</div>
     <div class="livebar"><div><b>● Monitor ufficiale attivo</b><br><small>Controllo quotidiano INPS / Ministero / Gazzetta / Normattiva</small></div><span class="source-tag">FPLS/ex ENPALS</span></div>
     <div class="coef-grid">
-      <label>Benchmark 64 anni + 3 mesi (%)<input id="coef2028" type="number" step="0.0001" value="5.1285"></label>
+      <label>Coefficiente operativo 64 anni + 6 mesi (%)<input id="coef2028" type="number" step="0.0001" value="5.1690"></label>
       <label>Coefficiente 67 anni (%)<input id="coef67" type="number" step="0.0001" value="5.6080"></label>
       <label>Rivalutazione ipotetica 2026–2027 (%)<input id="capRate" type="number" step="0.0001" value="4.0445"></label>
     </div>
@@ -450,8 +450,8 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
       <button class="light" onclick="resetCoefficients()">Ripristina valori base</button>
       <a class="doc-btn" href="./normativa-pensioni.html">Verifica fonti ufficiali →</a>
     </div>
-    <p class="note" style="margin-top:13px"><span class="dot orange"></span><b>5,1285% è il benchmark operativo a 64 anni e 3 mesi, non il coefficiente ufficiale 2029.</b> Deriva dalla tabella ufficiale oggi vigente: 64 anni 5,088% e 65 anni 5,250%, interpolati per 3 mesi. Quando sarà pubblicato il coefficiente valido per il 2029, il monitor lo segnalerà e potrà essere applicato qui. La rivalutazione centrale 4,0445% per 2026–2028 è un’ipotesi dichiarata, non un tasso ufficiale già noto per quei tre anni; lo scenario prudenziale usa 2,1982% per ciascuno dei tre anni.</p>
-    <p class="note" id="coefStatus" style="margin-top:7px">Set base ricalcolato: 28/08/2026 · patch v1.13.2.</p>
+    <p class="note" style="margin-top:13px"><span class="dot orange"></span><b>5,1690% è il coefficiente operativo a 64 anni e 6 mesi adottato nel set consolidato.</b> La rivalutazione centrale 4,0445% per 2026–2028 resta un’ipotesi dichiarata, non un tasso ufficiale già noto per quei tre anni; lo scenario prudenziale usa 2,1982% per ciascuno dei tre anni.</p>
+    <p class="note" id="coefStatus" style="margin-top:7px">Set consolidato v1.14 · decorrenza 01/01/2029.</p>
   </section>
 
 
@@ -500,23 +500,6 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
     </div>
   </section>
 
-  <section class="section-card" id="affidabilita">
-    <div class="section-title">Semaforo affidabilità dati · punto 8</div>
-    <div class="trust-grid">
-      <div class="trust"><b><span class="dot green"></span>Certificato INPS</b><p>EcoCert, estratti ufficiali, giornate contributive e dati espressamente certificati dall'Istituto.</p></div>
-      <div class="trust"><b><span class="dot yellow"></span>Calcolato su dati certificati</b><p>Valori ottenuti con formule verificabili partendo da dati INPS, ad esempio ricostruzioni del montante.</p></div>
-      <div class="trust"><b><span class="dot orange"></span>Proiezione / ipotesi</b><p>Montanti futuri, pensioni nette future, rivalutazioni ipotetiche e coefficienti non ancora ufficiali per la decorrenza.</p></div>
-      <div class="trust"><b><span class="dot blue-dot"></span>Normativa ufficiale</b><p>Leggi, decreti, circolari e messaggi verificati tramite INPS, Gazzetta Ufficiale, Normattiva o Ministero.</p></div>
-    </div>
-    <div class="list" style="margin-top:14px">
-      <div class="row"><span>Giornate EcoCert agosto 2026</span><strong>🟢 Certificato INPS</strong></div>
-      <div class="row"><span>Montante centrale 2028 € 748.616,51</span><strong>🟠 Proiezione operativa</strong></div>
-      <div class="row"><span>Netto medio ≈ € 2.151,86 ×13 (fiscalità 2026)</span><strong>🟠 Stima fiscale</strong></div>
-      <div class="row"><span>Benchmark coefficiente 64a3m 5,1285%</span><strong>🟠 Provvisorio</strong></div>
-      <div class="row"><span>Normativa Pensioni LIVE</span><strong>🔵 Fonti ufficiali</strong></div>
-    </div>
-  </section>
-
   <section class="calc-card">
     <div class="calc-title">Calcolatore lordo</div>
     <div class="formgrid">
@@ -524,7 +507,7 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
         <input id="montante" type="number" step="0.01" value="748616.51">
       </label>
       <label>Coefficiente (%)
-        <input id="coeff" type="number" step="0.0001" value="5.1285">
+        <input id="coeff" type="number" step="0.0001" value="5.1690">
       </label>
       <label>Mensilità
         <select id="mesi"><option selected>13</option><option>12</option></select>
@@ -537,7 +520,7 @@ button.secondary{background:rgba(255,255,255,.14);color:#fff}
     <div id="out" class="out"></div>
   </section>
 
-  <div class="footer">Pensione AI v1.13.3 VERIFICATA · filiera ricalcolata integralmente · 28/08/2026</div>
+  <div class="footer">Pensione AI v1.14 CONSOLIDATA · decorrenza 01/01/2029 · 03/09/2026</div>
 </main>
 
 <script>
@@ -583,7 +566,7 @@ function euro2(n){return new Intl.NumberFormat('it-IT',{style:'currency',currenc
 function euro0(n){return new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n)}
 const AUDIT_BASE_2025=590407.49;
 const AUDIT_CONTRIB_ANNUAL=26780.75;
-const COEF_KEY='pensioneAI.v133cristallizzata.coefficients';
+const COEF_KEY='pensioneAI.v114consolidata.coefficients';
 function projection(capPct){
   const r=Number(capPct)/100;
   const c=AUDIT_CONTRIB_ANNUAL;
@@ -618,10 +601,10 @@ function netCurrentTax(grossAnnual){
 }
 function setTxt(id,txt){const el=document.getElementById(id);if(el)el.textContent=txt}
 function applyCoefficients(silent=false){
-  const c28=Number(document.getElementById('coef2028').value||5.1285);
+  const c28=Number(document.getElementById('coef2028').value||5.1690);
   const c67=Number(document.getElementById('coef67').value||5.6080);
   const cap=Number(document.getElementById('capRate').value||4.0445);
-  let previous={c28:5.1285,c67:5.6080,cap:4.0445};
+  let previous={c28:5.1690,c67:5.6080,cap:4.0445};
   try{const p=JSON.parse(localStorage.getItem(COEF_KEY)||'null');if(p)previous=p}catch(e){}
   const prevP=projection(previous.cap);
   const curP=projection(cap);
@@ -655,9 +638,9 @@ function applyCoefficients(silent=false){
 }
 function resetCoefficients(){
   localStorage.removeItem(COEF_KEY);
-  document.getElementById('coef2028').value='5.1285';document.getElementById('coef67').value='5.6080';document.getElementById('capRate').value='4.0445';
+  document.getElementById('coef2028').value='5.1690';document.getElementById('coef67').value='5.6080';document.getElementById('capRate').value='4.0445';
   applyCoefficients(true);localStorage.removeItem(COEF_KEY);
-  document.getElementById('coefStatus').textContent='Ripristinato il set v1.13.3: benchmark 64a3m 5,1285% · 67 anni 5,6080% · scenario centrale 2026–2028 4,0445%.';
+  document.getElementById('coefStatus').textContent='Ripristinato il set v1.14: coefficiente operativo 64a6m 5,1690% · 67 anni 5,6080% · scenario centrale 2026–2028 4,0445%.';
 }
 function loadCoefficients(){
   try{const d=JSON.parse(localStorage.getItem(COEF_KEY)||'null');if(d){document.getElementById('coef2028').value=d.c28;document.getElementById('coef67').value=d.c67;document.getElementById('capRate').value=d.cap;applyCoefficients(true);return}}catch(e){}
@@ -750,13 +733,13 @@ function clearChangeHistory(){
 
 function seedAuditCorrection(){
   const items=getChanges();
-  if(items.some(x=>x.title==='Riallineamento base 2025 e scenario 64a3m'))return;
+  if(items.some(x=>x.title==='Aggiornamento decorrenza a 64a6m'))return;
   recordChange({
-    title:'Riallineamento base 2025 e scenario 64a3m',date:'2026-08-28',source:'Verifica documentale v1.13.2',
-    before:'Base 31/12/2025 € 578.350,56 · montante centrale 2028 € 706.011,45 · coefficiente 5,1690%',
-    after:'Base 31/12/2025 € 590.407,49 · montante centrale 2028 € 748.616,51 · coefficiente 64a3m 5,1285%',
-    impact28:35.39,impact67:108.39,
-    note:'Nuova base da ricostruzione documentale con coefficiente↔anno corretto. Scenario centrale 2026–2028 1,040445; contributi futuri € 26.780,75/anno; nel 2028 si rivaluta il capitale pregresso mentre il contributo 2028 entra nominalmente. Netto calcolato con sola IRPEF statale 2026 e detrazione pensione.',kind:'rettifica'});
+    title:'Aggiornamento decorrenza a 64a6m',date:'2026-09-03',source:'Set previdenziale consolidato',
+    before:'Coefficiente 64a3m 5,1285% · lordo centrale € 2.953,29 · netto centrale € 2.222,50',
+    after:'Coefficiente 64a6m 5,1690% · lordo centrale € 2.976,61 · netto centrale € 2.237,38',
+    impact28:23.32,impact67:0,
+    note:'Decorrenza stimata 01/01/2029. Montanti invariati: € 712.325,92 prudenziale ed € 748.616,51 centrale. Netto calcolato con sola IRPEF statale 2026 e detrazione pensione.',kind:'rettifica'});
 }
 updateCountdown();
 loadCoefficients();

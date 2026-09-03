@@ -1,5 +1,5 @@
 {
-  "version": "2026-08-28-v1.13.3-cristallizzata",
+  "version": "2026-09-03-v1.14-consolidata",
   "source_status": "consolidated-working-set",
   "base_montante_2025_12_31": 590407.49,
   "future_annual_contribution": 26780.75,
@@ -12,14 +12,14 @@
     "prudenziale": 712325.92,
     "centrale": 748616.51
   },
-  "coefficient_64y3m_working": 5.1285,
+  "coefficient_64y6m_working": 5.169,
   "gross_monthly_13": {
-    "prudenziale": 2810.13,
-    "centrale": 2953.29
+    "prudenziale": 2832.32,
+    "centrale": 2976.61
   },
   "net_state_only_monthly_13": {
-    "prudenziale": 2131.13,
-    "centrale": 2222.5
+    "prudenziale": 2145.3,
+    "centrale": 2237.38
   },
   "tax_baseline": "IRPEF statale 2026 + detrazione pensione; addizionali escluse",
   "ferie_residue_days": 130,
