@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#111820">
-<title>Fenice 4.9.3 · Lorenzo Hub</title>
+<title>Fenice Palcoscenico · Lorenzo Hub</title>
 <style>
 html,body{margin:0;height:100%;background:#111820;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 #frame{position:fixed;inset:0;width:100%;height:100%;border:0;background:white}
@@ -18,7 +18,7 @@ html,body{margin:0;height:100%;background:#111820;font-family:system-ui,-apple-s
 <iframe id="frame" src="https://lorenzogtp.github.io/fenice-palcoscenico-/" title="Fenice Palcoscenico 4.9.3"></iframe>
 <div id="bar">
   <button onclick="history.length>1?history.back():location.href='./index.html'">← Hub</button>
-  <div class="state" id="state">Apro Fenice 4.9.3…</div>
+  <div class="state" id="state">Apro Fenice Palcoscenico…</div>
 </div>
 <script>
 const section = new URLSearchParams(location.search).get('section') || 'home';
@@ -42,7 +42,7 @@ const labels = {
   backup:'Backup / Import',
   archive:'Archivio produzioni'
 };
-state.textContent = 'Fenice 4.9.3 · ' + (labels[section] || section);
+state.textContent = 'Fenice Palcoscenico · ' + (labels[section] || section);
 
 function norm(s){ return (s||'').replace(/\s+/g,' ').trim().toLowerCase(); }
 
@@ -122,7 +122,7 @@ function route(){
         setTimeout(()=>{
           // V4.9.x: cerca il comando ODG presente nella sezione Piano prove.
           if(!clickByText(d,['odg smart','odg','genera odg'])){
-            state.textContent='Fenice 4.9.3 · Piano prove (ODG disponibile nella sezione)';
+            state.textContent='Fenice Palcoscenico · Piano prove (ODG disponibile nella sezione)';
           }
         },450);
         break;
@@ -158,7 +158,7 @@ function route(){
         break;
     }
   }catch(e){
-    state.textContent='Fenice 4.9.3 · apertura manuale';
+    state.textContent='Fenice Palcoscenico · apertura manuale';
   }
 }
 

@@ -1,7 +1,7 @@
-const CACHE='lorenzo-hub-v2.1-pensione-1.14-20260903';
+const CACHE='lorenzo-hub-v2.2-fenice-home-20260904';
 const CORE=[
  './','./index.html','./manifest.webmanifest','./config.js','./links.js',
- './fenice-bridge.html','./pensione-ai.html','./normativa-pensioni.html','./pension-data.json',
+ './fenice-bridge.html','./fenice-snapshot.json','./pensione-ai.html','./normativa-pensioni.html','./pension-data.json',
  './docs/EcoCert_12-06-2025.pdf','./docs/Estratto_Conto_FPLS_18-06-2025.pdf',
  './docs/Estratto_Casellario_Attivi_18-06-2025.pdf','./docs/Studio_Miapensione_25-10-2023.pdf',
  './404.html','./version.json','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./favicon.png'

@@ -1,6 +1,13 @@
-LORENZO HUB v2.1 — CRUSCOTTO OPERATIVO
+LORENZO HUB v2.2 — HOME OPERATIVA FENICE
 
 NOVITÀ
+- La Home legge direttamente i dati operativi Fenice inclusi nel pacchetto.
+- Snapshot iniziale: backup Fenice esportato il 02/09/2026, con Dittico attiva.
+- Produzioni Fenice disponibili: Dittico, Pagliacci e L’Elisir d’amore.
+- Il pulsante “Aggiorna” importa un nuovo backup JSON esportato da Fenice.
+- Gli orari Fenice duplicati sono raggruppati in un’unica riga senza perdere le descrizioni diverse.
+- Il prossimo impegno considera sia Fenice sia le attività personali dell’Hub.
+- Agenda Oggi, Domani e Settimana unificata, con etichette Fenice e Hub.
 - Home con produzione attiva, prossimo impegno, urgenze e attività di oggi.
 - Agenda con viste Oggi, Domani e Settimana.
 - Attività associate a priorità, stato e produzione.
@@ -23,7 +30,7 @@ AGGIORNAMENTO GITHUB PAGES
 6. Chiudere e riaprire Lorenzo Hub.
 
 AGGIORNAMENTO DELL’APP INSTALLATA
-La cache v2.0 viene aggiornata automaticamente. Se l’icona o la schermata restano
+La cache precedente viene aggiornata automaticamente. Se l’icona o la schermata restano
 quelle precedenti, chiudere completamente l’app. Se necessario, rimuoverla dalla
 schermata Home e installarla nuovamente dopo la pubblicazione.
 
@@ -31,3 +38,10 @@ NOTA CALENDARIO
 Il pulsante Calendario avvia Calendario Samsung su Android. Una PWA può aprire
 l’app, ma non può leggere direttamente gli appuntamenti locali senza i permessi
 di un’app Android nativa.
+
+AGGIORNAMENTO DATI FENICE
+Lorenzo Hub include uno snapshot operativo già pronto. Per riportare modifiche
+successive fatte in Fenice Palcoscenico, esportare il backup JSON da Fenice e
+toccare “Aggiorna” nel riquadro Produzione attiva. I dati restano memorizzati
+sul dispositivo e disponibili offline. Due PWA su indirizzi diversi non possono
+leggere direttamente l’una il database locale dell’altra per ragioni di sicurezza.

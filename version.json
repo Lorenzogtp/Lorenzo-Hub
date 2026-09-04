@@ -1,7 +1,7 @@
 {
   "name": "Lorenzo Hub",
-  "version": "2.1",
-  "date": "2026-09-03",
+  "version": "2.2",
+  "date": "2026-09-04",
   "fenice": {
     "version": "aggiornata",
     "url": "https://lorenzogtp.github.io/fenice-palcoscenico-/",
@@ -50,6 +50,13 @@
   "dashboard": {
     "home": ["Produzione attiva", "Prossimo impegno", "Urgenze e solleciti", "Cosa devo fare adesso"],
     "agenda": ["Oggi", "Domani", "Settimana"],
-    "taskFields": ["Data", "Priorità", "Stato", "Produzione"]
+    "taskFields": ["Data", "Priorità", "Stato", "Produzione"],
+    "feniceData": {
+      "mode": "snapshot incluso e aggiornamento da backup JSON",
+      "source_exported": "2026-09-02T09:48:39.152Z",
+      "productions": 3,
+      "activeProduction": "Dittico",
+      "duplicateTimes": "raggruppati per produzione, data, ora iniziale e ora finale"
+    }
   }
 }
