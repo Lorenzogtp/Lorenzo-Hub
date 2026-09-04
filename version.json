@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "2.5",
+  "version": "2.6",
   "date": "2026-09-04",
   "fenice": {
     "version": "aggiornata",
@@ -76,6 +76,12 @@
       "preRestoreSafetyCopy": true,
       "confirmationRequired": true,
       "restoredData": ["attività", "note", "produzione selezionata", "stato attiva/non attiva", "dati Fenice"]
+    },
+    "deviceTransfer": {
+      "method": "Web Share con file JSON",
+      "fallback": "download automatico del backup",
+      "targets": ["Android", "iPad", "tablet", "computer"],
+      "restoreOnDestination": true
     }
   }
 }

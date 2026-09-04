@@ -1,6 +1,10 @@
-LORENZO HUB v2.5 — BACKUP E RIPRISTINO
+LORENZO HUB v2.6 — TRASFERIMENTO TRA DISPOSITIVI
 
 NOVITÀ
+- Nuovo comando Condividi dati nel Centro aggiornamenti.
+- Invio del backup completo tramite il menu Condividi del dispositivo.
+- Se la condivisione di file non è disponibile, il backup viene scaricato automaticamente.
+- Sul dispositivo di destinazione basta scegliere Ripristina e aprire il file ricevuto.
 - Nuovo pulsante Ripristina nell’intestazione.
 - Backup completo in formato LorenzoHub JSON versionato.
 - Compatibilità con i backup precedenti non versionati.

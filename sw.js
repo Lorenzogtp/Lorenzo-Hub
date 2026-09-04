@@ -1,4 +1,4 @@
-const CACHE='lorenzo-hub-v2.5-backup-restore-20260904';
+const CACHE='lorenzo-hub-v2.6-device-transfer-20260904';
 const CORE=[
  './','./index.html','./manifest.webmanifest','./config.js','./links.js',
  './fenice-bridge.html','./fenice-snapshot.json','./pensione-ai.html','./normativa-pensioni.html','./pension-data.json',
