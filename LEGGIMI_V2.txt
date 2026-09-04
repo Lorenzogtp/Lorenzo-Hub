@@ -1,6 +1,9 @@
-LORENZO HUB v2.2 — HOME OPERATIVA FENICE
+LORENZO HUB v2.3 — STATO PRODUZIONE
 
 NOVITÀ
+- La produzione selezionata può essere impostata come Attiva o Non attiva, come in Fenice Palcoscenico.
+- Se è Non attiva, la selezione resta memorizzata ma non compare in Oggi, Domani e Prossimo impegno.
+- Riattivandola, gli impegni Fenice tornano automaticamente nella Home.
 - La Home legge direttamente i dati operativi Fenice inclusi nel pacchetto.
 - Snapshot iniziale: backup Fenice esportato il 02/09/2026, con Dittico attiva.
 - Produzioni Fenice disponibili: Dittico, Pagliacci e L’Elisir d’amore.

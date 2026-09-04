@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "2.2",
+  "version": "2.3",
   "date": "2026-09-04",
   "fenice": {
     "version": "aggiornata",
@@ -57,6 +57,11 @@
       "productions": 3,
       "activeProduction": "Dittico",
       "duplicateTimes": "raggruppati per produzione, data, ora iniziale e ora finale"
+    },
+    "productionActivation": {
+      "states": ["Attiva", "Non attiva"],
+      "persistSelectionWhenInactive": true,
+      "inactiveBehavior": "esclude la produzione da Oggi, Domani e Prossimo impegno"
     }
   }
 }
