@@ -1,6 +1,13 @@
-LORENZO HUB v2.4 — HOME DECISIONALE
+LORENZO HUB v2.5 — BACKUP E RIPRISTINO
 
 NOVITÀ
+- Nuovo pulsante Ripristina nell’intestazione.
+- Backup completo in formato LorenzoHub JSON versionato.
+- Compatibilità con i backup precedenti non versionati.
+- Verifica del file prima del ripristino e rifiuto dei backup Fenice selezionati per errore.
+- Riepilogo di attività, note e produzioni prima della conferma.
+- Copia automatica di sicurezza dei dati correnti prima di ogni ripristino.
+- Ripristino di attività, note, produzione, stato Attiva/Non attiva e dati Fenice.
 - Nuovo Quadro personale nella Home con sintesi Pensione AI v1.14.
 - Netto mensile stimato ×13, decorrenza e montante base leggibili senza aprire la simulazione.
 - Nuovo Centro aggiornamenti con data del backup Fenice e numero di produzioni importate.

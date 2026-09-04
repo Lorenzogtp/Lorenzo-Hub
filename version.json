@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "2.4",
+  "version": "2.5",
   "date": "2026-09-04",
   "fenice": {
     "version": "aggiornata",
@@ -68,6 +68,14 @@
       "pension": ["netto mensile ×13", "decorrenza", "montante 31/12/2025"],
       "updates": ["data backup Fenice", "numero produzioni", "versione Pensione AI"],
       "feniceStaleAfterDays": 7
+    },
+    "backupRestore": {
+      "format": "LorenzoHub JSON versionato",
+      "legacyBackupSupport": true,
+      "preRestoreValidation": true,
+      "preRestoreSafetyCopy": true,
+      "confirmationRequired": true,
+      "restoredData": ["attività", "note", "produzione selezionata", "stato attiva/non attiva", "dati Fenice"]
     }
   }
 }
