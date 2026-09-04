@@ -3,7 +3,7 @@
   "version": 4,
   "exported": "2026-09-02T09:48:39.152Z",
   "state": {
-    "activeProductionId": "prod-1788080213069-q7dkk",
+    "activeProductionId": "prod-pagliacci-2026",
     "productions": [
       {
         "id": "prod-elisir-2026",
@@ -1636,5 +1636,9 @@
         ]
       }
     ]
+  },
+  "hub_override": {
+    "activeProductionId": "prod-pagliacci-2026",
+    "verifiedFrom": "Fenice Palcoscenico v5.1.4 screenshot 04/09/2026"
   }
 }

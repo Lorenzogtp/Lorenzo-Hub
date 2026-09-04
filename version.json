@@ -1,6 +1,6 @@
 {
   "name": "Lorenzo Hub",
-  "version": "2.3",
+  "version": "2.4",
   "date": "2026-09-04",
   "fenice": {
     "version": "aggiornata",
@@ -55,13 +55,19 @@
       "mode": "snapshot incluso e aggiornamento da backup JSON",
       "source_exported": "2026-09-02T09:48:39.152Z",
       "productions": 3,
-      "activeProduction": "Dittico",
+      "activeProduction": "Pagliacci",
+      "activeProductionVerifiedFrom": "Fenice Palcoscenico v5.1.4 screenshot, 04/09/2026",
       "duplicateTimes": "raggruppati per produzione, data, ora iniziale e ora finale"
     },
     "productionActivation": {
       "states": ["Attiva", "Non attiva"],
       "persistSelectionWhenInactive": true,
       "inactiveBehavior": "esclude la produzione da Oggi, Domani e Prossimo impegno"
+    },
+    "personalSummary": {
+      "pension": ["netto mensile ×13", "decorrenza", "montante 31/12/2025"],
+      "updates": ["data backup Fenice", "numero produzioni", "versione Pensione AI"],
+      "feniceStaleAfterDays": 7
     }
   }
 }

@@ -1,4 +1,4 @@
-const CACHE='lorenzo-hub-v2.3-production-toggle-20260904';
+const CACHE='lorenzo-hub-v2.4-personal-status-20260904';
 const CORE=[
  './','./index.html','./manifest.webmanifest','./config.js','./links.js',
  './fenice-bridge.html','./fenice-snapshot.json','./pensione-ai.html','./normativa-pensioni.html','./pension-data.json',

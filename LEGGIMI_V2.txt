@@ -1,6 +1,11 @@
-LORENZO HUB v2.3 — STATO PRODUZIONE
+LORENZO HUB v2.4 — HOME DECISIONALE
 
 NOVITÀ
+- Nuovo Quadro personale nella Home con sintesi Pensione AI v1.14.
+- Netto mensile stimato ×13, decorrenza e montante base leggibili senza aprire la simulazione.
+- Nuovo Centro aggiornamenti con data del backup Fenice e numero di produzioni importate.
+- Avviso automatico quando il backup Fenice supera sette giorni.
+- Produzione iniziale allineata a Pagliacci, come mostrato da Fenice Palcoscenico il 04/09/2026.
 - La produzione selezionata può essere impostata come Attiva o Non attiva, come in Fenice Palcoscenico.
 - Se è Non attiva, la selezione resta memorizzata ma non compare in Oggi, Domani e Prossimo impegno.
 - Riattivandola, gli impegni Fenice tornano automaticamente nella Home.
