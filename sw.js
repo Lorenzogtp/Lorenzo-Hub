@@ -1,4 +1,4 @@
-const CACHE = 'lorenzo-hub-simple-2026-09-09-v2';
+const CACHE = 'lorenzo-hub-simple-2026-09-09-v3-actv-github';
 const CORE = ['./', './index.html', './pensione.html'];
 self.addEventListener('install', e => {
   self.skipWaiting();

@@ -1,0 +1,16 @@
+LORENZO HUB — AGGIORNAMENTO ACTV RAPIDO
+
+Modifica eseguita:
+- il pulsante ACTV Rapido ora apre:
+  https://lorenzogtp.github.io/Actv-rapido/
+- aggiornato anche config.js per coerenza
+- cache Service Worker portata a una nuova versione per forzare il refresh
+
+PUBBLICAZIONE SU GITHUB
+1. Aprire il repository di Lorenzo Hub.
+2. Caricare nella radice: index.html, sw.js e config.js.
+3. Confermare Commit changes.
+4. Attendere il deploy GitHub Pages.
+5. Chiudere completamente Lorenzo Hub e riaprirlo.
+
+Se il vecchio collegamento resta visibile, rimuovere Lorenzo Hub dalla schermata Home e reinstallarlo dopo il deploy.
