@@ -1,17 +1,40 @@
-const CACHE="lorenzo-hub-semplice-2026-09-09";
-const CORE=["./","./index.html","./pensione.html","./manifest.webmanifest","./icon-192.png","./icon-512.png","./apple-touch-icon.png","./favicon.png"];
-self.addEventListener("install",e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)))});
-self.addEventListener("activate",e=>{e.waitUntil((async()=>{for(const k of await caches.keys())if(k!==CACHE)await caches.delete(k);await self.clients.claim()})())});
-self.addEventListener("fetch",e=>{
-  if(e.request.method!=="GET")return;
-  if(new URL(e.request.url).origin!==location.origin)return;
+const CACHE = 'lorenzo-hub-simple-2026-09-09-v2';
+const CORE = ['./', './index.html', './pensione.html'];
+self.addEventListener('install', e => {
+  self.skipWaiting();
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).catch(()=>{}));
+});
+self.addEventListener('activate', e => {
+  e.waitUntil((async()=>{
+    const keys = await caches.keys();
+    await Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)));
+    await self.clients.claim();
+  })());
+});
+self.addEventListener('fetch', e => {
+  const r=e.request;
+  if(r.method!=='GET') return;
+  if(r.mode==='navigate'){
+    e.respondWith((async()=>{
+      try {
+        const fresh=await fetch(r,{cache:'no-store'});
+        const c=await caches.open(CACHE);
+        c.put(r,fresh.clone()).catch(()=>{});
+        return fresh;
+      } catch(_) {
+        return (await caches.match(r)) || (await caches.match('./index.html'));
+      }
+    })());
+    return;
+  }
   e.respondWith((async()=>{
-    try{
-      const r=await fetch(e.request,{cache:"no-store"});
-      const c=await caches.open(CACHE); c.put(e.request,r.clone()).catch(()=>{});
-      return r;
-    }catch(_){
-      return (await caches.match(e.request)) || (await caches.match("./index.html"));
+    try {
+      const fresh=await fetch(r,{cache:'no-cache'});
+      const c=await caches.open(CACHE);
+      c.put(r,fresh.clone()).catch(()=>{});
+      return fresh;
+    } catch(_) {
+      return (await caches.match(r)) || Response.error();
     }
   })());
 });
