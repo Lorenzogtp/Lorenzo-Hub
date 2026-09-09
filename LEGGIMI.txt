@@ -1,21 +1,28 @@
-LORENZO HUB – PWA
+LORENZO HUB — VERSIONE SEMPLICE
 
-File principali:
-- index.html
-- manifest.webmanifest
-- sw.js
-- icon-192.png
-- icon-512.png
+Questa versione mantiene solo:
+- Fenice Palcoscenico
+- ODG Fenice di oggi
+- ACTV Rapido
+- Pensione AI
+- Calendario Samsung
 
-Pubblicazione rapida su GitHub Pages:
-1. Creare un nuovo repository.
-2. Caricare tutti i file nella radice del repository.
-3. Settings > Pages > Deploy from a branch.
-4. Selezionare main / root.
-5. Aprire il link GitHub Pages da Chrome.
-6. Menu ⋮ > Aggiungi a schermata Home / Installa app.
+Sono stati rimossi:
+- agenda interna
+- urgenze e solleciti
+- rapporto di turno
+- documenti
+- dettatura
+- contatti
+- sincronizzazione/cloud
+- notifiche
+- strumenti avanzati
 
-Nota:
-La prima volta, dentro Fenice > Impostazioni collegamenti, incollare l'URL della Sua app Fenice.
-Il collegamento ACTV Rapido è già configurato.
-I dati personali dell'app vengono salvati localmente nel browser del dispositivo.
+PER PUBBLICARE SU GITHUB PAGES
+1. Aprire il repository Lorenzo-Hub.
+2. Sostituire i file della root con quelli di questo pacchetto.
+3. Fare Commit changes.
+4. Se il telefono mostra ancora la vecchia versione, chiudere e riaprire l'app.
+   Se necessario, rimuovere il collegamento dalla schermata Home e reinstallarlo.
+
+Data pacchetto: 09/09/2026
